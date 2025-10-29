@@ -1,12 +1,12 @@
 ---------- ARIG
 
-data.raw["item"]["planetaris-hyper-transport-belt"].subgroup = "hyarion-gems"
+data.raw["item"]["planetaris-raw-diamond"].subgroup = "hyarion-gems"
 
 -- Changing hyper belts
 
-local hyper_belt = data.raw["transport-belt"]["planetaris-hyper-transport-belt"]
-local hyper_underground = data.raw["underground-belt"]["planetaris-hyper-underground-belt"]
-local hyper_splitter = data.raw["splitter"]["planetaris-hyper-splitter"]
+local hyper_belt = data.raw["recipe"]["planetaris-hyper-transport-belt"]
+local hyper_underground = data.raw["recipe"]["planetaris-hyper-underground-belt"]
+local hyper_splitter = data.raw["recipe"]["planetaris-hyper-splitter"]
 
 hyper_belt.ingredients =
       {
