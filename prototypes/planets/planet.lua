@@ -1,7 +1,7 @@
 local effects = require("__core__.lualib.surface-render-parameter-effects")
-local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
 local planet_catalogue_hyarion = require("__planetaris-hyarion__/prototypes/planets/procession-catalogue-hyarion")
 local planet_map_gen = require("__planetaris-hyarion__/prototypes/planets/planet_map_gen")
+local planetaris_asteroid_util = require("__planetaris-hyarion__/prototypes/planets/asteroid-spawn-definitions")
 
 PlanetsLib:extend({
 {
@@ -234,7 +234,7 @@ PlanetsLib:extend({
             }
           },
         asteroid_spawn_influence = 1,
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9),
+        asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.fulgora_hyarion, 0.9),
         surface_render_parameters = {
             shadow_opacity = 0.6,
             fog =
@@ -318,37 +318,6 @@ PlanetsLib:extend({
 data:extend({
     {
         type = "space-connection",
-        name = "vulcanus-arig",
-        subgroup = "planet-connections",
-        from = "vulcanus",
-        to = "arig", 
-        length = 15000,
-        icon_size = 64,
-        order = "d-b",
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
-    },
-    {
-        type = "space-connection",
-        name = "nauvis-arig",
-        subgroup = "planet-connections",
-        from = "nauvis",
-        to = "arig", 
-        length = 10000,
-        icon_size = 64,
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
-    },
-    {
-        type = "space-connection",
-        name = "fulgora-arig",
-        subgroup = "planet-connections",
-        from = "fulgora",
-        to = "arig", 
-        length = 15000,
-        icon_size = 64,
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
-    },
-    {
-        type = "space-connection",
         name = "arig-hyarion",
         subgroup = "planet-connections",
         from = "arig",
@@ -356,7 +325,7 @@ data:extend({
         length = 30000,
         icon_size = 64,
         order = "d-c",
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+        asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.arig_hyarion),
     },
     {
         type = "space-connection",
@@ -367,7 +336,7 @@ data:extend({
         length = 30000,
         icon_size = 64,
         order = "d-d",
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+        asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.fulgora_hyarion),
     },
 })
 

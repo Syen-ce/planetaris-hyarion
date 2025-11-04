@@ -699,19 +699,45 @@ data:extend({
     drop_sound = item_sounds.wire_inventory_move,
   },
 
-    --- Asteroid
+    --- Bismuth
 
       {
       type = "item",
       name = "bismuth-asteroid-chunk",
       icon = "__planetaris-hyarion__/graphics/icons/bismuth-asteroid-chunk.png",
       subgroup = "space-material",
-      order = "b[bismuth]-e[chunk]",
+      order = "c[oxide]-z[bismuth]-e",
       inventory_move_sound = item_sounds.resource_inventory_move,
       pick_sound = item_sounds.resource_inventory_pickup,
       drop_sound = item_sounds.resource_inventory_move,
       stack_size = 1,
       weight = 100 * kg,
+    },
+          {
+      type = "item",
+      name = "planetaris_raw_bismuth",
+      icon = "__planetaris-hyarion__/graphics/icons/raw-bismuth.png",
+      subgroup = "hyarion-advanced-processes",
+      order = "e[bismuth]-a",
+      inventory_move_sound = item_sounds.resource_inventory_move,
+      pick_sound = item_sounds.resource_inventory_pickup,
+      drop_sound = item_sounds.resource_inventory_move,
+      stack_size = 100,
+      weight = 5*kg,
+      default_import_location = "hyarion",
+    },
+          {
+      type = "item",
+      name = "planetaris-polished-bismuth",
+      icon = "__planetaris-hyarion__/graphics/icons/polished-bismuth.png",
+      subgroup = "hyarion-advanced-processes",
+      order = "e[bismuth]-b",
+      inventory_move_sound = item_sounds.resource_inventory_move,
+      pick_sound = item_sounds.resource_inventory_pickup,
+      drop_sound = item_sounds.resource_inventory_move,
+      stack_size = 100,
+      weight = 5*kg,
+      default_import_location = "hyarion",
     },
 
     --- space facilities

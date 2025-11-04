@@ -321,6 +321,23 @@ data:extend(
     results = {{type="item", name="planetaris-polishing-science-pack", amount=1}},
     allow_productivity = true,
   },
+  {
+    type = "recipe",
+    name = "planetaris-advanced-raw-quartz",
+    category = "compressing",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    ingredients =
+    {
+      {type = "fluid", name = "steam", amount = 10},
+      {type = "fluid", name = "light-oil", amount = 10},
+      {type = "item", name = "planetaris-sandstone-brick", amount = 1},
+      {type = "item", name = "coal", amount = 1},
+    },
+    results = {{type="item", name="planetaris-raw-quartz", amount=2}},
+    allow_productivity = true
+  },
     --- Rocket parts
     {
       type = "recipe",
@@ -784,6 +801,53 @@ data:extend(
     results = {{type="item", name="planetaris-refractory-ceramics", amount=1}},
     allow_productivity = true,
   },
+
+  --- Bismuth 
+
+    {
+    type = "recipe",
+    name = "bismuth-asteroid-crushing",
+    icon = "__planetaris-hyarion__/graphics/icons/bismuth-asteroid-crushing.png",
+    category = "crushing",
+    subgroup="space-crushing",
+    order = "b-a-c-a",
+    auto_recycle = false,
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "bismuth-asteroid-chunk", amount = 1},
+    },
+    energy_required = 2,
+    results =
+    {
+      {type = "item", name = "planetaris_raw_bismuth", amount = 5},
+      {type = "item", name = "bismuth-asteroid-chunk", amount = 1, probability = 0.2}
+    },
+    allow_productivity = true,
+    allow_decomposition = false
+  },
+      {
+      type = "recipe",
+      name = "planetaris-polished-bismuth",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris_raw_bismuth", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-bismuth", amount=1}},
+      allow_productivity = true,
+    },
 
   --- Space Facilites
     {
