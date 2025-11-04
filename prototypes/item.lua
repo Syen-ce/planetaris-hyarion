@@ -699,6 +699,21 @@ data:extend({
     drop_sound = item_sounds.wire_inventory_move,
   },
 
+    --- Asteroid
+
+      {
+      type = "item",
+      name = "bismuth-asteroid-chunk",
+      icon = "__planetaris-hyarion__/graphics/icons/bismuth-asteroid-chunk.png",
+      subgroup = "space-material",
+      order = "b[bismuth]-e[chunk]",
+      inventory_move_sound = item_sounds.resource_inventory_move,
+      pick_sound = item_sounds.resource_inventory_pickup,
+      drop_sound = item_sounds.resource_inventory_move,
+      stack_size = 1,
+      weight = 100 * kg,
+    },
+
     --- space facilities
 
   {
