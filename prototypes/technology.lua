@@ -598,6 +598,22 @@ local merge = lib.merge
           type = "unlock-recipe",
           recipe = "planetaris-raw-quartz-particle-manipulation"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-coal-to-stone-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-stone-to-coal-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sapphire-to-sulfur-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sulfur-to-sapphire-particle-manipulation"
+        },
       },
       prerequisites = {"planetaris-crystalization-motor","planetaris-nanoscale-lens","planetaris-simulating-unit"},
       unit =

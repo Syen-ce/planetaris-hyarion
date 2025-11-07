@@ -765,7 +765,7 @@ data:extend(
     localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
     category = "particle-manipulation",
     subgroup = "hyarion-advanced-processes",
-    order = "f[p-manipulation]-a",
+    order = "f[p-manipulation]-a-b",
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -803,7 +803,7 @@ data:extend(
     localised_name = {"", {"item-name.planetaris-raw-quartz"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
     category = "particle-manipulation",
     subgroup = "hyarion-advanced-processes",
-    order = "f[p-manipulation]-b",
+    order = "f[p-manipulation]-b-b",
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -815,6 +815,82 @@ data:extend(
     allow_productivity = false,
 
     crafting_machine_tint = {primary = {1,1,1,0.5}, secondary = {1,1,1,1}},
+  },
+    {
+    type = "recipe",
+    name = "planetaris-coal-to-stone-particle-manipulation",
+    localised_name = {"", {"item-name.stone"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-c",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "coal", amount = 3},
+    },
+    results = {{type="item", name="stone", amount=5}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0.902, 0.898, 0.773, 1}, secondary = {0.922, 0.922, 0.765, 1}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-stone-to-coal-particle-manipulation",
+    localised_name = {"", {"item-name.coal"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-c-b",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "stone", amount = 5},
+    },
+    results = {{type="item", name="coal", amount=3}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0,0,0,0.5}, secondary = {1,1,1,1}},
+  },
+      {
+    type = "recipe",
+    name = "planetaris-sapphire-to-sulfur-particle-manipulation",
+    localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-d",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "planetaris-raw-sapphire", amount = 2},
+    },
+    results = {{type="item", name="sulfur", amount=5}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {1, 0.89, 0, 1}, secondary = {1,1,0,1}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-sulfur-to-sapphire-particle-manipulation",
+    localised_name = {"", {"item-name.planetaris-raw-sapphire"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-d-b",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "sulfur", amount = 5},
+    },
+    results = {{type="item", name="planetaris-raw-sapphire", amount=2}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0, 0, 0.79, 0.5}, secondary = {0, 0, 1, 1}},
   },
 ---
   {
