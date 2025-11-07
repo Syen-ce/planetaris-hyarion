@@ -12,7 +12,7 @@ local util = require('util')
 function laser_turret_extension(inputs)
   return
   {
-    filename = "__base__/graphics/entity/laser-turret/laser-turret-raising.png",
+    filename = "__planetaris-hyarion__/graphics/entity/ruby-laser-turret/ruby-laser-turret-raising.png",
     priority = "medium",
     width = 130,
     height = 126,
@@ -41,26 +41,10 @@ function laser_turret_extension_shadow(inputs)
   }
 end
 
-function laser_turret_extension_mask(inputs)
-  return
-  {
-    filename = "__planetaris-hyarion__/graphics/entity/ruby-laser-turret/ruby-laser-turret-raising-mask.png",
-    flags = {"mask"},
-    width = 86,
-    height = 80,
-    frame_count = inputs.frame_count or 15,
-    line_length = inputs.line_length or 0,
-    run_mode = inputs.run_mode or "forward",
-    direction_count = 4,
-    shift = util.by_pixel(0, -43),
-    scale = 0.5,
-  }
-end
-
 function laser_turret_shooting()
   return
   {
-    filename = "__base__/graphics/entity/laser-turret/laser-turret-shooting.png",
+    filename = "__planetaris-hyarion__/graphics/entity/ruby-laser-turret/ruby-laser-turret-shooting.png",
     line_length = 8,
     width = 126,
     height = 120,
@@ -84,21 +68,6 @@ function laser_turret_shooting_glow()
   }
 end
 
-function laser_turret_shooting_mask()
-  return
-  {
-    filename = "__planetaris-hyarion__/graphics/entity/ruby-laser-turret/ruby-laser-turret-shooting-mask.png",
-    flags = {"mask"},
-    line_length = 8,
-    width = 92,
-    height = 80,
-    direction_count = 64,
-    run_mode = inputs.run_mode or "forward",
-    shift = util.by_pixel(0, -43.5),
-    scale = 0.5,
-  }
-end
-
 function laser_turret_shooting_shadow()
   return
   {
@@ -116,10 +85,10 @@ end
 data.extend({
     {
     type = "electric-turret",
-    name = "ruby-laser-turret",
-    icon = "__base__/graphics/icons/laser-turret.png",
+    name = "planetaris-ruby-laser-turret",
+    icon = "__planetaris-hyarion__/graphics/icons/ruby-laser-turret.png",
     flags = {"placeable-player", "placeable-enemy", "player-creation"},
-    minable = {mining_time = 0.5, result = "laser-turret"},
+    minable = {mining_time = 0.5, result = "planetaris-ruby-laser-turret"},
     fast_replaceable_group = "laser-turret",
     max_health = 1400,
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
@@ -130,11 +99,12 @@ data.extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     rotation_speed = 0.01,
     preparing_speed = 0.05,
+    heating_energy = "55kW",
     open_sound = sounds.turret_open,
     close_sound = sounds.turret_close,
     preparing_sound = sounds.laser_turret_activate,
     folding_sound = sounds.laser_turret_deactivate,
-    corpse = "laser-turret-remnants",
+    corpse = "planetaris-ruby-laser-turret-remnants",
     dying_explosion = "laser-turret-explosion",
     folding_speed = 0.05,
     energy_source =
@@ -151,14 +121,12 @@ data.extend({
       {
         laser_turret_extension{frame_count=1, line_length = 1},
         laser_turret_extension_shadow{frame_count=1, line_length=1},
-        laser_turret_extension_mask{frame_count=1, line_length=1}
       }
     },
     preparing_animation =
     {
       layers =
       {
-        laser_turret_extension_mask{},
         laser_turret_extension{},
         laser_turret_extension_shadow{},
       }
@@ -167,7 +135,6 @@ data.extend({
     {
       layers =
       {
-        laser_turret_shooting_mask(),
         laser_turret_shooting(),
         laser_turret_shooting_shadow(),
       }
@@ -179,7 +146,6 @@ data.extend({
     {
       layers =
       {
-        laser_turret_extension_mask{run_mode = "backward"},
         laser_turret_extension{run_mode = "backward"},
         laser_turret_extension_shadow{run_mode = "backward"},
       }
@@ -217,12 +183,13 @@ data.extend({
     attack_parameters =
     {
       type = "beam",
-      cooldown = 45,
+      cooldown = 35,
       range = 32,
+      min_range = 5,
       range_mode = "center-to-bounding-box",
       source_direction_count = 64,
       source_offset = {0, -3.423489 / 4},
-      damage_modifier = 2,
+      damage_modifier = 2.5,
       ammo_category = "laser",
       ammo_type =
       {

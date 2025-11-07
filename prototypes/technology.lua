@@ -459,6 +459,44 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
+    {
+      type = "technology",
+      name = "planetaris-ruby-laser-turret",
+      localised_name = {"entity-name.planetaris-ruby-laser-turret"},
+      localised_description = {"entity-description.planetaris-ruby-laser-turret"},
+      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser-turret.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-ruby-laser-turret"
+        },        
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-personal-ruby-laser-defense-equipment"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack", "planetaris-ruby-laser"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
         {
       type = "technology",
       name = "planetaris-crystalization-motor",
@@ -664,6 +702,42 @@ local merge = lib.merge
           {"planetaris-refraction-science-pack", 1},
         },
         time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+        {
+      type = "technology",
+      name = "planetaris-bismuth-processing",
+      icon = "__planetaris-hyarion__/graphics/technology/bismuth-processing.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "bismuth-asteroid-crushing"
+        },        
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-bismuth"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack", "planetaris-space-facilities-1"},
+      unit =
+      {
+        count = 600,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
       },
       order = "e-b[hyarion]",
     },

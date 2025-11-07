@@ -622,6 +622,38 @@ data:extend(
     results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
     allow_productivity = true,
   },
+    {
+    type = "recipe",
+    name = "planetaris-ruby-laser-turret",
+    category = "electromagnetics",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+      {type = "item", name = "advanced-circuit", amount = 5},
+      {type = "item", name = "tungsten-plate", amount = 20},
+      {type = "item", name = "laser-turret", amount = 5},
+      {type = "item", name = "planetaris-ruby-laser", amount = 2},
+    },
+    results = {{type="item", name="planetaris-ruby-laser-turret", amount=1}},
+    allow_productivity = true
+  },
+      {
+    type = "recipe",
+    name = "planetaris-personal-ruby-laser-defense-equipment",
+    category = "electromagnetics",
+    enabled = false,
+    energy_required = 25,
+    ingredients =
+    {
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "planetaris-crystalization-motor", amount = 10},
+      {type = "item", name = "personal-laser-defense-equipment", amount = 5},
+      {type = "item", name = "planetaris-ruby-laser-turret", amount = 5},
+    },
+    results = {{type="item", name="planetaris-personal-ruby-laser-defense-equipment", amount=1}},
+    allow_productivity = true
+  },
 
 -- Particle Manipulation
 

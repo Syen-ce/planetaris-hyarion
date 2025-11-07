@@ -5,6 +5,10 @@ local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-
 local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
 assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
 
+-- Set the next_upgrade property to point to assembling-machine-4
+
+data.raw["electric-turret"]["laser-turret"].next_upgrade = "planetaris-ruby-laser-turret"
+
 -- Surface conditions
 
 -- No buildable on Hyarion      
