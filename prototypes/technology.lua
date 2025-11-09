@@ -710,9 +710,45 @@ local merge = lib.merge
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "agricultural-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-zero-grav-accumulator",
+      localised_name = {"entity-name.planetaris-zero-grav-accumulator"},
+      localised_description = {"entity-description.planetaris-zero-gravity-accumulator"},
+      icon = "__planetaris-hyarion__/graphics/technology/zero-gravity-accumulator.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-zero-grav-accumulator"
+        },
+      },
+      prerequisites = {"planetaris-bismuth-processing", "planetaris-space-facilities-1"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
@@ -736,6 +772,10 @@ local merge = lib.merge
           type = "unlock-recipe",
           recipe = "planetaris-polished-bismuth"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-bismuth-transistor"
+        },
       },
       prerequisites = {"planetaris-refraction-science-pack", "planetaris-space-facilities-1"},
       unit =
@@ -748,7 +788,9 @@ local merge = lib.merge
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
@@ -757,4 +799,38 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
+      {
+    type = "technology",
+    name = "planetaris-electromagnetic-radar",
+    localised_name = {"entity-name.planetaris-electromagnetic-radar"},
+    localised_description = {"entity-description.planetaris-electromagnetic-radar"},
+    icon = "__planetaris-hyarion__/graphics/technology/electromagnetic-radar.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "planetaris-electromagnetic-radar"
+      }
+    },
+    prerequisites = {"radar","planetaris-bismuth-processing"},
+    unit =
+    {
+      count = 500,
+      ingredients = {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+      time = 30
+    }
+  },
   })

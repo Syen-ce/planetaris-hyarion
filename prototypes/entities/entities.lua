@@ -15,6 +15,99 @@ local logistic_chest_opened_duration = 7
 local wall_shift = 20
 local wall_shift_adjust = wall_shift - 7
 
+
+
+function zero_grav_accumulator_picture(tint, repeat_count)
+  return
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-hyarion__/graphics/entity/zero-gravity-accumulator/zero-gravity-accumulator.png",
+        priority = "high",
+        width = 158,
+        height = 243,
+        repeat_count = repeat_count,
+        shift = util.by_pixel(0, -31),
+        tint = tint,
+        scale = 0.5
+      },
+      {
+        filename = "__base__/graphics/entity/accumulator/accumulator-shadow.png",
+        priority = "high",
+        width = 234,
+        height = 106,
+        repeat_count = repeat_count,
+        shift = util.by_pixel(29, 6),
+        draw_as_shadow = true,
+        scale = 0.5
+      }
+    }
+  }
+end
+
+function zero_grav_accumulator_charge()
+  return
+  {
+    layers =
+    {
+      zero_grav_accumulator_picture({1, 1, 1, 1} , 24),
+      {
+        filename = "__planetaris-hyarion__/graphics/entity/zero-gravity-accumulator/zero-gravity-accumulator-charge.png",
+        priority = "high",
+        width = 178,
+        height = 210,
+        line_length = 6,
+        frame_count = 24,
+        draw_as_glow = true,
+        shift = util.by_pixel(1, -60),
+        scale = 0.5
+      }
+    }
+  }
+end
+
+function zero_grav_accumulator_reflection()
+  return
+  {
+    pictures =
+      {
+        filename = "__base__/graphics/entity/accumulator/accumulator-reflection.png",
+        priority = "extra-high",
+        width = 20,
+        height = 24,
+        shift = util.by_pixel(0, 50),
+        variation_count = 1,
+        scale = 5
+      },
+      rotate = false,
+      orientation_to_variation = false
+  }
+end
+
+function zero_grav_accumulator_discharge()
+  return
+  {
+    layers =
+    {
+      zero_grav_accumulator_picture({1, 1, 1, 1} , 24),
+      {
+        filename = "__planetaris-hyarion__/graphics/entity/zero-gravity-accumulator/zero-gravity-accumulator-discharge.png",
+        priority = "high",
+        width = 174,
+        height = 214,
+        line_length = 6,
+        frame_count = 24,
+        draw_as_glow = true,
+        shift = util.by_pixel(-1, -61),
+        scale = 0.5
+      }
+    }
+  }
+end
+
+
+
 data:extend({
     scaled_cliff(
     {
@@ -1304,7 +1397,7 @@ data:extend({
             draw_as_glow= false,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
           },
           {
             filename = "__planetaris-hyarion__/graphics/entity/space-manufacturer/space-manufacturer-shadow.png",
@@ -1312,7 +1405,7 @@ data:extend({
             width = 320,
             height = 350,
             repeat_count = 100,
-            shift = util.by_pixel(10, 0),
+            shift = util.by_pixel(10, -10),
             draw_as_shadow = true,
             scale = 0.5
             }
@@ -1329,6 +1422,7 @@ data:extend({
             width = 320,
             height = 350,
             repeat_count = 100,
+            shift = util.by_pixel(0, -10),
             scale = 0.5
           },
           {
@@ -1337,6 +1431,7 @@ data:extend({
             width = 320,
             height = 350,
             repeat_count = 100,
+            shift = util.by_pixel(0, -10),
             scale = 0.5
           },
           {
@@ -1345,6 +1440,7 @@ data:extend({
             width = 320,
             height = 350,
             repeat_count = 100,
+            shift = util.by_pixel(0, -10),
             scale = 0.5
           },
           {
@@ -1352,7 +1448,7 @@ data:extend({
             priority = "extra-high",
             width = 320,
             height = 350,
-            shift = util.by_pixel(10, 0),
+            shift = util.by_pixel(10, -10),
             draw_as_shadow = true,
             repeat_count = 100,
             scale = 0.5
@@ -1371,7 +1467,7 @@ data:extend({
             frame_count= 100,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
             draw_as_glow= true,
             blend_mode= "additive",
           },
@@ -1387,7 +1483,7 @@ data:extend({
             frame_count= 100,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
             draw_as_glow= true,
             blend_mode= "additive",
           },
@@ -1403,7 +1499,7 @@ data:extend({
             frame_count= 100,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
             draw_as_glow= true,
             blend_mode= "additive",
           },
@@ -1420,7 +1516,7 @@ data:extend({
             draw_as_glow= false,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
           },
       },
       {
@@ -1435,7 +1531,7 @@ data:extend({
             draw_as_glow= false,
             width= 320,
             height= 350,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
           },
       }
     }
@@ -1446,6 +1542,180 @@ data:extend({
     circuit_connector = circuit_connector_definitions["manufacturer"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 },
+  {
+    type = "accumulator",
+    name = "planetaris-zero-grav-accumulator",
+    icon = "__planetaris-hyarion__/graphics/icons/zero-gravity-accumulator.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "planetaris-zero-grav-accumulator"},
+    fast_replaceable_group = "accumulator",
+    max_health = 450,
+    corpse = "planetaris-zero-grav-accumulator-remnants",
+    dying_explosion = "accumulator-explosion",
+    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+    selection_box = {{-1, -1}, {1, 1}},
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box_vertical_extension = 1.5,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "15MJ",
+      usage_priority = "tertiary",
+      input_flow_limit = "750kW",
+      output_flow_limit = "750kW"
+    },
+    chargable_graphics =
+    {
+      picture = zero_grav_accumulator_picture(),
+      charge_animation = zero_grav_accumulator_charge(),
+      charge_cooldown = 30,
+      discharge_animation = zero_grav_accumulator_discharge(),
+      discharge_cooldown = 60
+    },
+        surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    water_reflection = zero_grav_accumulator_reflection(),
+    impact_category = "metal",
+    open_sound = sounds.electric_large_open,
+    close_sound = sounds.electric_large_close,
+    working_sound =
+    {
+      main_sounds =
+      {
+        {
+          sound =
+          {
+            filename = "__base__/sound/accumulator-working.ogg",
+            volume = 0.4,
+            modifiers = volume_multiplier("main-menu", 1.44),
+            audible_distance_modifier = 0.5
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 2, inverted = true},
+          fade_in_ticks = 4,
+          fade_out_ticks = 20
+        },
+        {
+          sound =
+          {
+            filename = "__base__/sound/accumulator-discharging.ogg",
+            volume = 0.4,
+            modifiers = volume_multiplier("main-menu", 1.44),
+            audible_distance_modifier = 0.5
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 1},
+          fade_in_ticks = 4,
+          fade_out_ticks = 20
+        }
+      },
+      idle_sound = {filename = "__base__/sound/accumulator-idle.ogg", volume = 0.35, audible_distance_modifier = 0.5},
+      max_sounds_per_prototype = 3,
+    },
+
+    circuit_connector = circuit_connector_definitions["accumulator"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+
+    default_output_signal = {type = "virtual", name = "signal-A"}
+  },
+  {
+    type = "radar",
+    name = "planetaris-electromagnetic-radar",
+    icon = "__planetaris-hyarion__/graphics/icons/electromagnetic-radar.png",
+    flags = {"placeable-player", "player-creation"},
+    minable = {mining_time = 0.1, result = "planetaris-electromagnetic-radar"},
+    fast_replaceable_group = "radar",
+    max_health = 450,
+    corpse = "radar-remnants",
+    dying_explosion = "radar-explosion",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      },
+      {
+        type = "impact",
+        percent = 50
+      }
+    },
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    energy_per_sector = "15MJ",
+    max_distance_of_sector_revealed = 30,
+    max_distance_of_nearby_sector_revealed = 6,
+    energy_per_nearby_scan = "200kJ",
+    drawing_box_vertical_extension = 2,
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input"
+    },
+    energy_usage = "900kW",
+    pictures =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/electromagnetic-radar/electromagnetic-radar.png",
+          priority = "low",
+          width = 250,
+          height = 350,
+          apply_projection = false,
+          direction_count = 64,
+          line_length = 8,
+          shift = util.by_pixel(1.0, -34.0),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/electromagnetic-radar/electromagnetic-radar-shadow.png",
+          priority = "low",
+          width = 320,
+          height = 186,
+          apply_projection = false,
+          direction_count = 64,
+          line_length = 8,
+          shift = util.by_pixel(30.0, 16.0),
+          draw_as_shadow = true,
+          scale = 0.5
+        }
+      }
+    },
+    impact_category = "metal",
+    working_sound =
+    {
+      sound = {filename = "__base__/sound/radar.ogg", volume = 0.8, modifiers = volume_multiplier("main-menu", 2.0)},
+      max_sounds_per_prototype = 3,
+      use_doppler_shift = false
+    },
+    radius_minimap_visualisation_color = {0.059, 0.092, 0.235, 0.275},
+    rotation_speed = 0.01,
+    water_reflection =
+    {
+      pictures =
+      {
+        filename = "__planetaris-hyarion__/graphics/entity/electromagnetic-radar/electromagnetic-radar-reflection.png",
+        priority = "extra-high",
+        width = 218,
+        height = 213,
+        shift = util.by_pixel(5, 35),
+        variation_count = 1,
+        scale = 5
+      },
+      rotate = false,
+      orientation_to_variation = false
+    },
+    is_military_target = false,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance
+  },
 })
 
 if not mods["Krastorio2-spaced-out"] then

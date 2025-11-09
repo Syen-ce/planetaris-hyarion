@@ -956,6 +956,28 @@ data:extend(
       results = {{type="item", name="planetaris-polished-bismuth", amount=1}},
       allow_productivity = true,
     },
+    {
+    type = "recipe",
+    name = "planetaris-bismuth-transistor",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-polished-bismuth", amount = 2},
+      {type = "item", name = "copper-cable", amount = 20},
+      {type = "item", name = "plastic-bar", amount = 5},
+      {type = "fluid", name = "sulfuric-acid", amount = 25},
+    },
+    results = {{type="item", name="planetaris-bismuth-transistor", amount=1}},
+  },
 
   --- Space Facilites
     {
@@ -978,11 +1000,11 @@ data:extend(
         {type = "item", name = "planetaris-beryllium-plate", amount = 60},
         {type = "item", name = "planetaris-simulating-unit", amount = 15},
     },
-    energy_required = 10,
+    energy_required = 20,
     results = {{type="item", name="planetaris-space-manufacturer", amount=1}},
     allow_productivity = true,
   },
-    {
+      {
     type = "recipe",
     name = "planetaris-beryllium-coating",
     category = "space-manufacturing",
@@ -1004,6 +1026,53 @@ data:extend(
     energy_required = 5,
     results = {{type="item", name="planetaris-beryllium-coating", amount=1}},
     allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-zero-grav-accumulator",
+    category = "space-manufacturing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+        {type = "item", name = "planetaris-beryllium-plate", amount = 10},
+        {type = "item", name = "planetaris-bismuth-transistor", amount = 20},
+        {type = "item", name = "planetaris-refractory-ceramics", amount = 15},
+        {type = "item", name = "battery", amount = 30},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-zero-grav-accumulator", amount=1}},
+    allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-electromagnetic-radar",
+    category = "space-manufacturing",
+    enabled = false,
+    energy_required = 10,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "planetaris-refractory-ceramics", amount = 10},
+      {type = "item", name = "planetaris-bismuth-transistor", amount = 10},
+      {type = "item", name = "tungsten-plate", amount = 35}
+    },
+    results = {{type="item", name="planetaris-electromagnetic-radar", amount=1}},
   },
 })
 
