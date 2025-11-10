@@ -365,6 +365,7 @@ data:extend(
       order = "x-a",
       energy_required = 3,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 10},

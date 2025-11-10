@@ -13,7 +13,8 @@ Date: 2025-11-11
   Bugfixes:
     - Fixed error in hyarion briefing locale
     - Fixed geode mining drill west graphic
-    - Fix in refraction ray factorpedia simulation
+    - Fixed in refraction ray factorpedia simulation  
+    - Fixed hyarion fuel recipe able to be recycled
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-10-31
