@@ -365,6 +365,7 @@ data:extend(
       order = "x-a",
       energy_required = 3,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
@@ -622,6 +623,38 @@ data:extend(
     results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
     allow_productivity = true,
   },
+    {
+    type = "recipe",
+    name = "planetaris-ruby-laser-turret",
+    category = "electromagnetics",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+      {type = "item", name = "advanced-circuit", amount = 5},
+      {type = "item", name = "tungsten-plate", amount = 20},
+      {type = "item", name = "laser-turret", amount = 5},
+      {type = "item", name = "planetaris-ruby-laser", amount = 2},
+    },
+    results = {{type="item", name="planetaris-ruby-laser-turret", amount=1}},
+    allow_productivity = true
+  },
+      {
+    type = "recipe",
+    name = "planetaris-personal-ruby-laser-defense-equipment",
+    category = "electromagnetics",
+    enabled = false,
+    energy_required = 25,
+    ingredients =
+    {
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "planetaris-crystalization-motor", amount = 10},
+      {type = "item", name = "personal-laser-defense-equipment", amount = 5},
+      {type = "item", name = "planetaris-ruby-laser-turret", amount = 5},
+    },
+    results = {{type="item", name="planetaris-personal-ruby-laser-defense-equipment", amount=1}},
+    allow_productivity = true
+  },
 
 -- Particle Manipulation
 
@@ -733,7 +766,7 @@ data:extend(
     localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
     category = "particle-manipulation",
     subgroup = "hyarion-advanced-processes",
-    order = "f[p-manipulation]-a",
+    order = "f[p-manipulation]-a-b",
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -771,7 +804,7 @@ data:extend(
     localised_name = {"", {"item-name.planetaris-raw-quartz"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
     category = "particle-manipulation",
     subgroup = "hyarion-advanced-processes",
-    order = "f[p-manipulation]-b",
+    order = "f[p-manipulation]-b-b",
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -783,6 +816,82 @@ data:extend(
     allow_productivity = false,
 
     crafting_machine_tint = {primary = {1,1,1,0.5}, secondary = {1,1,1,1}},
+  },
+    {
+    type = "recipe",
+    name = "planetaris-coal-to-stone-particle-manipulation",
+    localised_name = {"", {"item-name.stone"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-c",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "coal", amount = 3},
+    },
+    results = {{type="item", name="stone", amount=5}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0.902, 0.898, 0.773, 1}, secondary = {0.922, 0.922, 0.765, 1}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-stone-to-coal-particle-manipulation",
+    localised_name = {"", {"item-name.coal"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-c-b",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "stone", amount = 5},
+    },
+    results = {{type="item", name="coal", amount=3}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0,0,0,0.5}, secondary = {1,1,1,1}},
+  },
+      {
+    type = "recipe",
+    name = "planetaris-sapphire-to-sulfur-particle-manipulation",
+    localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-d",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "planetaris-raw-sapphire", amount = 2},
+    },
+    results = {{type="item", name="sulfur", amount=5}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {1, 0.89, 0, 1}, secondary = {1,1,0,1}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-sulfur-to-sapphire-particle-manipulation",
+    localised_name = {"", {"item-name.planetaris-raw-sapphire"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
+    category = "particle-manipulation",
+    subgroup = "hyarion-advanced-processes",
+    order = "f[p-manipulation]-d-b",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "sulfur", amount = 5},
+    },
+    results = {{type="item", name="planetaris-raw-sapphire", amount=2}},
+    allow_productivity = false,
+
+    crafting_machine_tint = {primary = {0, 0, 0.79, 0.5}, secondary = {0, 0, 1, 1}},
   },
 ---
   {
@@ -800,6 +909,75 @@ data:extend(
     },
     results = {{type="item", name="planetaris-refractory-ceramics", amount=1}},
     allow_productivity = true,
+  },
+
+  --- Bismuth 
+
+    {
+    type = "recipe",
+    name = "bismuth-asteroid-crushing",
+    icon = "__planetaris-hyarion__/graphics/icons/bismuth-asteroid-crushing.png",
+    category = "crushing",
+    subgroup="space-crushing",
+    order = "b-a-c-a",
+    auto_recycle = false,
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "bismuth-asteroid-chunk", amount = 1},
+    },
+    energy_required = 2,
+    results =
+    {
+      {type = "item", name = "planetaris_raw_bismuth", amount = 5},
+      {type = "item", name = "bismuth-asteroid-chunk", amount = 1, probability = 0.2}
+    },
+    allow_productivity = true,
+    allow_decomposition = false
+  },
+      {
+      type = "recipe",
+      name = "planetaris-polished-bismuth",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris_raw_bismuth", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-bismuth", amount=1}},
+      allow_productivity = true,
+    },
+    {
+    type = "recipe",
+    name = "planetaris-bismuth-transistor",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-polished-bismuth", amount = 2},
+      {type = "item", name = "copper-cable", amount = 20},
+      {type = "item", name = "plastic-bar", amount = 5},
+      {type = "fluid", name = "sulfuric-acid", amount = 25},
+    },
+    results = {{type="item", name="planetaris-bismuth-transistor", amount=1}},
   },
 
   --- Space Facilites
@@ -823,11 +1001,11 @@ data:extend(
         {type = "item", name = "planetaris-beryllium-plate", amount = 60},
         {type = "item", name = "planetaris-simulating-unit", amount = 15},
     },
-    energy_required = 10,
+    energy_required = 20,
     results = {{type="item", name="planetaris-space-manufacturer", amount=1}},
     allow_productivity = true,
   },
-    {
+      {
     type = "recipe",
     name = "planetaris-beryllium-coating",
     category = "space-manufacturing",
@@ -849,6 +1027,53 @@ data:extend(
     energy_required = 5,
     results = {{type="item", name="planetaris-beryllium-coating", amount=1}},
     allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-zero-grav-accumulator",
+    category = "space-manufacturing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+        {type = "item", name = "planetaris-beryllium-plate", amount = 10},
+        {type = "item", name = "planetaris-bismuth-transistor", amount = 20},
+        {type = "item", name = "planetaris-refractory-ceramics", amount = 15},
+        {type = "item", name = "battery", amount = 30},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-zero-grav-accumulator", amount=1}},
+    allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-electromagnetic-radar",
+    category = "space-manufacturing",
+    enabled = false,
+    energy_required = 10,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "planetaris-refractory-ceramics", amount = 10},
+      {type = "item", name = "planetaris-bismuth-transistor", amount = 10},
+      {type = "item", name = "tungsten-plate", amount = 35}
+    },
+    results = {{type="item", name="planetaris-electromagnetic-radar", amount=1}},
   },
 })
 

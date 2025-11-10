@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-11-11
+  Features:
+    - Added ruby laser turret and personal ruby laser
+    - Added zero gravity accumulator
+    - Added electromagnetic radar
+    - Added sulfur and stone recipes to particle manipulator 
+    - Added bismuth asteroid in hyarion and crushing and polishing processes
+    - Added spanish locale
+  Changes:
+    - Reduced saturation of beryllium coating
+  Bugfixes:
+    - Fixed error in hyarion briefing locale
+    - Fixed geode mining drill west graphic
+    - Fixed in refraction ray factorpedia simulation  
+    - Fixed hyarion fuel recipe able to be recycled
+---------------------------------------------------------------------------------------------------    
 Version: 1.0.4
 Date: 2025-11-05
   Bugfixes:

@@ -459,6 +459,44 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
+    {
+      type = "technology",
+      name = "planetaris-ruby-laser-turret",
+      localised_name = {"entity-name.planetaris-ruby-laser-turret"},
+      localised_description = {"entity-description.planetaris-ruby-laser-turret"},
+      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser-turret.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-ruby-laser-turret"
+        },        
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-personal-ruby-laser-defense-equipment"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack", "planetaris-ruby-laser"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
         {
       type = "technology",
       name = "planetaris-crystalization-motor",
@@ -560,6 +598,22 @@ local merge = lib.merge
           type = "unlock-recipe",
           recipe = "planetaris-raw-quartz-particle-manipulation"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-coal-to-stone-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-stone-to-coal-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sapphire-to-sulfur-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sulfur-to-sapphire-particle-manipulation"
+        },
       },
       prerequisites = {"planetaris-crystalization-motor","planetaris-nanoscale-lens","planetaris-simulating-unit"},
       unit =
@@ -656,9 +710,9 @@ local merge = lib.merge
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "agricultural-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
@@ -667,4 +721,116 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
+    {
+      type = "technology",
+      name = "planetaris-zero-grav-accumulator",
+      localised_name = {"entity-name.planetaris-zero-grav-accumulator"},
+      localised_description = {"entity-description.planetaris-zero-gravity-accumulator"},
+      icon = "__planetaris-hyarion__/graphics/technology/zero-gravity-accumulator.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-zero-grav-accumulator"
+        },
+      },
+      prerequisites = {"planetaris-bismuth-processing", "planetaris-space-facilities-1"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+        {
+      type = "technology",
+      name = "planetaris-bismuth-processing",
+      icon = "__planetaris-hyarion__/graphics/technology/bismuth-processing.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "bismuth-asteroid-crushing"
+        },        
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-bismuth"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-bismuth-transistor"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack", "planetaris-space-facilities-1"},
+      unit =
+      {
+        count = 600,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+    type = "technology",
+    name = "planetaris-electromagnetic-radar",
+    localised_name = {"entity-name.planetaris-electromagnetic-radar"},
+    localised_description = {"entity-description.planetaris-electromagnetic-radar"},
+    icon = "__planetaris-hyarion__/graphics/technology/electromagnetic-radar.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "planetaris-electromagnetic-radar"
+      }
+    },
+    prerequisites = {"radar","planetaris-bismuth-processing"},
+    unit =
+    {
+      count = 500,
+      ingredients = {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+      time = 30
+    }
+  },
   })
