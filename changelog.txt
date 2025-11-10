@@ -15,6 +15,11 @@ Date: 2025-11-11
     - Fixed geode mining drill west graphic
     - Fixed in refraction ray factorpedia simulation  
     - Fixed hyarion fuel recipe able to be recycled
+---------------------------------------------------------------------------------------------------    
+Version: 1.0.4
+Date: 2025-11-05
+  Bugfixes:
+    - Moved advanced quartz recipe from arig
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-10-31
