@@ -29,7 +29,7 @@ if not mods["wood-industry"] then return end
 
 --- Resin
 
-if settings.startup["wood-industry-resin"].value then
+if settings.startup["wood-industry-resin"].value and settings.startup["alloy-smelting-coke"].value then
 
     data.extend({
         {

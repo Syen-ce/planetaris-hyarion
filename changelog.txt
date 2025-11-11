@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
+Version: 1.1.1
 Date: 2025-11-11
+  Bugfixes:
+    - Fixed error with wood industry
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-11-10
   Features:
     - Added ruby laser turret and personal ruby laser
     - Added zero gravity accumulator
@@ -15,7 +20,7 @@ Date: 2025-11-11
     - Fixed geode mining drill west graphic
     - Fixed in refraction ray factorpedia simulation  
     - Fixed hyarion fuel recipe able to be recycled
----------------------------------------------------------------------------------------------------    
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-11-05
   Bugfixes:
