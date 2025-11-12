@@ -9,6 +9,16 @@ assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
 
 data.raw["electric-turret"]["laser-turret"].next_upgrade = "planetaris-ruby-laser-turret"
 
+if mods["bobwarfare"] then
+
+  data.raw["electric-turret"]["planetaris-ruby-laser-turret"].fast_replaceable_group = "turret"
+
+elseif not mods["bobwarfare"] then
+
+  data.raw["electric-turret"]["laser-turret"].next_upgrade = "planetaris-ruby-laser-turret"
+  
+end
+
 -- Surface conditions
 
 -- No buildable on Hyarion      

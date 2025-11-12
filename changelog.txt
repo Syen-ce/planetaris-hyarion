@@ -1,12 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2025-11-12
-  Bugfixes:
-    - Fixed ruby laser turret error with fast replaceable group
-    - Fixed error with wood industry
   Graphics:
     - Reduced saturation of beryllium coating icon
     - Fixed raw ruby picture 4 mipmap counts
+  Compatibility:
+    - Added ruby laser turret compat with bob warfare mod
+  Bugfixes:
+    - Fixed ruby laser turret error with fast replaceable group
+    - Fixed error with wood industry
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-11-11
