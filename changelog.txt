@@ -4,6 +4,9 @@ Date: 2025-11-11
   Bugfixes:
     - Fixed ruby laser turret error with fast replaceable group
     - Fixed error with wood industry
+  Graphics:
+    - Reduced saturation of beryllium coating icon
+    - Fixed raw ruby picture 4 mipmap counts
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-11-11
