@@ -89,7 +89,7 @@ data.extend({
     icon = "__planetaris-hyarion__/graphics/icons/ruby-laser-turret.png",
     flags = {"placeable-player", "placeable-enemy", "player-creation"},
     minable = {mining_time = 0.5, result = "planetaris-ruby-laser-turret"},
-    fast_replaceable_group = "laser-turret",
+    fast_replaceable_group = "electric-turret",
     max_health = 1400,
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-1, -1}, {1, 1}},
