@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2025-11-12
+  Graphics:
+    - Reduced saturation of beryllium coating icon
+    - Fixed raw ruby picture 4 mipmap counts
+  Compatibility:
+    - Added ruby laser turret compat with bob warfare mod
+  Bugfixes:
+    - Fixed ruby laser turret error with fast replaceable group
+    - Fixed error with wood industry
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-11-11
   Bugfixes:
@@ -12,8 +23,9 @@ Date: 2025-11-10
     - Added electromagnetic radar
     - Added sulfur and stone recipes to particle manipulator 
     - Added bismuth asteroid in hyarion and crushing and polishing processes
+  Translation:
     - Added spanish locale
-  Changes:
+  Graphics:
     - Reduced saturation of beryllium coating
   Bugfixes:
     - Fixed error in hyarion briefing locale
@@ -28,7 +40,7 @@ Date: 2025-11-05
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-10-31
-  Bugfixes:
+  Graphics:
     - Added custom procession graphics
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
