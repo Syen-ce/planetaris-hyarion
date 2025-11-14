@@ -133,6 +133,7 @@ data:extend(
       category = "crafting",
       energy_required = 5,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "item", name = "iron-plate", amount = 3},
@@ -348,6 +349,7 @@ data:extend(
       order = "x-a",
       energy_required = 3,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "fluid", name = "lava", amount = 30},
@@ -409,6 +411,7 @@ data:extend(
     localised_description = {"entity-description.cargo-landing-pad"},
     subgroup = "hyarion-rocket-building",
     enabled = false,
+    auto_recycle = false,
     surface_conditions =
     {
       {
@@ -433,6 +436,7 @@ data:extend(
     localised_description = {"entity-description.rocket-silo"},
     subgroup = "hyarion-rocket-building",
     enabled = false,
+    auto_recycle = false,
     surface_conditions =
     {
       {
