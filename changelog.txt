@@ -5,7 +5,7 @@ Date: 2025-11-14
   Compatibility:
     - Fixed error with wood industry when crushing industry is installed
   Sounds:
-    - Change inventory sounds of some items
+    - Change inventory sounds for some items
   Bugfixes:
     - Fixed some recipes having auto recycle
 ---------------------------------------------------------------------------------------------------
