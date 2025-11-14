@@ -36,13 +36,13 @@ if settings.startup["wood-industry-resin"].value then
         {
         type = "recipe",
         name = "planetaris-wood-resin",
-        category = data.raw["item"]["resin"].category,
+        category = "organic-or-chemistry",
         subgroup = "hyarion-basic-processes",
         order = "a-a-e-b",
         enabled = false,
         auto_recycle = false,
         energy_required = 10,
-        icon = data.raw["item"]["resin"].icon,
+        icon = "__wood-industry__/graphics/icons/resin.png",
         localised_name = {"", {"item-name.resin"}, " (", {"space-location-name.hyarion"}, ")"},
         surface_conditions =
         {
@@ -70,13 +70,13 @@ if settings.startup["wood-industry-resin"].value then
         {
         type = "recipe",
         name = "planetaris-wood-resin",
-        category = data.raw["item"]["resin"].category,
+        category = "organic-or-chemistry",
         subgroup = "hyarion-basic-processes",
         order = "a-a-e-b",
         enabled = false,
         auto_recycle = false,
         energy_required = 10,
-        icon = data.raw["item"]["resin"].icon,
+        icon = "__wood-industry__/graphics/icons/resin.png",
         localised_name = {"", {"item-name.resin"}, " (", {"space-location-name.hyarion"}, ")"},
         surface_conditions =
         {

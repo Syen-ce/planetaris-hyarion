@@ -781,9 +781,9 @@ data:extend({
     weight = 1000*kg,
     default_import_location = "hyarion",
 
-    inventory_move_sound = item_sounds.steam_inventory_move,
-    pick_sound = item_sounds.steam_inventory_pickup,
-    drop_sound = item_sounds.steam_inventory_move,
+    inventory_move_sound = item_sounds.mechanical_inventory_move,
+    pick_sound = item_sounds.mechanical_inventory_pickup,
+    drop_sound = item_sounds.mechanical_inventory_move,
   },  
   {
     type = "item",
@@ -810,9 +810,9 @@ data:extend({
     weight = 20*kg,
     default_import_location = "hyarion",
 
-    inventory_move_sound = item_sounds.metal_large_inventory_move,
-    pick_sound = item_sounds.metal_large_inventory_pickup,
-    drop_sound = item_sounds.metal_large_inventory_move,
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
   },
   {
     type = "item",
