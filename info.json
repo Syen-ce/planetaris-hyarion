@@ -1,6 +1,6 @@
 {
   "name": "planetaris-hyarion",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "title": "○🌐Planetaris: Hyarion",
   "author": "Syen",
   "factorio_version": "2.0",
@@ -11,8 +11,7 @@
     "planetaris-arig",
     "PlanetsLib >= 1.1.38",
     "?celestial-weather",
-    "?aai-loaders",
-    "!lunar_legacy"
+    "?aai-loaders"
   ],
   "description": "Hyarion, a planet made from crystals and lava, light refraction rays fall from the sky and destroys the surface.",
   "quality_required": true,
