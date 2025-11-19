@@ -2927,17 +2927,34 @@ data:extend{
     }
   },
 
+scaled_cliff_crater(
+  {
+    mod_name = "__planetaris-hyarion__",
+    name = "hyarion-crater-cliff",
+    icon = "__planetaris-hyarion__/graphics/icons/crater-cliff.png",
+    map_color = {r=144, g=119, b=87},
+    subfolder = "hyarion",
+    prefix = "hyarion-crater-section",
+    scale = 1.0,
+    collision_mask = {layers={item=true, object=true, player=true, water_tile=true}},
+    has_lower_layer = true,
+    sprite_size_multiplier = 2,
+    flags = { "placeable-off-grid", "placeable-neutral" },
+    factoriopedia_simulation = simulations.factoriopedia_hyarion_crater_cliff,
+    cliff_explosive = "planetaris-unstable-gem",
+    
+
+    crater_radius = 7, --3.5,
+    crater_edge_thickness = 5,
+    crater_segment_orientation_offset = 0, --1 / 16,
+    --segment_probability = 1,
+    autoplace =
+    {
+      order = "a[landscape]-a[cliff]-b[crater]",
+      probability_expression = "crater_cliff"
+    }
+  })
+
 }
 
-local hyarion_crater = table.deepcopy(data.raw["cliff"]["crater-cliff"])
-
-hyarion_crater.mod_name = "__planetaris-hyarion__"
-hyarion_crater.name = "hyarion-crater-cliff"
-hyarion_crater.icon = "__planetaris-hyarion__/graphics/icons/crater-cliff.png"
-hyarion_crater.map_color = {r=144, g=119, b=87}
-hyarion_crater.subfolder = "__planetaris-hyarion__/graphics/terrain/craters/hyarion"
-hyarion_crater.prefix = "hyarion-crater-section"
-hyarion_crater.factoriopedia_simulation = simulations.factoriopedia_hyarion_crater_cliff
-hyarion_crater.cliff_explosive ="planetaris-unstable-gem"
-
-data.extend({hyarion_crater})
+data.raw["cliff"]["hyarion-crater-cliff"].place_as_crater = data.raw["cliff"]["crater-cliff"].place_as_crater
