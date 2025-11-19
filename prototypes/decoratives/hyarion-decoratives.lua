@@ -2926,7 +2926,8 @@ data:extend{
       }
     }
   },
-  scaled_cliff_crater(
+
+scaled_cliff_crater(
   {
     mod_name = "__planetaris-hyarion__",
     name = "hyarion-crater-cliff",
@@ -2953,4 +2954,7 @@ data:extend{
       probability_expression = "crater_cliff"
     }
   })
+
 }
+
+data.raw["cliff"]["hyarion-crater-cliff"].place_as_crater = data.raw["cliff"]["crater-cliff"].place_as_crater
