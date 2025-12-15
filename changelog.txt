@@ -6,6 +6,7 @@ Date: 2025-12-13
     - Added placeable fiber optics cables
     - Added refraction light and pure light materials
     - Big refraction ray collectors capture refraction light when hit by a refraction ray
+    - Added refraction generator
   Changes:
     - Made the refraction plant a assembling machine type
     - Change charge gems into charged fluorite

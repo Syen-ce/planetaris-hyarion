@@ -149,6 +149,7 @@ data.extend({
     corpse = "accumulator-remnants",
     dying_explosion = "accumulator-explosion",
     factoriopedia_simulation = simulations.factoriopedia_big_refraction_ray_collector,
+    drawing_box_vertical_extension = 1,
     resistances =
     {
       {
@@ -231,7 +232,7 @@ data.extend({
 {
     type = "storage-tank",
     name = "hidden-big-refraction-ray-collector-tank",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__planetaris-hyarion__/graphics/icons/big-refraction-ray-collector.png",
     icon_size = 64,
     flags = {"not-rotatable", "placeable-off-grid", "not-on-map", "not-deconstructable", "not-blueprintable"},
     max_health = 1000,

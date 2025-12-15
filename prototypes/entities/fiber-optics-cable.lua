@@ -327,8 +327,6 @@ data.extend({
   {
     type = "pipe",
     name = "planetaris-fiber-optics-cable",
-    localised_name = {"item-name.planetaris-fiber-optics-cable"},
-    localised_description = {"item-description.planetaris-fiber-optics-cable"},
     icon = "__planetaris-hyarion__/graphics/icons/fiber-optics-cable.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-fiber-optics-cable"},
