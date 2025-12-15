@@ -485,6 +485,32 @@ data:extend(
     allow_productivity = false,
   },
     {
+    type = "recipe",
+    name = "planetaris-refraction-generator",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-crystalization-motor", amount = 10},
+      {type = "item", name = "planetaris-fluorite", amount = 20},
+      {type = "item", name = "planetaris-fiber-optics-cable", amount = 30},
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "holmium-plate", amount = 50},
+
+    },
+    energy_required = 15,
+    results = {{type="item", name="planetaris-refraction-generator", amount=1}},
+    allow_productivity = false,
+  },
+    {
       type = "recipe",
       name = "planetaris-fiber-optics-cable",
       category = "electromagnetics",
@@ -557,31 +583,91 @@ data:extend(
 --- Refraction gems
     {
       type = "recipe",
-      name = "planetaris-charged-gem",
+      name = "planetaris-fluorite",
+      localised_name = {"item-name.planetaris-charged-fluorite"},
+      localised_description = {"item-description.planetaris-charged-fluorite"},
       category = "polishing",
       energy_required = 10,
       enabled = false,
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
-        {type = "item", name = "planetaris-polished-quartz", amount = 5},
-        {type = "item", name = "planetaris-polished-sapphire", amount = 10},
+        {type = "item", name = "planetaris-polished-diamond", amount = 1},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+        {type = "item", name = "planetaris-polished-emerald", amount = 5},
       },
-      results = {{type="item", name="planetaris-charged-gem", amount=1}},
+      results = {{type="item", name="planetaris-fluorite", amount=1}},
+      allow_productivity = true,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-charged-fluorite",
+      icons = {{icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=true}},
+      localised_name = {"item-name.planetaris-charged-fluorite"},
+      localised_description = {"item-description.planetaris-charged-fluorite"},
+      category = "refraction",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "item", name = "planetaris-fluorite", amount = 1},
+      },
+      results = {{type="item", name="planetaris-charged-fluorite", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-fluorite-discharge",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=false},
+        {icon="__planetaris-hyarion__/graphics/icons/fluids/pure-light.png", shift={12, 12}, scale=0.5},
+      },
+      category = "refraction",
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 2,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-charged-fluorite", amount = 1},
+      },
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+                 {type="item", name="planetaris-unstable-shard", amount=1}
+      },
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-pure-light",
+      icon = "__planetaris-hyarion__/graphics/icons/fluids/pure-light.png",
+      localised_name = {"fluid-name.planetaris-pure-light"},
+      localised_description = {"fluid-description.planetaris-pure-light"},
+      category = "refraction",
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 2,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "item", name = "planetaris-fluorite", amount = 1},
+      },
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+                 {type="item", name="planetaris-unstable-shard", amount=1}
+      },
       allow_productivity = false,
     },
     {
       type = "recipe",
       name = "planetaris-unstable-gem",
-      category = "polishing",
+      category = "refraction",
       energy_required = 10,
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
-        {type = "item", name = "planetaris-polished-quartz", amount = 5},
-        {type = "item", name = "planetaris-unstable-shard", amount = 5},
-        {type = "item", name = "planetaris-polished-ruby", amount = 5},
+        {type = "fluid", name = "planetaris-pure-light",      amount = 20},
+        {type = "item",  name = "planetaris-polished-quartz", amount = 5 },
+        {type = "item",  name = "planetaris-unstable-shard",  amount = 5 },
+        {type = "item",  name = "planetaris-polished-ruby",   amount = 5 },
       },
       results = {{type="item", name="planetaris-unstable-gem", amount=1}},
       allow_productivity = false,
@@ -606,6 +692,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-refraction-science-pack",
+    icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
     category = "electromagnetics",
     enabled = false,
     surface_conditions =

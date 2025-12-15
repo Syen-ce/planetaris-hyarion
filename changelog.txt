@@ -1,4 +1,20 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025-12-13
+  Features:
+    - Added Fluorite
+    - Added placeable fiber optics cables
+    - Added refraction light and pure light materials
+    - Big refraction ray collectors capture refraction light when hit by a refraction ray
+  Changes:
+    - Made the refraction plant a assembling machine type
+    - Change charge gems into charged fluorite
+  Balancing:
+    - Reduced output_flow_limit of the big refraction ray collector 0.7MW -> 0.5MW
+  Graphics:
+    - Disable background from refraction icons
+  Bugfixes:
+    - dd
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2025-11-19
