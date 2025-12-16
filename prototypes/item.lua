@@ -324,6 +324,7 @@ data:extend({
     type = "item",
     name = "planetaris-charged-fluorite",
     icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png",
+    subgroup = "hyarion-gems",
     order = "c[refraction]-d[charged]-b-b",
     stack_size = 20,
     weight = 100*kg,

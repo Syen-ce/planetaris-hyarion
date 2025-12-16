@@ -1499,6 +1499,7 @@ data:extend({
     result_inventory_size = 2,
     module_slots = 6,
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
+    effect_receiver = { base_effect = { productivity = 0.5 }},
     energy_usage = "250kW",
     energy_source =
     {
