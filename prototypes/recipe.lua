@@ -227,7 +227,7 @@ data:extend(
         {type = "item", name = "iron-ore", amount = 10},
       },
       results = {{type="fluid", name="planetaris-polishing-compound", amount=40}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",

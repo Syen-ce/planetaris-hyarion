@@ -14,6 +14,7 @@ Date: 2025-12-16
     - Made the refraction plant a assembling machine type
     - Change charge gems into charged fluorite
     - Space manufacturer now have a 50% productivity bonus
+    - Polishing compund recipe can use productivity modules
   Balancing:
     - Reduced output_flow_limit of the big refraction ray collector 0.7MW -> 0.5MW
   Graphics:
