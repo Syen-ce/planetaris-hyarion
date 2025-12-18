@@ -6,7 +6,7 @@
 
 A planet made from crystals and lava, light refraction rays fall from the sky and destroys the surface.
 
-#Features
+# Features
 *   1 new planet, Hyarion
 *   5 new machines
 *   A better assembling machine
@@ -42,7 +42,7 @@ Planetaris unbounded is a bigger mod that merges all planetaris planets, Hyarion
 
 I'm completely open to suggestions and ideas. :)
 
-#Credits
+# Credits
 
 *   The foundry members
 *   lyx_kljk - provided the Chinese translation
