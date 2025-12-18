@@ -7,7 +7,7 @@ local function on_built_collector(event)
 	storage.big_refraction_ray_collector[collector.unit_number] = { 
 		collector = collector, 
 		tank = nil,
-		last_energy = 0  -- Track last energy level for lightning detection
+		last_energy = 0  -- Track last energy level
 	}
 end
 
@@ -26,7 +26,7 @@ local function on_removed_collector(event)
 	end
 end
 
--- Every 1 second: check tank exists AND detect lightning strikes
+-- Check tank exists AND detect lightning strikes
 script.on_nth_tick(60, function()
 	if not storage.big_refraction_ray_collector then
 		return
@@ -65,9 +65,9 @@ script.on_nth_tick(60, function()
 			if tank and tank.valid then
 				local current_energy = collector.energy
 				local last_energy = data.last_energy or 0
-				local energy_threshold = 1000000  -- 1MJ - adjust based on lightning strike energy
+				local energy_threshold = 1000000
 
-				-- If energy increased significantly, lightning struck
+				-- If energy increased, lightning struck
 				if current_energy > last_energy + energy_threshold then
 					tank.insert_fluid({
 						name = "planetaris-refraction-light",
