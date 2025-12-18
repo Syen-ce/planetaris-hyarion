@@ -22,3 +22,5 @@ for _, surface in pairs(game.surfaces) do
         end
     end
 end
+
+game.print({"", "[color=red]", {"planetaris-migration.refraction-collector-updated"}, "[/color]"})

@@ -19,6 +19,8 @@ Date: 2025-12-18
     - Reduced output_flow_limit of the big refraction ray collector 0.7MW -> 0.5MW
   Graphics:
     - Disable background from refraction icons
+  Locale:
+    - Added russian locale (by Efremiros)
   Bugfixes:
     - Fixed bismuth asteroid chunk not having locale
     - Fixed gems being able to recycle
