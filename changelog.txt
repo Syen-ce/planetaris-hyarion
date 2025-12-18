@@ -1,4 +1,29 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025-12-18
+  Features:
+    - Added Fluorite
+    - Added placeable fiber optics cables
+    - Added refraction light and pure light materials
+    - Big refraction ray collectors capture refraction light when hit by a refraction ray
+    - Added refraction generator
+    - Added productivity technologies for simulating units and supercapacitors
+    - Added tips for refraction energy production and unstable gems
+    - Added better recipes for space and promethium science packs in the space manufacturer
+  Changes:
+    - Made the refraction plant a assembling machine type
+    - Change charge gems into charged fluorite
+    - Space manufacturer now have a 50% productivity bonus
+    - Polishing compund recipe can use productivity modules
+  Balancing:
+    - Reduced output_flow_limit of the big refraction ray collector 0.7MW -> 0.5MW
+  Graphics:
+    - Disable background from refraction icons
+  Locale:
+    - Added russian locale (by Efremiros)
+  Bugfixes:
+    - Fixed bismuth asteroid chunk not having locale
+    - Fixed gems being able to recycle
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2025-11-19

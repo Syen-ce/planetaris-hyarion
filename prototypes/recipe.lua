@@ -219,6 +219,7 @@ data:extend(
       subgroup = "hyarion-basic-processes",
       category = "polishing",
       energy_required = 10,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -226,13 +227,14 @@ data:extend(
         {type = "item", name = "iron-ore", amount = 10},
       },
       results = {{type="fluid", name="planetaris-polishing-compound", amount=40}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
       name = "planetaris-polished-quartz",
       category = "polishing",
       energy_required = 5,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -247,6 +249,7 @@ data:extend(
       name = "planetaris-polished-emerald",
       category = "polishing",
       energy_required = 5,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -261,6 +264,7 @@ data:extend(
       name = "planetaris-polished-ruby",
       category = "polishing",
       energy_required = 5,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -275,6 +279,7 @@ data:extend(
       name = "planetaris-polished-sapphire",
       category = "polishing",
       energy_required = 5,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -289,6 +294,7 @@ data:extend(
       name = "planetaris-polished-diamond",
       category = "polishing",
       energy_required = 5,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
@@ -361,6 +367,10 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-hyarion-rocket-fuel",
+      icons = {
+        {icon="__base__/graphics/icons/rocket-fuel.png", draw_background=false},
+        {icon="__planetaris-hyarion__/graphics/icons/fluids/polishing-compound.png", shift={12, 12}, scale=0.5},
+      },
       localised_name = {"", {"item-name.rocket-fuel"}, " (", {"technology-name.planetaris-polishing"}, ")"},
       category = "polishing",
       subgroup = "hyarion-basic-processes",
@@ -485,6 +495,32 @@ data:extend(
     allow_productivity = false,
   },
     {
+    type = "recipe",
+    name = "planetaris-refraction-generator",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+    ingredients =
+    {
+      {type = "item", name = "planetaris-crystalization-motor", amount = 10},
+      {type = "item", name = "planetaris-fluorite", amount = 20},
+      {type = "item", name = "planetaris-fiber-optics-cable", amount = 30},
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "holmium-plate", amount = 50},
+
+    },
+    energy_required = 15,
+    results = {{type="item", name="planetaris-refraction-generator", amount=1}},
+    allow_productivity = false,
+  },
+    {
       type = "recipe",
       name = "planetaris-fiber-optics-cable",
       category = "electromagnetics",
@@ -557,31 +593,96 @@ data:extend(
 --- Refraction gems
     {
       type = "recipe",
-      name = "planetaris-charged-gem",
+      name = "planetaris-fluorite",
+      localised_name = {"item-name.planetaris-charged-fluorite"},
+      localised_description = {"item-description.planetaris-charged-fluorite"},
       category = "polishing",
       energy_required = 10,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
-        {type = "item", name = "planetaris-polished-quartz", amount = 5},
-        {type = "item", name = "planetaris-polished-sapphire", amount = 10},
+        {type = "item", name = "planetaris-polished-diamond", amount = 1},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+        {type = "item", name = "planetaris-polished-emerald", amount = 5},
       },
-      results = {{type="item", name="planetaris-charged-gem", amount=1}},
+      results = {{type="item", name="planetaris-fluorite", amount=1}},
+      allow_productivity = true,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-charged-fluorite",
+      icons = {{icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=true}},
+      localised_name = {"item-name.planetaris-charged-fluorite"},
+      localised_description = {"item-description.planetaris-charged-fluorite"},
+      category = "refraction",
+      energy_required = 5,
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "item", name = "planetaris-fluorite", amount = 1},
+      },
+      results = {{type="item", name="planetaris-charged-fluorite", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-fluorite-discharge",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=false},
+        {icon="__planetaris-hyarion__/graphics/icons/fluids/pure-light.png", shift={12, 12}, scale=0.5},
+      },
+      category = "refraction",
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 2,
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-charged-fluorite", amount = 1},
+      },
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+                 {type="item", name="planetaris-unstable-shard", amount=1}
+      },
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-pure-light",
+      icon = "__planetaris-hyarion__/graphics/icons/fluids/pure-light.png",
+      localised_name = {"fluid-name.planetaris-pure-light"},
+      localised_description = {"fluid-description.planetaris-pure-light"},
+      category = "refraction",
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 2,
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "item", name = "planetaris-fluorite", amount = 1},
+      },
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+                 {type="item", name="planetaris-unstable-shard", amount=1}
+      },
       allow_productivity = false,
     },
     {
       type = "recipe",
       name = "planetaris-unstable-gem",
-      category = "polishing",
+      category = "refraction",
       energy_required = 10,
+      auto_recycle = false,
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
-        {type = "item", name = "planetaris-polished-quartz", amount = 5},
-        {type = "item", name = "planetaris-unstable-shard", amount = 5},
-        {type = "item", name = "planetaris-polished-ruby", amount = 5},
+        {type = "fluid", name = "planetaris-pure-light",      amount = 20},
+        {type = "item",  name = "planetaris-polished-quartz", amount = 5 },
+        {type = "item",  name = "planetaris-unstable-shard",  amount = 5 },
+        {type = "item",  name = "planetaris-polished-ruby",   amount = 5 },
       },
       results = {{type="item", name="planetaris-unstable-gem", amount=1}},
       allow_productivity = false,
@@ -606,6 +707,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-refraction-science-pack",
+    icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
     category = "electromagnetics",
     enabled = false,
     surface_conditions =
@@ -1008,6 +1110,73 @@ data:extend(
     energy_required = 20,
     results = {{type="item", name="planetaris-space-manufacturer", amount=1}},
     allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-space-science-pack",
+    localised_name = {"item-name.space-science-pack"},
+    localised_description = {"item-description.space-science-pack"},
+    icon = "__base__/graphics/icons/space-science-pack.png",
+    category = "space-manufacturing",
+    subgroup = "space-facilities",
+    order = "a-b-a-a",
+    enabled = false,
+    ingredients =
+    {
+      {type = "item", name = "iron-plate", amount = 10},
+      {type = "item", name = "carbon", amount = 5},
+      {type = "item", name = "ice", amount = 5}
+    },
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    energy_required = 25,
+    results =
+    {
+      {type = "item", name = "space-science-pack", amount = 25}
+    },
+    allow_productivity = true,
+    main_product = "space-science-pack"
+  },
+    {
+    type = "recipe",
+    name = "planetaris-promethium-science-pack",
+    localised_name = {"item-name.promethium-science-pack"},
+    localised_description = {"item-description.promethium-science-pack"},
+    energy_required = 5,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    enabled = false,
+    allow_productivity = true,
+    category = "space-manufacturing",
+    subgroup = "space-facilities",
+    order = "a-b-a-b",
+    ingredients =
+    {
+      {type = "item", name = "promethium-asteroid-chunk", amount = 20},
+      {type = "item", name = "quantum-processor", amount = 1},
+      {type = "item", name = "biter-egg", amount = 10}
+    },
+    results = {{type="item", name="promethium-science-pack", amount=15}},
+    main_product = "promethium-science-pack",
+    crafting_machine_tint =
+    {
+      primary = {r = 0, g = 0, b = 0.1, a = 1},
+      secondary = {r = 0, g = 0, b = 0.4, a = 1},
+      tertiary = {r = 0.1, g = 0.1, b = 0.4, a = 1},
+      quaternary = {r = 0, g = 0, b = 0.1, a = 1},
+    }
   },
       {
     type = "recipe",

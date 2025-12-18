@@ -7,14 +7,74 @@ require ("__base__/prototypes/entity/pipecovers")
 
 local simulations = require("prototypes.factoriopedia-simulations")
 local sounds = require("__base__/prototypes/entity/sounds")
-
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
-
-local logistic_chest_opened_duration = 7
 
 local wall_shift = 20
 local wall_shift_adjust = wall_shift - 7
 
+
+planetaris_fiber_optics_covers_pictures = function()
+  local layers =
+  {
+    north =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/fiber-optics-cable/fiber-optics-cable-cover-south.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
+          scale = 0.5,
+          shift = {0, 0.5}
+        },
+      }
+    },
+    east =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/fiber-optics-cable/fiber-optics-cable-cover-east.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
+          scale = 0.5,
+          shift = {-0.5, 0}
+        },
+      }
+    },
+    south =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/fiber-optics-cable/fiber-optics-cable-cover-north.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
+          scale = 0.5,
+          shift = {0, -0.5}
+        },
+      }
+    },
+    west =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/fiber-optics-cable/fiber-optics-cable-cover-west.png",
+          priority = "extra-high",
+          width = 64,
+          height = 64,
+          scale = 0.5,
+          shift = {0.5, 0}
+        },
+      }
+    }
+  }
+  return layers
+end
 
 
 function zero_grav_accumulator_picture(tint, repeat_count)
@@ -675,96 +735,7 @@ data:extend({
     },
   },
 {
-    type = "lightning-attractor",
-    name = "planetaris-big-refraction-ray-collector",
-    efficiency = 0.7,
-    range_elongation = 25.0,
-    energy_source =
-    {
-      type = "electric",
-      buffer_capacity = "500MJ",
-      usage_priority = "primary-output",
-      output_flow_limit = "0.7MW",
-      drain = "0.166MJ"
-    },
-    icon = "__planetaris-hyarion__/graphics/icons/big-refraction-ray-collector.png",
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.3, result = "planetaris-big-refraction-ray-collector"},
-    max_health = 350,
-    corpse = "accumulator-remnants",
-    dying_explosion = "accumulator-explosion",
-    factoriopedia_simulation = simulations.factoriopedia_big_refraction_ray_collector,
-    resistances =
-    {
-      {
-        type = "fire",
-        percent = 90
-      },
-      {
-        type = "electric",
-        percent = 100
-      }
-    },
-    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
-    selection_box = {{-1, -1}, {1, 1}},
-    lightning_strike_offset = {0, -1},
-    damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2},{0.2, 0.2}}),
-    open_sound = sounds.electric_network_open,
-    close_sound = sounds.electric_network_close,
-    working_sound =
-    {
-      main_sounds =
-      {
-        {
-          sound =
-          {
-            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-charge.ogg",
-            volume = 0.5,
-            audible_distance_modifier = 0.5,
-          },
-          match_volume_to_activity = true,
-          activity_to_volume_modifiers = {offset = 2, inverted = true},
-        },
-        {
-          sound =
-          {
-            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-discharge.ogg",
-            volume = 0.5,
-            audible_distance_modifier = 0.5,
-          },
-          match_volume_to_activity = true,
-          activity_to_volume_modifiers = {offset = 1},
-        }
-      },
-      max_sounds_per_prototype = 3,
-    },
-    chargable_graphics = require("__planetaris-hyarion__.prototypes.entities.big-refraction-ray-collector"),
-    water_reflection =
-    {
-      pictures =
-      {
-        filename = "__planetaris-hyarion__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector-reflection.png",
-        priority = "extra-high",
-        width = 11,
-        height = 30,
-        shift = util.by_pixel(0, 28),
-        variation_count = 1,
-        scale = 1
-      },
-      rotate = false,
-      orientation_to_variation = false
-    },
-      surface_conditions =
-    {
-      {
-        property = "planetaris-crystalization-resistance",
-        min = 50,
-        max = 100,
-      }
-    },
-  },
-{
-    type = "burner-generator",
+    type = "assembling-machine",
     name = "planetaris-refraction-plant",
     icon = "__planetaris-hyarion__/graphics/icons/refraction-plant.png",
     icon_size = 64,
@@ -780,11 +751,14 @@ data:extend({
         {type = "impact",   percent = 100},
     },
 
+    crafting_categories = {"refraction"},
+    crafting_speed = 1,
     heating_energy = "500kW",
-    neighbour_bonus = 1,
-    module_slots = nil,
+    module_slots = 3,
+    allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
 
     collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
+    collision_mask = {layers = {item = true, object = true, player = true, water_tile = true}},
     selection_box = {{-3, -3}, {3, 3}},
     drawing_box_vertical_extension = 1,
     damaged_trigger_effect = hit_effects.entity(),
@@ -799,87 +773,248 @@ data:extend({
       fade_out_ticks = 20
     },
     idle_sound = {filename = "__base__/sound/idle1.ogg"},
+    energy_usage = "350kW",
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 1.8 }
+    },
+    fluid_boxes =
+    {
+        {
+            production_type = "input",
+            pipe_covers = planetaris_fiber_optics_covers_pictures(),
+            volume = 100,
+            pipe_connections = {
+              {direction = defines.direction.west, flow_direction = "input", position = {-2.5, -1.5},  connection_category = "light"},
+              {direction = defines.direction.east, flow_direction = "input", position = {2.5, 1.5},  connection_category = "light"},
+              {direction = defines.direction.north, flow_direction = "input", position = {1.5, -2.5},  connection_category = "light"},
+              {direction = defines.direction.south, flow_direction = "input", position = {-1.5, 2.5},  connection_category = "light"},
+          },
+            --filter = {"refraction-light","pure-light"},
+        },
+        {
+            production_type = "output",
+            pipe_covers = planetaris_fiber_optics_covers_pictures(),
+            volume = 100,
+            pipe_connections = {
+              {direction = defines.direction.west, flow_direction = "output", position = {-2.5, 1.5},  connection_category = "light"},
+              {direction = defines.direction.east, flow_direction = "output", position = {2.5, -1.5},  connection_category = "light"},
+              {direction = defines.direction.north, flow_direction = "output", position = {-1.5, -2.5},  connection_category = "light"},
+              {direction = defines.direction.south, flow_direction = "output", position = {1.5, 2.5},  connection_category = "light"},
+            },
+            --filter = {"refraction-light","pure-light"},
+        },
+    },
+    graphics_set = {
+      animation =
+      {
+        north = {
+          layers =
+          {
+            {
+              filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-working-glow.png",
+              width = 400,
+              height = 450,
+              frame_count = 60,
+              line_length = 8,
+              animation_speed = 1,
+              shift = util.by_pixel(0, -10),
+              scale = 0.5
+            },
+            {
+            filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-connections.png",
+            width = 400,
+            height = 450,
+            repeat_count = 60,
+            shift = util.by_pixel(0, -10),
+            scale = 0.5
+            },
+            {
+              filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
+              width = 700,
+              height = 600,          
+              repeat_count = 60,
+              draw_as_shadow = true,
+              shift = util.by_pixel(0, -10),
+              scale = 0.5
+            },
+          }
+        }
+      },
+      idle_animation =
+      {
+        north = {
+          layers = {
+        {
+        filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-animation-1.png",
+        frame_count = 60,
+        line_length = 8,
+        width = 400,
+        height = 450,
+        animation_speed = 0.5,
+        shift = util.by_pixel(0, -10),
+        scale = 0.5
+        },
+        {
+        filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-connections.png",
+        width = 400,
+        height = 450,
+        repeat_count = 60,
+        shift = util.by_pixel(0, -10),
+        scale = 0.5
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
+          width = 700,
+          height = 600,          
+          repeat_count = 60,
+          draw_as_shadow = true,
+          shift = util.by_pixel(0, -10),
+          scale = 0.5
+        },
+      }}},
+    },
 
-    result_inventory_size = 2,
-    consumption = "10MW",
-    max_power_output = "20MW",
+    icon_draw_specification = {scale = 1.75, shift = {0, 0}},
+    circuit_connector = circuit_connector_definitions["refraction-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+},
+{
+    type = "generator",
+    name = "planetaris-refraction-generator",
+    icon = "__planetaris-hyarion__/graphics/icons/refraction-generator.png",
+    flags = {"placeable-neutral","player-creation"},
+    minable = {mining_time = 0.5, result = "planetaris-refraction-generator"},
+    max_health = 600,
+    corpse = "steam-engine-remnants",
+    dying_explosion = "steam-engine-explosion",
+    alert_icon_shift = util.by_pixel(0, -12),
+    drawing_box_vertical_extension = 1,
+    effectivity = 1,
+    fluid_usage_per_tick = 0.1,
+    maximum_temperature = 500,
+    max_power_output = "15MW",
+    burns_fluid = false,
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 70
+      },
+      {
+        type = "impact",
+        percent = 30
+      }
+    },
+    fast_replaceable_group = nil,
+    collision_box = {{-1.7, -1.7}, {1.7, 1.7}},
+    selection_box = {{-2, -2}, {2, 2}},
+    damaged_trigger_effect = hit_effects.entity(),
+    fluid_box =
+    {
+      volume = 24,
+      pipe_covers = planetaris_fiber_optics_covers_pictures(),
+      pipe_connections =
+      {
+        { flow_direction = "input-output", direction = defines.direction.south, position = { 1.5,  1.5}, connection_category = "light" },
+        { flow_direction = "input-output", direction = defines.direction.east,  position = { 1.5,  1.5}, connection_category = "light" },
+        { flow_direction = "input-output", direction = defines.direction.north, position = {-1.5, -1.5}, connection_category = "light" },
+        { flow_direction = "input-output", direction = defines.direction.west,  position = {-1.5, -1.5}, connection_category = "light" }
+      },
+      filter = "planetaris-pure-light",
+      minimum_temperature = 100.0
+    },
     energy_source =
     {
       type = "electric",
       usage_priority = "secondary-output"
     },
-    burner =
+    vertical_animation =
     {
-      type = "burner",
-      fuel_categories = {"refraction"},
-      effectivity = 1,
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-      light_flicker =
+      animation_speed = 1,
+      layers =
       {
-        color = {0,0,0},
-        minimum_intensity = 0.7,
-        maximum_intensity = 0.95
-      }
-    },
-
-    animation =
-    {
-      north = {
-        layers =
         {
-          {
-            filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-working-glow.png",
-            width = 400,
-            height = 450,
-            frame_count = 60,
-            line_length = 8,
-            animation_speed = 1,
-            shift = util.by_pixel(0, -10),
-            scale = 0.5
-          },
-          {
-            filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
-            width = 700,
-            height = 600,          
-            repeat_count = 60,
-            draw_as_shadow = true,
-            shift = util.by_pixel(0, -10),
-            scale = 0.5
-          },
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-vertical.png",
+          priority = "extra-high",
+          width = 220,
+          height = 290,
+          repeat_count = 60,
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
+          priority = "extra-high",
+          width = 220,
+          height = 290,
+          line_length = 10,
+          lines_per_file = 6,
+          frame_count = 60,
+          draw_as_glow = true,
+          blend_mode = "additive",
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
+          priority = "extra-high",
+          width = 600,
+          height = 400,
+          repeat_count = 60,
+          draw_as_shadow = true,
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
         }
       }
     },
-
-    idle_animation =
-    {
-      north = {
-        layers = {
+    horizontal_animation =
+   {
+      animation_speed = 1,
+      layers =
       {
-      filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-animation-1.png",
-      frame_count = 60,
-      line_length = 8,
-      width = 400,
-      height = 450,
-      animation_speed = 0.5,
-      shift = util.by_pixel(0, -10),
-      scale = 0.5
-      },
-      {
-        filename = "__planetaris-hyarion__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
-        width = 700,
-        height = 600,          
-        repeat_count = 60,
-        draw_as_shadow = true,
-        shift = util.by_pixel(0, -10),
-        scale = 0.5
-      },
-    }}},
-
-    icon_draw_specification = {scale = 1.75, shift = {0, -0.3}},
-    circuit_connector = circuit_connector_definitions["foundry"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
-},
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-horizontal.png",
+          priority = "extra-high",
+          width = 220,
+          height = 290,
+          repeat_count = 60,
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
+          priority = "extra-high",
+          width = 220,
+          height = 290,
+          line_length = 10,
+          lines_per_file = 6,
+          frame_count = 60,
+          draw_as_glow = true,
+          blend_mode = "additive",
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
+        },
+        {
+          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
+          priority = "extra-high",
+          width = 600,
+          height = 400,
+          repeat_count = 60,
+          draw_as_shadow = true,
+          shift = util.by_pixel(0, -22),
+          scale = 0.6
+        }
+      }
+    },
+    impact_category = "metal-large",
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    working_sound = data.raw["lab"]["lab"].working_sound,
+    perceived_performance = {minimum = 0.25, performance_to_activity_rate = 2.0},
+  },
 {
     type = "wall",
     name = "planetaris-beryllium-coating",
@@ -1364,6 +1499,7 @@ data:extend({
     result_inventory_size = 2,
     module_slots = 6,
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
+    effect_receiver = { base_effect = { productivity = 0.5 }},
     energy_usage = "250kW",
     energy_source =
     {

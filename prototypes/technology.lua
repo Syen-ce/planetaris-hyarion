@@ -543,17 +543,62 @@ local merge = lib.merge
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-charged-gem"
+          recipe = "planetaris-refraction-generator"
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-unstable-gem"
+          recipe = "planetaris-charged-fluorite"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-pure-light"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-fluorite"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-fluorite-discharge"
         },
       },
       prerequisites = {"planetaris-crystalization-motor"},
       unit =
       {
         count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          { "electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-unstable-gems",
+      icon = "__planetaris-hyarion__/graphics/technology/unstable-gems.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-unstable-gem"
+        },
+      },
+      prerequisites = {"planetaris-refraction-plant"},
+      unit =
+      {
+        count = 500,
         ingredients =
         {
           {"automation-science-pack", 1},
@@ -657,7 +702,7 @@ local merge = lib.merge
           recipe = "planetaris-beryllium-nitride"
         },
       },
-      prerequisites = {"planetaris-refraction-science-pack","planetaris-particle-manipulation"},
+      prerequisites = {"planetaris-refraction-science-pack","planetaris-particle-manipulation","planetaris-unstable-gems"},
       unit =
       {
         count = 800,
@@ -697,6 +742,10 @@ local merge = lib.merge
         {
           type = "unlock-recipe",
           recipe = "planetaris-refractory-ceramics"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-space-science-pack"
         },
       },
       prerequisites = {"planetaris-beryllium-processing"},
@@ -832,5 +881,74 @@ local merge = lib.merge
         },
       time = 30
     }
+  },
+    {
+    type = "technology",
+    name = "planetaris-simulating-unit-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__planetaris-hyarion__/graphics/technology/simulating-unit-productivity.png"),
+    icon_size = 256,
+    essential = true,
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "planetaris-simulating-unit",
+        change = 0.1
+      },
+    },
+    prerequisites = {"planetaris-refraction-science-pack"},
+    unit =
+    {
+      count_formula = "1.5^L*1000",
+      ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+      time = 60
+    },
+    max_level = 20,
+    upgrade = true
+  },
+      {
+    type = "technology",
+    name = "planetaris-supercapacitor-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__planetaris-hyarion__/graphics/technology/supercapacitor-productivity.png"),
+    icon_size = 256,
+    essential = true,
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "supercapacitor",
+        change = 0.1
+      },
+    },
+    prerequisites = {"planetaris-refraction-science-pack"},
+    unit =
+    {
+      count_formula = "1.5^L*1000",
+      ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+      time = 60
+    },
+    max_level = 20,
+    upgrade = true
   },
   })

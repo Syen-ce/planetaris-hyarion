@@ -43,3 +43,7 @@ data.raw["reactor"]["nuclear-reactor"].surface_conditions = {{
 table.insert(data.raw.lab["lab"].inputs, "planetaris-polishing-science-pack")
 table.insert(data.raw.lab["lab"].inputs, "planetaris-refraction-science-pack")
 
+table.insert(data.raw.technology["promethium-science-pack"].effects, {
+          type = "unlock-recipe",
+          recipe = "planetaris-promethium-science-pack"
+        })
