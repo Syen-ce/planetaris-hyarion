@@ -2,6 +2,7 @@ local effects = require("__core__.lualib.surface-render-parameter-effects")
 local planet_catalogue_hyarion = require("__planetaris-hyarion__/prototypes/planets/procession-catalogue-hyarion")
 local planet_map_gen = require("__planetaris-hyarion__/prototypes/planets/planet_map_gen")
 local planetaris_asteroid_util = require("__planetaris-hyarion__/prototypes/planets/asteroid-spawn-definitions")
+local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
 
 PlanetsLib:extend({
 {
@@ -339,5 +340,21 @@ data:extend({
         asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.fulgora_hyarion),
     },
 })
+
+if data.raw["planet"]["maraxsis"] then
+  data:extend({
+      {
+          type = "space-connection",
+          name = "maraxsis-hyarion",
+          subgroup = "planet-connections",
+          from = "maraxsis",
+          to = "hyarion", 
+          length = 30000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+      }
+  })
+end
 
 PlanetsLib.borrow_music(data.raw["planet"]["fulgora"], data.raw["planet"]["hyarion"])
