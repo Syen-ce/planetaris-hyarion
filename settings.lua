@@ -1,7 +1,3 @@
-data.extend({
-
-})
-
 if (mods["celestial-weather"]) then
 data:extend({
 	{
