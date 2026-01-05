@@ -301,7 +301,7 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
-          {
+    {
       type = "technology",
       name = "planetaris-nanoscale-lens",
       icon = "__planetaris-hyarion__/graphics/technology/nanoscale-lens.png",
@@ -777,7 +777,7 @@ local merge = lib.merge
       localised_description = {"entity-description.planetaris-zero-gravity-accumulator"},
       icon = "__planetaris-hyarion__/graphics/technology/zero-gravity-accumulator.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -855,6 +855,7 @@ local merge = lib.merge
     localised_description = {"entity-description.planetaris-electromagnetic-radar"},
     icon = "__planetaris-hyarion__/graphics/technology/electromagnetic-radar.png",
     icon_size = 256,
+    essential = false,
     effects =
     {
       {
@@ -887,7 +888,7 @@ local merge = lib.merge
     name = "planetaris-simulating-unit-productivity",
     icons = util.technology_icon_constant_recipe_productivity("__planetaris-hyarion__/graphics/technology/simulating-unit-productivity.png"),
     icon_size = 256,
-    essential = true,
+    essential = false,
     effects =
     {
       {
@@ -922,7 +923,7 @@ local merge = lib.merge
     name = "planetaris-supercapacitor-productivity",
     icons = util.technology_icon_constant_recipe_productivity("__planetaris-hyarion__/graphics/technology/supercapacitor-productivity.png"),
     icon_size = 256,
-    essential = true,
+    essential = false,
     effects =
     {
       {

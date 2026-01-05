@@ -39,3 +39,15 @@ data:extend({
 	}
 })
 end
+
+if (mods["TechnologyPriceMultiplier"]) then
+data:extend({
+	{
+		type = "bool-setting",
+		name = "ignore-hyarion-tech-price-exponent",
+		setting_type = "startup",
+		default_value = true,
+		order = "b-a",
+	}
+})
+end
