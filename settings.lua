@@ -1,3 +1,7 @@
+data.extend({
+
+})
+
 if (mods["celestial-weather"]) then
 data:extend({
 	{
@@ -36,6 +40,18 @@ data:extend({
 		setting_type = "startup",
 		default_value = true,
 		order = "c-e",
+	}
+})
+end
+
+if (mods["TechnologyPriceMultiplier"]) then
+data:extend({
+	{
+		type = "bool-setting",
+		name = "ignore-hyarion-tech-price-exponent",
+		setting_type = "startup",
+		default_value = true,
+		order = "b-a",
 	}
 })
 end
