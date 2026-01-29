@@ -1,4 +1,4 @@
-require("__base__/prototypes/tile/tiles")
+--require("__base__/prototypes/tile/tiles")
 require("__space-age__/prototypes/tile/tiles-vulcanus")
 require("prototypes/planets/planet_hyarion_map_gen")
 
