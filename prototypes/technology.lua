@@ -42,7 +42,7 @@ local merge = lib.merge
       name = "planetaris-quartz-furnace",
       icon = "__planetaris-hyarion__/graphics/technology/quartz-furnace.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -61,7 +61,7 @@ local merge = lib.merge
       name = "planetaris-metallic-ore-processing",
       icon = "__planetaris-hyarion__/graphics/technology/quartz-furnace.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -96,7 +96,7 @@ local merge = lib.merge
       name = "planetaris-polishing",
       icon = "__planetaris-hyarion__/graphics/technology/polishing.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -154,7 +154,7 @@ local merge = lib.merge
       name = "planetaris-geode-processing",
       icon = "__planetaris-hyarion__/graphics/technology/sapphire-tech.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -209,7 +209,7 @@ local merge = lib.merge
       name = "planetaris-diamond-polishing",
       icon = "__planetaris-hyarion__/graphics/technology/diamond-tech.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -244,7 +244,7 @@ local merge = lib.merge
       name = "planetaris-big-refraction-ray-collector",
       icon = "__planetaris-hyarion__/graphics/technology/big-refraction-ray-collector.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -275,7 +275,7 @@ local merge = lib.merge
       name = "planetaris-advanced-raw-quartz",
       icon = "__planetaris-arig__/graphics/technology/quartz.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -306,7 +306,7 @@ local merge = lib.merge
       name = "planetaris-nanoscale-lens",
       icon = "__planetaris-hyarion__/graphics/technology/nanoscale-lens.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -337,7 +337,7 @@ local merge = lib.merge
       name = "planetaris-ruby-laser",
       icon = "__planetaris-hyarion__/graphics/technology/ruby-laser.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -368,7 +368,7 @@ local merge = lib.merge
       name = "planetaris-simulating-unit",
       icon = "__planetaris-arig__/graphics/technology/simulating-unit.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -466,7 +466,7 @@ local merge = lib.merge
       localised_description = {"entity-description.planetaris-ruby-laser-turret"},
       icon = "__planetaris-hyarion__/graphics/technology/ruby-laser-turret.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -502,7 +502,7 @@ local merge = lib.merge
       name = "planetaris-crystalization-motor",
       icon = "__planetaris-hyarion__/graphics/technology/crystalization-motor.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -535,7 +535,7 @@ local merge = lib.merge
       name = "planetaris-refraction-plant",
       icon = "__planetaris-hyarion__/graphics/technology/refraction-plant.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -588,7 +588,7 @@ local merge = lib.merge
       name = "planetaris-unstable-gems",
       icon = "__planetaris-hyarion__/graphics/technology/unstable-gems.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -621,7 +621,7 @@ local merge = lib.merge
       name = "planetaris-particle-manipulation",
       icon = "__planetaris-hyarion__/graphics/technology/particle-manipulator.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -687,7 +687,7 @@ local merge = lib.merge
       name = "planetaris-beryllium-processing",
       icon = "__planetaris-hyarion__/graphics/technology/beryllium-processing.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -811,7 +811,7 @@ local merge = lib.merge
       name = "planetaris-bismuth-processing",
       icon = "__planetaris-hyarion__/graphics/technology/bismuth-processing.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",

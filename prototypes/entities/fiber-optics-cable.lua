@@ -353,7 +353,7 @@ data.extend({
     fluid_box =
     {
       volume = 2,
-      pipe_covers = planetaris_fiber_optics_covers_pictures(), -- in case a real pipe is connected to a ghost
+      pipe_covers = planetaris_fiber_optics_covers_pictures(),
       pipe_connections =
       {
         { direction = defines.direction.north, position = {0, 0}, connection_category = "light" },
@@ -362,7 +362,7 @@ data.extend({
         { direction = defines.direction.west,  position = {0, 0}, connection_category = "light" }
       },
       hide_connection_info = true,
-      max_pipeline_extent = 100,
+      max_pipeline_extent = 1000,
     },
     filter = {"refraction-light","pure-light"},
     pictures = planetaris_fiber_optics_pictures(),

@@ -594,8 +594,6 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-fluorite",
-      localised_name = {"item-name.planetaris-charged-fluorite"},
-      localised_description = {"item-description.planetaris-charged-fluorite"},
       category = "polishing",
       energy_required = 10,
       auto_recycle = false,
@@ -614,8 +612,6 @@ data:extend(
       type = "recipe",
       name = "planetaris-charged-fluorite",
       icons = {{icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=true}},
-      localised_name = {"item-name.planetaris-charged-fluorite"},
-      localised_description = {"item-description.planetaris-charged-fluorite"},
       category = "refraction",
       energy_required = 5,
       auto_recycle = false,

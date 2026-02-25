@@ -1,11 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+Date: 2026-02-25
+  Changes:
+    - Extended fiber optics cable maximum extension (100 -> 1000)
+  Graphics:
+    - Fixed error in beryl icon having a small shadow
+  Sounds:
+    - Added new sounds to Hyarion surface
+    - Added new sounds to light refraction rays
+    - Added new sounds to geodes
+  Bugfixes:
+    - Fixed most technologies mark as essential
+    - Fixed Hyarion tips and tricks breaking Maraxsis page order
+    - Fixed locale error with charge fluorite recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.2.3
-Date: 2025-01-29
+Date: 2026-01-29
   Bugfixes:
     - Fixed concrete and stone brick nor freezing in Aquilo
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
-Date: 2025-01-05
+Date: 2026-01-05
   Compatibility:
     - Added compatibility with Technology price multiplier mod and added setting to enable exponential price
 ---------------------------------------------------------------------------------------------------
