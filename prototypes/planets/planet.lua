@@ -232,6 +232,18 @@ PlanetsLib:extend({
                 delay_mean_seconds = 15,
                 delay_variance_seconds = 9,
               },
+              {
+              sound =
+                {
+                  variations = sound_variations("__planetaris-hyarion__/sound/shine", 9, 0.8),
+                  advanced_volume_control =
+                  {
+                    fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 50.0}, to = {1.5, 100.0}}},
+                  }
+                },
+                delay_mean_seconds = 10,
+                delay_variance_seconds = 5
+            },
             }
           },
         asteroid_spawn_influence = 1,

@@ -225,7 +225,7 @@ data:extend ({
     category = "space-age",
     tag = "[planet=hyarion]",
     indent = 0,
-    order = "e-a-b",
+    order = "p-hyarion-a",
     trigger = {
         type = "research",
         technology = "planet-discovery-hyarion"
@@ -247,7 +247,7 @@ data:extend ({
     category = "space-age",
     tag = "[item=planetaris-charged-fluorite]",
     indent = 1,
-    order = "e-a-b-a",
+    order = "p-hyarion-c",
     trigger = {
         type = "research",
         technology = "planetaris-refraction-plant"
@@ -269,7 +269,7 @@ data:extend ({
     category = "space-age",
     tag = "[item=planetaris-unstable-gem]",
     indent = 1,
-    order = "e-a-b-b",
+    order = "p-hyarion-d",
     trigger = {
         type = "research",
         technology = "planetaris-unstable-gems"

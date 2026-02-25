@@ -66,6 +66,19 @@ local function resource(resource_parameters, autoplace_parameters)
   }
 end
 
+local geode_ambient_sounds = {
+              sound =
+                {
+                  variations = sound_variations("__planetaris-hyarion__/sound/geode", 4, 0.8),
+                  advanced_volume_control =
+                  {
+                    fades = {fade_in = {curve_type = "cosine", from = {control = 0.5, volume_percentage = 50.0}, to = {1.5, 100.0}}},
+                  }
+                },
+                delay_mean_seconds = 10,
+                delay_variance_seconds = 5
+        }
+
 data:extend ({
 
     resource(
@@ -231,6 +244,7 @@ data:extend ({
             }
           }
         },
+        ambient_sounds = geode_ambient_sounds,
         map_color = {0, 250, 0},
         map_grid = false
       },
@@ -328,6 +342,7 @@ data:extend ({
             }
           }
         },
+        ambient_sounds = geode_ambient_sounds,
         map_color = {250, 0, 0},
         map_grid = false
       },
@@ -425,6 +440,7 @@ data:extend ({
             }
           }
         },
+        ambient_sounds = geode_ambient_sounds,
         map_color = {0, 0, 250},
         map_grid = false
       },

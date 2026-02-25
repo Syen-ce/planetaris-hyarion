@@ -19,7 +19,7 @@ data:extend({
     source_variance = {30, 6},
     sound =
     {
-      variations = sound_variations_with_volume_variations("__space-age__/sound/explosions/lightning-effect", 5, 0.25, 0.8),
+      variations = sound_variations_with_volume_variations("__planetaris-hyarion__/sound/refraction-light-effect", 5, 0.25, 0.8),
       advanced_volume_control =
       {
         fades = {fade_in = {curve_type = "S-curve", from = {control = 0.3, volume_percentage = 50.0}, to = {2.5, 100.0 }}},
