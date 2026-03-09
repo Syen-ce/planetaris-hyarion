@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 2026-03-09
+  Features:
+    - Added 5 new menu simulations
+  Changes:
+    - Added polishing and refraction science packs to Aquilo discovery and Promethium science pack, this can be disable by 2 new settings.
+  Compatibility:
+    - Krastorio 2 SO, Added custom tech cards to hyarion science packs, Added k2so items to hyarion recipes
+  Bugfixes:
+    - Fixed assembling machine 4 missing heating energy value
+---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 2026-02-25
   Changes:

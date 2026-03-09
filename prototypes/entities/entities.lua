@@ -196,6 +196,7 @@ data:extend({
   flags = {"placeable-neutral","placeable-player", "player-creation"},
   minable = {mining_time = 0.2, result = "planetaris-assembling-machine-4"},
   max_health = 400,
+  heating_energy = "500kW",
   corpse = "planetaris-assembling-machine-4-remnants",
   dying_explosion = "planetaris-assembling-machine-4-explosion",
   icon_draw_specification = {shift = {0, -0.3}},
@@ -294,6 +295,124 @@ data:extend({
 
 data:extend({
 {
+    type = "container",
+    name = "planetaris-logo-white",
+    icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+    flags = {"placeable-neutral", "player-creation"},
+    hidden = true,
+    minable = {mining_time = 0.1},
+    max_health = 666,
+    collision_box = {{-4.5+0.15, -1+0.15}, {4.5-0.15, 1-0.15}},
+    selection_box = {{-4.5, -1}, {4.5, 1}},
+    inventory_size = 1,
+    picture =
+    {
+      filename = "__planetaris-hyarion__/graphics/entity/planetaris-logo/planetaris-logo-white.png",
+      priority = "very-low",
+      width = 2164,
+      height = 295,
+      shift = util.by_pixel(5, -8),
+      scale = 0.20
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "physical",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "impact",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "explosion",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "acid",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "laser",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "electric",
+        decrease = 0,
+        percent = 100
+      },
+    },
+  },
+  {
+    type = "container",
+    name = "planetaris-factorio-logo-small",
+    icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+    flags = {"placeable-neutral", "player-creation"},
+    hidden = true,
+    minable = {mining_time = 0.1},
+    max_health = 666,
+    collision_box = {{-4.5+0.15, -1+0.15}, {4.5-0.15, 1-0.15}},
+    selection_box = {{-4.5, -1}, {4.5, 1}},
+    inventory_size = 1,
+    picture =
+    {
+      filename = "__base__/graphics/entity/factorio-logo/factorio-logo-16tiles.png",
+      priority = "very-low",
+      width = 1536,
+      height = 512,
+      shift = util.by_pixel(1, 18),
+      scale = 0.33
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "physical",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "impact",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "explosion",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "acid",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "laser",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "electric",
+        decrease = 0,
+        percent = 100
+      },
+    },
+  },
+{
     type = "furnace",
     name = "planetaris-quartz-furnace",
     icon = "__planetaris-hyarion__/graphics/icons/quartz-furnace.png",
@@ -304,6 +423,7 @@ data:extend({
     circuit_wire_max_distance = furnace_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["stone-furnace"],
     max_health = 200,
+    heating_energy = "500kW",
     corpse = "planetaris-quartz-furnace-remnants",
     dying_explosion = "stone-furnace-explosion",
     repair_sound = sounds.manual_repair,
@@ -483,6 +603,7 @@ data:extend({
     circuit_wire_max_distance = furnace_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["stone-furnace"],
     max_health = 50,
+    heating_energy = "500kW",
     corpse = "planetaris-quartz-furnace-remnants",
     dying_explosion = "stone-furnace-explosion",
     repair_sound = sounds.manual_repair,
@@ -661,6 +782,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "planetaris-refraction-ray-collector"},
     max_health = 200,
+    heating_energy = "500kW",
     corpse = "lightning-rod-remnants",
     dying_explosion = "medium-electric-pole-explosion",
     factoriopedia_simulation = simulations.factoriopedia_refraction_ray_collector,
@@ -891,6 +1013,7 @@ data:extend({
     corpse = "steam-engine-remnants",
     dying_explosion = "steam-engine-explosion",
     alert_icon_shift = util.by_pixel(0, -12),
+    heating_energy = "500kW",
     drawing_box_vertical_extension = 1,
     effectivity = 1,
     fluid_usage_per_tick = 0.1,
@@ -1026,6 +1149,7 @@ data:extend({
     minable = {mining_time = 0.4, result = "planetaris-beryllium-coating"},
     fast_replaceable_group = nil,
     max_health = 650,
+    heating_energy = "500kW",
     repair_speed_modifier = 3,
     corpse = "planetaris-beryllium-coating-remnants",
     dying_explosion = "wall-explosion",
@@ -1467,7 +1591,7 @@ data:extend({
         {type = "fire",     percent = 20},
         {type = "impact",   percent = 50},
     },
-    heating_energy = "800kW",
+    heating_energy = "500kW",
 
     collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -1686,6 +1810,7 @@ data:extend({
     minable = {mining_time = 0.1, result = "planetaris-zero-grav-accumulator"},
     fast_replaceable_group = "accumulator",
     max_health = 450,
+    heating_energy = "500kW",
     corpse = "planetaris-zero-grav-accumulator-remnants",
     dying_explosion = "accumulator-explosion",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
@@ -1768,6 +1893,7 @@ data:extend({
     minable = {mining_time = 0.1, result = "planetaris-electromagnetic-radar"},
     fast_replaceable_group = "radar",
     max_health = 450,
+    heating_energy = "500kW",
     corpse = "radar-remnants",
     dying_explosion = "radar-explosion",
     resistances =

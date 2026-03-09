@@ -1,3 +1,20 @@
+data.extend({
+    {
+		type = "bool-setting",
+		name = "hyarion-packs-for-aquilo",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-b-a",
+	},
+	{
+		type = "bool-setting",
+		name = "hyarion-packs-for-promethium",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-b-b",
+	}
+})
+
 if (mods["celestial-weather"]) then
 data:extend({
 	{

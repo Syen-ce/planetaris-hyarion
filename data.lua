@@ -47,3 +47,15 @@ require("compat.msppr")
 require("compat.alloy-smelting")
 require("compat.technology-price-multiplier")
 require("compat.wood-industry")
+
+local replace_base_game_simulations = false
+local planetaris_menu_simulations = require("__planetaris-hyarion__/menu-simulations/menu-simulations")
+if not data.raw["utility-constants"]["default"].main_menu_simulations or replace_base_game_simulations then
+  data.raw["utility-constants"]["default"].main_menu_simulations = {}
+end
+local main_menu_simulations = data.raw["utility-constants"]["default"].main_menu_simulations
+main_menu_simulations.hyarion_cable_madness = planetaris_menu_simulations.hyarion_cable_madness
+main_menu_simulations.hyarion_metallic_and_emerald = planetaris_menu_simulations.hyarion_metallic_and_emerald
+main_menu_simulations.hyarion_hyarion_polishing = planetaris_menu_simulations.hyarion_hyarion_polishing
+main_menu_simulations.hyarion_hyarion_quartzlands = planetaris_menu_simulations.hyarion_hyarion_quartzlands
+main_menu_simulations.tellus_mycelia_hyarion_refraction_powernutrients = planetaris_menu_simulations.hyarion_refraction_power
