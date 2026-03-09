@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.5
 Date: 2026-03-09
+  Features:
+    - Added 5 new menu simulations
   Changes:
     - Added polishing and refraction science packs to Aquilo discovery and Promethium science pack, this can be disable by 2 new settings.
   Compatibility:
