@@ -38,7 +38,7 @@ data.extend({
 	{
 		type = "recipe",
 		name = "kr-polishing-research-data",
-        category = "electromagnetics",
+        category = "polishing",
         surface_conditions =
         {
             {
@@ -97,7 +97,7 @@ data.extend({
     {
     type = "recipe",
     name = "kr-refraction-research-data",
-    category = "planetaris-pathologics",
+    category = "electromagnetics",
     emissions_multiplier = 5,
     surface_conditions =
     {
@@ -110,9 +110,10 @@ data.extend({
     enabled = false,
     energy_required = 10,
     ingredients = {
-      {type = "item",  name = "planetaris-parasite-nest",      amount = 1},
-      {type = "item",  name = "planetaris-carbolyte-bacteria", amount = 2},
-      {type = "item",  name = "planetaris-fulgoran-bacteria",  amount = 2},
+      {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+      {type = "item", name = "planetaris-simulating-unit", amount = 3},
+      {type = "item", name = "planetaris-nanoscale-lens", amount = 3},
+      {type = "item", name = "planetaris-ruby-laser", amount = 5},
     },
     results =
     {
