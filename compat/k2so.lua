@@ -51,10 +51,10 @@ data.extend({
         energy_required = 10,
         ingredients =
         {
-            {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
-            {type = "item", name = "planetaris-simulating-unit", amount = 3},
-            {type = "item", name = "planetaris-nanoscale-lens", amount = 3},
-            {type = "item", name = "planetaris-ruby-laser", amount = 5},
+            {type = "fluid", name = "planetaris-polishing-compound", amount = 8},
+            {type = "item", name = "planetaris-polished-quartz", amount = 5},
+            {type = "item", name = "planetaris-polished-ruby", amount = 5},
+            {type = "item", name = "planetaris-polished-sapphire", amount = 5},
         },
         results =
         {
