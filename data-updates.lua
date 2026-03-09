@@ -1,4 +1,6 @@
 local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-masks")
+require("PlanetarisLib")
+
 
 -- Set the next_upgrade property to point to assembling-machine-4
 
@@ -47,3 +49,24 @@ table.insert(data.raw.technology["promethium-science-pack"].effects, {
           type = "unlock-recipe",
           recipe = "planetaris-promethium-science-pack"
         })
+
+
+if settings.startup["hyarion-packs-for-aquilo"].value == true then
+    PlanetarisLib.add_tech_ingredient_if_missing("planet-discovery-aquilo", "planetaris-polishing-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("planet-discovery-aquilo", "planetaris-polishing-science-pack")
+
+    PlanetarisLib.add_tech_ingredient_if_missing("planet-discovery-aquilo", "planetaris-refraction-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("planet-discovery-aquilo", "planetaris-refraction-science-pack")
+end
+
+if settings.startup["hyarion-packs-for-promethium"].value == true then
+    PlanetarisLib.add_tech_ingredient_if_missing("promethium-science-pack", "planetaris-polishing-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("promethium-science-pack", "planetaris-polishing-science-pack")
+    PlanetarisLib.add_tech_ingredient_if_missing("research-productivity", "planetaris-polishing-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("research-productivity", "planetaris-polishing-science-pack")
+
+    PlanetarisLib.add_tech_ingredient_if_missing("promethium-science-pack", "planetaris-refraction-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("promethium-science-pack", "planetaris-refraction-science-pack")
+    PlanetarisLib.add_tech_ingredient_if_missing("research-productivity", "planetaris-refraction-science-pack")
+    PlanetarisLib.add_tech_prerequisite_if_missing("research-productivity", "planetaris-refraction-science-pack")
+end
