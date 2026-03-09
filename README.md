@@ -1,5 +1,6 @@
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/Mu7zkD7THf)
 [![foundrygg.com](https://img.shields.io/badge/foundrygg-4a1402?style=for-the-badge&logo=vercel&logoColor=white)](https://foundrygg.com)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/syen_ce)
 
 ![Alt text](https://raw.githubusercontent.com/Syen-ce/planetaris-factorio-images/refs/heads/main/hyarion-title.png)
 
