@@ -183,3 +183,5 @@ data.extend({
       crafting_machine_tint = {primary = {0.57, 0.55, 0.969, 1}, secondary = {0.57, 0.55, 0.969, 1}},
     },
 })
+
+data_util.add_recipe_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-sifting")
