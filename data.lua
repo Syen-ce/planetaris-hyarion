@@ -47,6 +47,7 @@ require("compat.msppr")
 require("compat.alloy-smelting")
 require("compat.technology-price-multiplier")
 require("compat.wood-industry")
+require("compat.k2so")
 
 local replace_base_game_simulations = false
 local planetaris_menu_simulations = require("__planetaris-hyarion__/menu-simulations/menu-simulations")
