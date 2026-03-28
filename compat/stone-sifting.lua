@@ -1,4 +1,6 @@
 if mods["crushing-industry"] or mods["aai-industry"] then
+
+  if mods["planetaris-arig"] then
     data.extend({
     {
       type = "recipe",
@@ -27,6 +29,41 @@ if mods["crushing-industry"] or mods["aai-industry"] then
       )
 
     })
+
+  else
+
+      data.extend({
+    {
+      type = "recipe",
+      name = "planetaris-stone-metallic-separation",
+      icon = "__planetaris-hyarion__/graphics/compat/metallic-stone-sifting.png",
+      category = "chemistry",
+      subgroup = "hyarion-basic-processes",
+      order = "a-a-c-b",
+      energy_required = 10,
+      enabled = false,
+      auto_recycle = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-metallic-ore", amount = 3},
+      },
+      results = {
+        {type="item", name="stone", amount=5}
+      }
+    },
+
+    table.insert(data.raw["technology"]["planetaris-metallic-ore-processing"].effects,
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-stone-metallic-separation"
+        }
+      )
+
+    })
+
+  end
+
+---------------
 
 local planetaris_metallic_smelting = data.raw["recipe"]["planetaris-metallic-smelting"].results
 table.insert(planetaris_metallic_smelting,

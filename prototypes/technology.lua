@@ -19,10 +19,10 @@ local merge = lib.merge
         }
       },
       prerequisites = {
-        "planetaris-compression-science",
+        "electromagnetic-science-pack",
       },
       unit = {
-        count = 8000,
+        count = 1000,
         ingredients = {
           {"automation-science-pack", 1},
           {"logistic-science-pack", 1},
@@ -31,7 +31,6 @@ local merge = lib.merge
           {"metallurgic-science-pack", 1},
           {"agricultural-science-pack", 1},
           {"electromagnetic-science-pack", 1},
-          {"planetaris-compression-science-pack", 1}
         },
         time = 30,
       },
@@ -73,11 +72,11 @@ local merge = lib.merge
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-iron-metallic-sifting"
+          recipe = "planetaris-iron-metallic-separation"
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-copper-metallic-sifting"
+          recipe = "planetaris-copper-metallic-separation"
         },
         {
           type = "unlock-recipe",
@@ -213,6 +212,10 @@ local merge = lib.merge
       effects = {
         {
           type = "unlock-recipe",
+          recipe = "planetaris-raw-diamond"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "planetaris-polished-diamond"
         },
         {
@@ -220,7 +223,7 @@ local merge = lib.merge
           recipe = "planetaris-fiber-optics-cable"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-raw-diamond-production"},
+      prerequisites = {"planetaris-polishing-science-pack"},
       unit =
       {
         count = 1500,
@@ -232,14 +235,13 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"metallurgic-science-pack", 1},
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 120
       },
       order = "e-b[hyarion]",
     },
-        {
+    {
       type = "technology",
       name = "planetaris-big-refraction-ray-collector",
       icon = "__planetaris-hyarion__/graphics/technology/big-refraction-ray-collector.png",
@@ -263,7 +265,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -273,7 +274,7 @@ local merge = lib.merge
           {
       type = "technology",
       name = "planetaris-advanced-raw-quartz",
-      icon = "__planetaris-arig__/graphics/technology/quartz.png",
+      icon = "__planetaris-hyarion__/graphics/technology/quartz.png",
       icon_size = 256,
       essential = false,
       effects = {
@@ -294,7 +295,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -325,7 +325,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -356,7 +355,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -366,7 +364,7 @@ local merge = lib.merge
       {
       type = "technology",
       name = "planetaris-simulating-unit",
-      icon = "__planetaris-arig__/graphics/technology/simulating-unit.png",
+      icon = "__planetaris-hyarion__/graphics/technology/simulating-unit.png",
       icon_size = 256,
       essential = false,
       effects = {
@@ -375,7 +373,7 @@ local merge = lib.merge
           recipe = "planetaris-simulating-unit"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetaris-diamond-polishing"},
+      prerequisites = {"planetaris-polishing-science-pack", "planetaris-diamond-polishing"},
       unit =
       {
         count = 800,
@@ -387,7 +385,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 120
@@ -408,7 +405,7 @@ local merge = lib.merge
             recipe = "planetaris-assembling-machine-4"
           }
         },
-        prerequisites = {"planetaris-simulating-unit","automation-3","planetaris-heavy-glass"},
+        prerequisites = {"planetaris-simulating-unit","automation-3"},
         unit =
         {
           count = 5000,
@@ -420,7 +417,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           },
           time = 120
@@ -452,7 +448,6 @@ local merge = lib.merge
           { "metallurgic-science-pack", 1 },
           { "agricultural-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -489,7 +484,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -522,7 +516,6 @@ local merge = lib.merge
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -575,7 +568,6 @@ local merge = lib.merge
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -608,7 +600,6 @@ local merge = lib.merge
           {"space-science-pack", 1},
           { "metallurgic-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -674,7 +665,6 @@ local merge = lib.merge
           { "metallurgic-science-pack", 1 },
           { "agricultural-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -716,7 +706,6 @@ local merge = lib.merge
           { "metallurgic-science-pack", 1 },
           { "agricultural-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -762,7 +751,6 @@ local merge = lib.merge
           {"metallurgic-science-pack", 1 },
           {"agricultural-science-pack", 1 },
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -798,7 +786,6 @@ local merge = lib.merge
           {"metallurgic-science-pack", 1 },
           {"agricultural-science-pack", 1 },
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -840,7 +827,6 @@ local merge = lib.merge
           {"metallurgic-science-pack", 1 },
           {"agricultural-science-pack", 1 },
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -876,7 +862,6 @@ local merge = lib.merge
           {"metallurgic-science-pack", 1 },
           {"agricultural-science-pack", 1 },
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },
@@ -909,7 +894,6 @@ local merge = lib.merge
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"electromagnetic-science-pack", 1 },
-          {"planetaris-compression-science-pack", 1},
           {"planetaris-polishing-science-pack", 1},
           {"planetaris-refraction-science-pack", 1},
         },

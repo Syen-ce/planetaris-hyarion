@@ -38,7 +38,7 @@ table.insert(planetaris_metallic_smelting,
         {
         type = "recipe",
         name = "planetaris-metallic-lead-sifting",
-        category = "sifting",
+        category = "chemistry",
         subgroup = "hyarion-basic-processes",
         order = "a-a-d",
         enabled = false,
@@ -62,3 +62,7 @@ table.insert(planetaris_metallic_smelting,
           recipe = "planetaris-metallic-lead-sifting"
         }
       )
+
+if mods["planetaris-arig"] then
+  data.raw.recipe["planetaris-metallic-lead-sifting"].category = "sifting"
+end
