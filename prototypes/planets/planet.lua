@@ -302,7 +302,7 @@ PlanetsLib:extend({
             {
               noise_texture =
               {
-                filename = "__planetaris-arig__/graphics/terrain/arig-tint-noise.png",
+                filename = "__planetaris-hyarion__/graphics/terrain/hyarion-tint-noise.png",
                 size = 4096
               },
       
@@ -331,14 +331,14 @@ PlanetsLib:extend({
 data:extend({
     {
         type = "space-connection",
-        name = "arig-hyarion",
+        name = "nauvis-hyarion",
         subgroup = "planet-connections",
-        from = "arig",
+        from = "nauvis",
         to = "hyarion", 
         length = 30000,
         icon_size = 64,
         order = "d-c",
-        asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.arig_hyarion),
+        asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.fulgora_hyarion),
     },
     {
         type = "space-connection",
@@ -352,6 +352,24 @@ data:extend({
         asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.fulgora_hyarion),
     },
 })
+
+if data.raw["planet"]["arig"] then
+  data:extend({
+      {
+          type = "space-connection",
+          name = "arig-hyarion",
+          subgroup = "planet-connections",
+          from = "arig",
+          to = "hyarion", 
+          length = 30000,
+          icon_size = 64,
+          order = "d-c",
+          asteroid_spawn_definitions = planetaris_asteroid_util.spawn_definitions(planetaris_asteroid_util.arig_hyarion),
+      }
+  })
+
+  data.raw["space-connection"]["nauvis-hyarion"] = nil
+end
 
 if data.raw["planet"]["maraxsis"] then
   data:extend({

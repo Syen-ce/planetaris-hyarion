@@ -156,6 +156,7 @@ PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-bismuth-transistor", 
 
 -- Add rare ores to the production
 
+if mods["planetaris-arig"] then
 data.extend({
 {
       type = "recipe",
@@ -185,3 +186,36 @@ data.extend({
 })
 
 data_util.add_recipe_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-sifting")
+
+else
+data.extend({
+    {
+      type = "recipe",
+      name = "planetaris-rare-ore-metallic-separation",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/metallic-ore.png", draw_background=false},
+        {icon="__Krastorio2Assets__/icons/items/rare-metal-ore.png", shift={12, 12}, scale=0.5},
+      },
+      icon_size = 64,
+      category = "chemistry",
+      subgroup = "hyarion-basic-processes",
+      order = "a-a-c",
+      energy_required = 10,
+      enabled = false,
+      auto_recycle = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-metallic-ore", amount = 5},
+      },
+      results = {
+        {type="item", name="kr-rare-metal-ore", amount=6},
+      },
+
+      allow_productivity = true,
+      crafting_machine_tint = {primary = {0.57, 0.55, 0.969, 1}, secondary = {0.57, 0.55, 0.969, 1}},
+    }
+})
+
+data_util.add_recipe_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-separation")
+
+end

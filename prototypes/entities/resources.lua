@@ -232,7 +232,7 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-arig__/graphics/entity/heavy-oil/oil-smoke-inner.png",
+              filename = "__planetaris-hyarion__/graphics/entity/smoke/oil-smoke-inner.png",
               frame_count = 47,
               line_length = 16,
               width = 40,
@@ -330,7 +330,7 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-arig__/graphics/entity/heavy-oil/oil-smoke-inner.png",
+              filename = "__planetaris-hyarion__/graphics/entity/smoke/oil-smoke-inner.png",
               frame_count = 47,
               line_length = 16,
               width = 40,
@@ -428,7 +428,7 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-arig__/graphics/entity/heavy-oil/oil-smoke-inner.png",
+              filename = "__planetaris-hyarion__/graphics/entity/smoke/oil-smoke-inner.png",
               frame_count = 47,
               line_length = 16,
               width = 40,

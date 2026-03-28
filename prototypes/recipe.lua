@@ -74,7 +74,7 @@ data:extend(
         {type = "item", name = "planetaris-polished-quartz", amount = 10},
         {type = "item", name = "steel-plate", amount = 10},
         {type = "item", name = "electronic-circuit", amount = 5},
-        {type = "item", name = "planetaris-heavy-glass", amount = 2},
+        {type = "item", name = "plastic-bar", amount = 2},
       },
       results = {{type="item", name="planetaris-big-refraction-ray-collector", amount=1}},
       allow_productivity = false,
@@ -168,10 +168,10 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "planetaris-iron-metallic-sifting",
+      name = "planetaris-iron-metallic-separation",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-iron-sifting.png",
       icon_size = 64,
-      category = "sifting",
+      category = "chemistry",
       subgroup = "hyarion-basic-processes",
       order = "a-a-b",
       energy_required = 10,
@@ -190,10 +190,10 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "planetaris-copper-metallic-sifting",
+      name = "planetaris-copper-metallic-separation",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-copper-sifting.png",
       icon_size = 64,
-      category = "sifting",
+      category = "chemistry",
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
       energy_required = 10,
@@ -210,7 +210,32 @@ data:extend(
       allow_productivity = true,
       crafting_machine_tint = {primary = {1, 0.671, 0.208, 1}, secondary = {1, 0.671, 0.208, 1}},
     },
+  })
+    --- RAW
+if not mods["planetaris-arig"] then
+data:extend(
+{
+    {
+      type = "recipe",
+      name = "planetaris-raw-diamond",
+      category = "polishing",
+      auto_recycle = false,
+      enabled = false,
+      energy_required = 2,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-raw-quartz", amount = 2},
+        {type = "fluid", name = "petroleum-gas", amount = 20},
+        {type = "item", name = "carbon", amount = 2},
+      },
+      results = {{type="item", name="planetaris-raw-diamond", amount=1}},
+      allow_productivity = true
+    }
+  })
+end
 
+data:extend(
+{
     --- Polishing
 
     {
@@ -331,7 +356,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-advanced-raw-quartz",
-    category = "compressing",
+    category = "chemistry",
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
@@ -339,7 +364,7 @@ data:extend(
     {
       {type = "fluid", name = "steam", amount = 10},
       {type = "fluid", name = "light-oil", amount = 10},
-      {type = "item", name = "planetaris-sandstone-brick", amount = 1},
+      {type = "item", name = "concrete", amount = 1},
       {type = "item", name = "coal", amount = 1},
     },
     results = {{type="item", name="planetaris-raw-quartz", amount=2}},
@@ -552,7 +577,7 @@ data:extend(
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 15},
-        {type = "item", name = "planetaris-glass-panel", amount = 1},
+        {type = "item", name = "tungsten-carbide", amount = 1},
         {type = "item", name = "planetaris-polished-diamond", amount = 1},
       },
       results = {{type="item", name="planetaris-nanoscale-lens", amount=1}},
@@ -569,7 +594,7 @@ data:extend(
         {type = "item", name = "steel-plate", amount = 5},
         {type = "item", name = "planetaris-polished-quartz", amount = 2},
         {type = "item", name = "planetaris-polished-ruby", amount = 8},
-        {type = "item", name = "planetaris-heavy-glass", amount = 2},
+        {type = "item", name = "tungsten-plate", amount = 2},
       },
       results = {{type="item", name="planetaris-ruby-laser", amount=1}},
       allow_productivity = true,
@@ -695,7 +720,7 @@ data:extend(
       {type = "item", name = "processing-unit", amount = 1},
       {type = "item", name = "supercapacitor", amount = 1},
       {type = "item", name = "planetaris-fiber-optics-cable", amount = 2},
-      {type = "item", name = "planetaris-silica", amount = 5},
+      {type = "item", name = "tungsten-carbide", amount = 5},
     },
     results = {{type="item", name="planetaris-simulating-unit", amount=1}},
     allow_productivity = true
@@ -775,7 +800,7 @@ data:extend(
     },
     ingredients =
     {
-        {type = "item", name = "planetaris-heavy-glass", amount = 50},
+        {type = "item", name = "tungsten-plate", amount = 50},
         {type = "item", name = "holmium-plate", amount = 25},
         {type = "item", name = "planetaris-nanoscale-lens", amount = 25},
         {type = "item", name = "planetaris-simulating-unit", amount = 10},
@@ -999,7 +1024,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-refractory-ceramics",
-    category = "compressing",
+    category = "electromagnetics",
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -1007,7 +1032,7 @@ data:extend(
     {
       {type = "fluid", name = "planetaris-aluminium", amount = 10},
       {type = "item", name = "planetaris-beryllium-nitride", amount = 3},
-      {type = "item", name = "planetaris-silica", amount = 25},
+      {type = "item", name = "holmium-plate", amount = 25},
     },
     results = {{type="item", name="planetaris-refractory-ceramics", amount=1}},
     allow_productivity = true,
@@ -1190,7 +1215,7 @@ data:extend(
     ingredients =
     {
         {type = "item", name = "planetaris-beryllium-plate", amount = 5},
-        {type = "item", name = "planetaris-sandstone-brick", amount = 20},
+        {type = "item", name = "concrete", amount = 20},
         {type = "item", name = "planetaris-refractory-ceramics", amount = 2},
     },
     energy_required = 5,
