@@ -42,8 +42,11 @@ data.raw["reactor"]["nuclear-reactor"].surface_conditions = {{
       }}
       
 -- Adding science packs
-table.insert(data.raw.lab["lab"].inputs, "planetaris-polishing-science-pack")
-table.insert(data.raw.lab["lab"].inputs, "planetaris-refraction-science-pack")
+PlanetarisLib.add_science_pack("lab", "planetaris-polishing-science-pack")
+PlanetarisLib.add_science_pack("lab", "planetaris-refraction-science-pack")
+
+PlanetarisLib.add_science_pack("biolab", "planetaris-polishing-science-pack")
+PlanetarisLib.add_science_pack("biolab", "planetaris-refraction-science-pack")
 
 table.insert(data.raw.technology["promethium-science-pack"].effects, {
           type = "unlock-recipe",

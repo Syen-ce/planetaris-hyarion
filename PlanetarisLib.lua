@@ -46,28 +46,27 @@ PlanetarisLib.item_types = {
 --- Prints the given error message to the log, or invokes a script error if in debug mode.
 --- @param message string
 function PlanetarisLib.error(message)
-	if DEBUG then
-		error(message)
-	else
-		local output = "\n      PLANETARIS ERROR: " .. message
-		local i = 2
-		while true do
-			local info = debug.getinfo(i, "nSl")
-			if not info then
-				break
-			end
+    local output = "\n      PLANETARIS ERROR: " .. message
+    local i = 2
+    while true do
+        local info = debug.getinfo(i, "nSl")
+        if not info then break end
 
-			output = output .. "\n        " .. info.source .. ":" .. info.currentline
-			if info.name then
-				output = output .. " in function '" .. info.name .. "'"
-			else
-				output = output .. " in main chunk"
-			end
+        output = output .. "\n        " .. info.source .. ":" .. info.currentline
+        if info.name then
+            output = output .. " in function '" .. info.name .. "'"
+        else
+            output = output .. " in main chunk"
+        end
 
-			i = i + 1
-		end
-		log(output)
-	end
+        i = i + 1
+    end
+
+    if DEBUG then
+        error(output)
+    else
+        log(output)
+    end
 end
 
 --- @param target_name string
@@ -129,6 +128,32 @@ function PlanetarisLib.table_contains(t, value)
 	return false
 end
 
+---------------------------------------------------------------------------
+------------------------- Items
+---------------------------------------------------------------------------
+
+--- Add science pack if missing
+--- @param lab_name string
+--- @param pack_name string
+function PlanetarisLib.add_science_pack(lab_name, pack_name)
+    local lab = data.raw.lab[lab_name]
+    if not lab then 
+        PlanetarisLib.error("Lab:"..lab_name.."dont exist")
+    return
+    end
+
+    if not lab.inputs then
+        PlanetarisLib.error("Lab"..lab_name.."input not found")
+    end
+  
+    for _, packs in ipairs(lab.inputs) do
+        if packs[1] == pack_name then
+        return  -- Already has it
+        end
+    end
+  
+    table.insert(lab.inputs, pack_name)
+end
 
 ---------------------------------------------------------------------------
 ------------------------- Recipes
@@ -279,6 +304,16 @@ function PlanetarisLib.set_recipe_category(recipe_name, category)
         return
     end
     recipe.crafting_categories = category
+end
+
+--- Hide recipe in factoriopedia
+--- @param recipe_name string
+function PlanetarisLib.hide_recipe_factoriopedia(recipe_name)
+	local recipe = data.raw.recipe[recipe_name]
+	if not recipe then
+        return
+    end
+    recipe.hidden_in_factoriopedia = true
 end
 
 ---------------------------------------------------------------------------
@@ -551,7 +586,7 @@ end
 ------------------------- Planets 
 ---------------------------------------------------------------------------
 
---- Adds a surface condition to an recipe prototype
+--- Adds a surface condition to an entity prototype
 --- @param entity_name string
 --- @param surface_condition string
 --- @param max_amount number|nil
@@ -572,7 +607,7 @@ function PlanetarisLib.add_entity_surface_condition(entity_name, surface_conditi
     table.insert(prototype.surface_conditions, {property = surface_condition, max = max, min = min})
 end
 
---- Adds a surface condition to an entity prototype
+--- Adds a surface condition to an recipe prototype
 --- @param recipe_name string
 --- @param surface_condition string
 --- @param max_amount number|nil
@@ -595,7 +630,7 @@ end
 
 --- @param entity_name string
 function PlanetarisLib.clear_entity_surface_condition(entity_name)
-    local _, prototype = PlanetarisLib.find_prototype(entity_name)
+    local _, prototype = PlanetarisLib.find_entity(entity_name)
   	if not prototype then
 		  PlanetarisLib.error("Entity:" .. entity_name .. " does not exist.")
 		  return
@@ -621,17 +656,18 @@ end
 --- @param entity_name string
 --- @param surface_condition string
 function PlanetarisLib.remove_surface_condition(entity_name, surface_condition)
-	local _, prototype = PlanetarisLib.find_entity(entity_name)
-	if not prototype then
-		PlanetarisLib.error("Entity " .. entity_name .. " does not exist.")
-		return
-	end
-	for i, conditions in pairs(prototype.surface_conditions) do
-		if conditions.property == surface_condition then
-			table.remove(prototype.surface_conditions, i)
-			return
-		end
-	end
+    local _, prototype = PlanetarisLib.find_entity(entity_name)
+    if not prototype then
+        PlanetarisLib.error("Entity " .. entity_name .. " does not exist.")
+        return
+    end
+    if not prototype.surface_conditions then return end
+    for i, conditions in pairs(prototype.surface_conditions) do
+        if conditions.property == surface_condition then
+            table.remove(prototype.surface_conditions, i)
+            return
+        end
+    end
 end
 
 return PlanetarisLib
