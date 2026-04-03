@@ -1,5 +1,5 @@
 local lib = require("lib")
-local merge = lib.merge
+require("PlanetarisLib")
 
 -----------------------------------------------------------------
 --------------------------- Hyarion
@@ -72,14 +72,6 @@ local merge = lib.merge
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-iron-metallic-separation"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-copper-metallic-separation"
-        },
-        {
-          type = "unlock-recipe",
           recipe = "planetaris-refraction-ray-collector"
         },
       },
@@ -90,6 +82,14 @@ local merge = lib.merge
       },
       order = "e-b[hyarion]",
     },
+  })
+  
+if not mods["planetaris-arig"] then
+  PlanetarisLib.add_tech_effect("planetaris-metallic-ore-processing",{ type = "unlock-recipe", recipe = "planetaris-iron-metallic-separation"})
+  PlanetarisLib.add_tech_effect("planetaris-metallic-ore-processing",{ type = "unlock-recipe", recipe = "planetaris-copper-metallic-separation"})
+end
+
+  data.extend({
     {
       type = "technology",
       name = "planetaris-polishing",
