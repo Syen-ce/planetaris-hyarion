@@ -105,8 +105,6 @@ PlanetarisLib.add_tech_ingredient_if_missing("planetaris-bismuth-processing", "p
 PlanetarisLib.add_tech_ingredient_if_missing("planetaris-electromagnetic-radar", "planetaris-compression-science-pack")
 PlanetarisLib.add_tech_ingredient_if_missing("planetaris-simulating-unit-productivity", "planetaris-compression-science-pack")
 
-PlanetarisLib.remove_tech_effect("planetaris-metallic-ore-processing", "unlock-recipe", "planetaris-iron-metallic-separation")
-PlanetarisLib.remove_tech_effect("planetaris-metallic-ore-processing", "unlock-recipe", "planetaris-copper-metallic-separation")
 PlanetarisLib.add_tech_effect("planetaris-metallic-ore-processing", {type = "unlock-recipe", recipe = "planetaris-iron-metallic-sifting"})
 PlanetarisLib.add_tech_effect("planetaris-metallic-ore-processing", {type = "unlock-recipe", recipe = "planetaris-copper-metallic-sifting"})
 
