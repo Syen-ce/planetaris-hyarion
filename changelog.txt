@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.4
+Date: 2026-04-06
+  Changes:
+    - Moved ray collectors to the enviromental protection category
+  Bugfixes:
+    - Fixed assembling machine 4 not having weight
+---------------------------------------------------------------------------------------------------
 Version: 1.3.3
 Date: 2026-04-05
   Bugfixes:
