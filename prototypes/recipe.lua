@@ -373,9 +373,8 @@ data:extend(
     --- Rocket parts
     {
       type = "recipe",
-      name = "planetaris-polishing-carbon-fiber",
-      localised_name = {"", {"item-name.carbon-fiber"}, " (", {"technology-name.planetaris-polishing"}, ")"},
-      category = "polishing",
+      name = "planetaris-carbon-nanotube",
+      category = "chemistry",
       subgroup = "hyarion-basic-processes",
       order = "x-a",
       energy_required = 3,
@@ -385,8 +384,30 @@ data:extend(
       {
         {type = "fluid", name = "lava", amount = 30},
         {type = "item", name = "carbon", amount = 10},
+        {type = "item", name = "planetaris-metallic-ore", amount = 2},
       },
-      results = {{type="item", name="carbon-fiber", amount=1}},
+      results = {{type="item", name="planetaris-carbon-nanotube", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-advanced-carbon-nanotube",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/carbon-nanotube.png", draw_background=false},
+        {icon="__space-age__/graphics/icons/carbon.png", shift={12, 12}, scale=0.5},
+      },
+      category = "particle-manipulation",
+      subgroup = "hyarion-advanced-processes",
+      order = "e[post-refraction]-b",
+      energy_required = 3,
+      enabled = false,
+      auto_recycle = false,
+      ingredients =
+      {
+        {type = "fluid", name = "molten-copper", amount = 50},
+        {type = "item", name = "carbon-fiber", amount = 5},
+      },
+      results = {{type="item", name="planetaris-carbon-nanotube", amount=2}},
       allow_productivity = true,
     },
     {
@@ -432,8 +453,8 @@ data:extend(
       category = "rocket-building",
       ingredients =
       {
-        {type = "item", name = "engine-unit", amount = 10},
-        {type = "item", name = "carbon-fiber", amount = 10},
+        {type = "item", name = "engine-unit", amount = 5},
+        {type = "item", name = "planetaris-carbon-nanotube", amount = 5},
         {type = "item", name = "rocket-fuel", amount = 10}
       },
       results = {{type="item", name="rocket-part", amount=1}},
@@ -808,7 +829,7 @@ data:extend(
     },
     energy_required = 10,
     results = {{type="item", name="planetaris-particle-manipulator", amount=1}},
-    allow_productivity = true,
+    allow_productivity = false,
   },
   {
     type = "recipe",

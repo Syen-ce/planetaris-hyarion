@@ -111,7 +111,7 @@ end
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-polishing-carbon-fiber"
+          recipe = "planetaris-carbon-nanotube"
         },
         {
           type = "unlock-recipe",
@@ -617,6 +617,10 @@ end
         {
           type = "unlock-recipe",
           recipe = "planetaris-particle-manipulator"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-advanced-carbon-nanotube"
         },
         {
           type = "unlock-recipe",

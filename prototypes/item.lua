@@ -562,6 +562,20 @@ data:extend({
       factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
       durability_description_value = "description.science-pack-remaining-amount-value",
   },
+  {
+    type = "item",
+    name = "planetaris-carbon-nanotube",
+    icon = "__planetaris-hyarion__/graphics/icons/carbon-nanotube.png",
+    subgroup = "hyarion-basic-processes",
+    order = "b-a",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
+    stack_size = 100,
+    default_import_location = "hyarion",
+    weight = 2*kg,
+    random_tint_color = item_tints.bluish_concrete
+  },
     --- Refraction
   {
     type = "item",
