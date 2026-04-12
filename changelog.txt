@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.6
+Date: 2026-04-13
+  Compatibility:
+    - Added compatibility with the early unlock setting of the lamp post
+  Bugfixes:
+    - Replaced carbon icon to carbon fiber inn the advanced carbon nanotube icon
+---------------------------------------------------------------------------------------------------
 Version: 1.3.5
 Date: 2026-04-10
   Features:

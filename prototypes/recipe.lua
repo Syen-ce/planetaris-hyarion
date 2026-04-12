@@ -394,7 +394,7 @@ data:extend(
       name = "planetaris-advanced-carbon-nanotube",
       icons = {
         {icon="__planetaris-hyarion__/graphics/icons/carbon-nanotube.png", draw_background=false},
-        {icon="__space-age__/graphics/icons/carbon.png", shift={12, 12}, scale=0.5},
+        {icon="__space-age__/graphics/icons/carbon-fiber.png", shift={12, 12}, scale=0.5},
       },
       category = "particle-manipulation",
       subgroup = "hyarion-advanced-processes",
