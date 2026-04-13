@@ -1,5 +1,7 @@
 if not mods["lamp-post"] then return end
 
+if settings.startup["early-unlock"].value == true then return end
+
 require("PlanetarisLib")
 
 data.raw["technology"]["lamp-post"] = nil

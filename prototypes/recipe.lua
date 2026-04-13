@@ -383,8 +383,8 @@ data:extend(
       ingredients =
       {
         {type = "fluid", name = "lava", amount = 30},
-        {type = "item", name = "carbon", amount = 10},
-        {type = "item", name = "planetaris-metallic-ore", amount = 2},
+        {type = "item", name = "carbon", amount = 20},
+        {type = "item", name = "planetaris-polished-quartz", amount = 10},
       },
       results = {{type="item", name="planetaris-carbon-nanotube", amount=1}},
       allow_productivity = false,
@@ -394,7 +394,7 @@ data:extend(
       name = "planetaris-advanced-carbon-nanotube",
       icons = {
         {icon="__planetaris-hyarion__/graphics/icons/carbon-nanotube.png", draw_background=false},
-        {icon="__space-age__/graphics/icons/carbon.png", shift={12, 12}, scale=0.5},
+        {icon="__space-age__/graphics/icons/carbon-fiber.png", shift={12, 12}, scale=0.5},
       },
       category = "particle-manipulation",
       subgroup = "hyarion-advanced-processes",
