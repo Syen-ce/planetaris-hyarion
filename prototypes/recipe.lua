@@ -383,8 +383,8 @@ data:extend(
       ingredients =
       {
         {type = "fluid", name = "lava", amount = 30},
-        {type = "item", name = "carbon", amount = 10},
-        {type = "item", name = "planetaris-metallic-ore", amount = 2},
+        {type = "item", name = "carbon", amount = 20},
+        {type = "item", name = "planetaris-polished-quartz", amount = 10},
       },
       results = {{type="item", name="planetaris-carbon-nanotube", amount=1}},
       allow_productivity = false,
