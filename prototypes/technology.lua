@@ -434,7 +434,7 @@ end
           recipe = "planetaris-refraction-science-pack"
         },
       },
-      prerequisites = {"planetaris-diamond-polishing","planetaris-nanoscale-lens","planetaris-simulating-unit"},
+      prerequisites = {"planetaris-diamond-polishing","planetaris-nanoscale-lens","planetaris-simulating-unit","planetaris-ruby-laser"},
       unit =
       {
         count = 2000,
