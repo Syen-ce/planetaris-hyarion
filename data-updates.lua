@@ -23,15 +23,19 @@ end
 
 -- Surface conditions
 
--- No buildable on Hyarion      
-data.raw["lightning-attractor"]["lightning-collector"].surface_conditions = {{
-        property = "planetaris-crystalization-resistance",
-        max = 49
-      }}
-data.raw["lightning-attractor"]["lightning-rod"].surface_conditions = {{
-        property = "planetaris-crystalization-resistance",
-        max = 49
-      }}
+-- No buildable on Hyarion
+
+local hyarion_allowed = {
+  ["planetaris-big-refraction-ray-collector"] = true,
+  ["planetaris-refraction-ray-collector"] = true
+}
+
+for _, attractor in pairs(data.raw["lightning-attractor"]) do
+  if not hyarion_allowed[attractor.name] then
+    PlanetarisLib.add_entity_surface_condition(attractor.name, "planetaris-crystalization-resistance", 49, 0)
+  end
+end
+
 data.raw["fusion-generator"]["fusion-generator"].surface_conditions = {{
         property = "planetaris-crystalization-resistance",
         max = 49
