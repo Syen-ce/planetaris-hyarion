@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.7
+Date: 2026-04-13
+  Balancing:
+    - Big refraction ray collector storage 24 -> 32
+    - Big refraction ray collector amount of refraction light received when hit a  6 -> 8
+  Bugfixes:
+    - Fixed crash with aai loaders
+    - Fixed beryllium coating and big refraction ray collector recycling into wrong ingredients
+---------------------------------------------------------------------------------------------------
 Version: 1.3.6
 Date: 2026-04-13
   Compatibility:

@@ -1,5 +1,4 @@
 require("compat.aai-loaders")
-require("compat.arig")
 require("compat.arcanyx")
 require("compat.celestial-weather")
 require("compat.lamp-post")
