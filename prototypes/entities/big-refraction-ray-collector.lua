@@ -244,7 +244,7 @@ data.extend({
     fluid_box = {
         -- pipe_covers = planetaris_fiber_optics_covers_pictures(),
         filter = "planetaris-refraction-light",
-        volume = 24,
+        volume = 32,
         pipe_connections = {
             { direction = defines.direction.west,  position = { -0.5, -0.5 }, connection_category = "light"},
             { direction = defines.direction.east,  position = { 0.5, 0.5 },   connection_category = "light"},

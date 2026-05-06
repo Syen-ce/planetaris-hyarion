@@ -71,7 +71,7 @@ script.on_nth_tick(60, function()
 				if current_energy > last_energy + energy_threshold then
 					tank.insert_fluid({
 						name = "planetaris-refraction-light",
-						amount = 6,
+						amount = 8,
 						temperature = 0
 					})
 				end
