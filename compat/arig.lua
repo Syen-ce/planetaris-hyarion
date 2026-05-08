@@ -112,11 +112,10 @@ PlanetarisLib.remove_tech_effect("planetaris-diamond-polishing", "unlock-recipe"
 
 -- Change hyper belts
 
-local hyper_belt = data.raw["recipe"]["planetaris-hyper-transport-belt"]
-local hyper_underground = data.raw["recipe"]["planetaris-hyper-underground-belt"]
-local hyper_splitter = data.raw["recipe"]["planetaris-hyper-splitter"]
+if data.raw["recipe"]["planetaris-hyper-transport-belt"] then
+  local hyper_belt = data.raw["recipe"]["planetaris-hyper-transport-belt"]
 
-hyper_belt.ingredients =
+  hyper_belt.ingredients =
       {
         {type = "item", name = "turbo-transport-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 2},
@@ -124,47 +123,35 @@ hyper_belt.ingredients =
 
       }
 
-hyper_belt.surface_conditions =
-    {
-      {
-        property = "planetaris-crystalization-resistance",
-        min = 50,
-        max = 100,
-      }
-    }
+  PlanetarisLib.replace_recipe_surface_condition("planetaris-hyper-transport-belt", "planetaris-crystalization-resistance", 100, 50)
+end
 
-hyper_splitter.ingredients =
-      {
-        {type = "item", name = "turbo-splitter", amount = 1},
-        {type = "item", name = "processing-unit", amount = 2},
-        {type = "item", name = "planetaris-silica", amount = 1},
-        {type = "item", name = "planetaris-polished-quartz", amount = 1},
-      }
+if data.raw["recipe"]["planetaris-hyper-underground-belt"] then
+  local hyper_underground = data.raw["recipe"]["planetaris-hyper-underground-belt"]
 
-hyper_splitter.surface_conditions =
-    {
-      {
-        property = "planetaris-crystalization-resistance",
-        min = 50,
-        max = 100,
-      }
-    }
-
-hyper_underground.ingredients =
+  hyper_underground.ingredients =
       {
         {type = "item", name = "turbo-underground-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 3},
         {type = "item", name = "planetaris-polished-quartz", amount = 2},
       }
 
-hyper_underground.surface_conditions =
-    {
-      {
-        property = "planetaris-crystalization-resistance",
-        min = 50,
-        max = 100,
-      }
-    }
+  PlanetarisLib.replace_recipe_surface_condition("planetaris-hyper-underground-belt", "planetaris-crystalization-resistance", 100, 50)
+end
+
+if data.raw["recipe"]["planetaris-hyper-splitter"] then
+  local hyper_splitter = data.raw["recipe"]["planetaris-hyper-splitter"]
+
+  hyper_splitter.ingredients =
+        {
+          {type = "item", name = "turbo-splitter", amount = 1},
+          {type = "item", name = "processing-unit", amount = 2},
+          {type = "item", name = "planetaris-silica", amount = 1},
+          {type = "item", name = "planetaris-polished-quartz", amount = 1},
+        }
+
+  PlanetarisLib.replace_recipe_surface_condition("planetaris-hyper-splitter", "planetaris-crystalization-resistance", 100, 50)
+end
 
 data.raw["technology"]["planetaris-hyper-transport-belt"].prerequisites = {"planetaris-polishing-science-pack", "turbo-transport-belt"}
 data.raw["technology"]["planetaris-hyper-transport-belt"].unit.ingredients =
