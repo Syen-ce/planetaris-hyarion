@@ -628,6 +628,50 @@ function PlanetarisLib.add_recipe_surface_condition(recipe_name, surface_conditi
     table.insert(recipe.surface_conditions, {property = surface_condition, max = max, min = min})
 end
 
+--- Clears surface conditions then adds a new one
+--- @param recipe_name string
+--- @param surface_condition string
+--- @param max_amount number|nil
+--- @param min_amount number|nil
+function PlanetarisLib.replace_entity_surface_condition(entity_name, surface_condition, max_amount, min_amount)
+    local _, prototype = PlanetarisLib.find_entity(entity_name)
+  	if not prototype then
+		  PlanetarisLib.error(entity_name .. " does not exist.")
+		  return
+    end
+    local min = min_amount or 1
+    local max = max_amount or 50
+
+    if not prototype.surface_conditions then
+      prototype.surface_conditions = {{property = surface_condition, max = max, min = min}}
+      return
+    end
+    PlanetarisLib.clear_entity_surface_condition(entity_name)
+    table.insert(prototype.surface_conditions, {property = surface_condition, max = max, min = min})  
+end
+
+--- Clears surface conditions then adds a new one
+--- @param recipe_name string
+--- @param surface_condition string
+--- @param max_amount number|nil
+--- @param min_amount number|nil
+function PlanetarisLib.replace_recipe_surface_condition(recipe_name, surface_condition, max_amount, min_amount)
+    local recipe = data.raw.recipe[recipe_name]
+  	if not recipe then
+		  PlanetarisLib.error("Recipe:" ..recipe_name .. " does not exist.")
+		  return
+    end
+    local min = min_amount or 1
+    local max = max_amount or 50
+
+    if not recipe.surface_conditions then
+      recipe.surface_conditions = {{property = surface_condition, max = max, min = min}}
+      return
+    end
+    PlanetarisLib.clear_recipe_surface_condition(recipe_name)
+    table.insert(recipe.surface_conditions, {property = surface_condition, max = max, min = min})    
+end
+
 --- @param entity_name string
 function PlanetarisLib.clear_entity_surface_condition(entity_name)
     local _, prototype = PlanetarisLib.find_entity(entity_name)

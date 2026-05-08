@@ -38,7 +38,7 @@ require("prototypes.tips-and-tricks")
 
 --------------------- Compat
 
-require("compat.arig")
+require("compat.arig-data")
 require("compat.stone-sifting")
 require("compat.resource-spawner-overhaul")
 require("compat.bzlead")
