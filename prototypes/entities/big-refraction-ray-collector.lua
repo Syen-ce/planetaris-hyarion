@@ -251,6 +251,7 @@ data.extend({
             { direction = defines.direction.north, position = { -0.5, -0.5 }, connection_category = "light"},
             { direction = defines.direction.south, position = { 0.5, 0.5 },   connection_category = "light"},
         },
+      max_pipeline_extent = 1000,
     },
     two_direction_only = false,
     window_bounding_box = {{0, 0}, {0, 0}},

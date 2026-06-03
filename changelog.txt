@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.9
+Date: 2026-06-03
+  Balancing:
+    - Charged fluorite spoiling time 3 hours -> 6 hours
+    - Refraction generation light consumption 6/s -> 2/s
+  Bugfixes:
+    - Fixed pipe line extent of fiber optics cable being overriden to 320 by big refraction light collectors
+---------------------------------------------------------------------------------------------------
 Version: 1.3.8
 Date: 2026-05-08
   Compatibility:
