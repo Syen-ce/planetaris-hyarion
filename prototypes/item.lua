@@ -344,7 +344,7 @@ data:extend({
       { size = 64, filename = "__planetaris-hyarion__/graphics/icons/charged-fluorite-4.png", scale = 0.5, mipmap_count = 4 },
     },
 
-    spoil_ticks = 180 * minute,
+    spoil_ticks = 6 * hour,
     spoil_result = "planetaris-fluorite",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
