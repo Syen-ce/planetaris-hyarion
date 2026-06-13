@@ -686,7 +686,7 @@ data:extend(
       {
         {type = "item", name = "planetaris-charged-fluorite", amount = 1},
       },
-      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 1600},
                  {type="item", name="planetaris-unstable-shard", amount=1}
       },
       allow_productivity = false,
@@ -707,7 +707,7 @@ data:extend(
         {type = "fluid", name = "planetaris-refraction-light", amount = 48},
         {type = "item", name = "planetaris-fluorite", amount = 1},
       },
-      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 500},
+      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 1600},
                  {type="item", name="planetaris-unstable-shard", amount=1}
       },
       allow_productivity = false,
