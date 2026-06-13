@@ -1017,7 +1017,7 @@ data:extend({
     drawing_box_vertical_extension = 1.1,
     effectivity = 1,
     fluid_usage_per_tick = 0.033,
-    maximum_temperature = 500,
+    maximum_temperature = 100,
     max_power_output = "15MW",
     burns_fluid = false,
     resistances =
