@@ -5,7 +5,7 @@ if not mods["wood-industry"] then return end
         {
         type = "recipe",
         name = "planetaris-lig-carbon-wood",
-        category = "sifting",
+        categories = {"sifting"},
         enabled = false,
         auto_recycle = false,
         energy_required = 1,
@@ -36,7 +36,7 @@ if settings.startup["wood-industry-resin"].value then
         {
         type = "recipe",
         name = "planetaris-wood-resin",
-        category = "organic-or-chemistry",
+        categories = {"organic-or-chemistry"},
         subgroup = "hyarion-basic-processes",
         order = "a-a-e-b",
         enabled = false,
@@ -70,7 +70,7 @@ if settings.startup["wood-industry-resin"].value then
         {
         type = "recipe",
         name = "planetaris-wood-resin",
-        category = "organic-or-chemistry",
+        categories = {"organic-or-chemistry"},
         subgroup = "hyarion-basic-processes",
         order = "a-a-e-b",
         enabled = false,

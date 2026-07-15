@@ -85,7 +85,7 @@ data.extend({
     heating_energy = "500kW",
     module_slots = 4,
     icons_positioning = {
-        {inventory_index = defines.inventory.furnace_modules, shift = {0, 1}}
+        {inventory_index = defines.inventory.crafter_modules, shift = {0, 1}}
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
     water_reflection = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").water_reflection,

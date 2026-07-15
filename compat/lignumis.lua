@@ -6,7 +6,7 @@ if mods["planetaris-arig"] then
         {
         type = "recipe",
         name = "planetaris-lig-carbon-wood",
-        category = "sifting",
+        categories = {"sifting"},
         enabled = false,
         auto_recycle = false,
         energy_required = 1,
@@ -33,7 +33,7 @@ table.insert(data.raw["technology"]["planetaris-metallic-ore-processing"].effect
         {
         type = "recipe",
         name = "planetaris-lig-carbon-wood-chemistry",
-        category = "chemistry",
+        categories = {"chemistry"},
         enabled = false,
         auto_recycle = false,
         energy_required = 1,

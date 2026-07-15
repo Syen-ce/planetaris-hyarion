@@ -6,7 +6,7 @@ if mods["crushing-industry"] or mods["aai-industry"] then
       type = "recipe",
       name = "planetaris-stone-metallic-sifting",
       icon = "__planetaris-hyarion__/graphics/compat/metallic-stone-sifting.png",
-      category = "sifting",
+      categories = {"sifting"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c-b",
       energy_required = 10,
@@ -37,7 +37,7 @@ if mods["crushing-industry"] or mods["aai-industry"] then
       type = "recipe",
       name = "planetaris-stone-metallic-separation",
       icon = "__planetaris-hyarion__/graphics/compat/metallic-stone-sifting.png",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c-b",
       energy_required = 10,
@@ -67,7 +67,7 @@ if mods["crushing-industry"] or mods["aai-industry"] then
 
 local planetaris_metallic_smelting = data.raw["recipe"]["planetaris-metallic-smelting"].results
 table.insert(planetaris_metallic_smelting,
-    {type = "item", name = "stone-brick", amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false})
+    {type = "item", name = "stone-brick", amount = 1,  independent_probability = 0.25, show_details_in_recipe_tooltip = false})
 
 local stone_furnace = data.raw["furnace"]["planetaris-quartz-furnace"]
 if stone_furnace then

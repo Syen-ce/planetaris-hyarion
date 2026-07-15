@@ -11,7 +11,7 @@ data.extend({
       {
     type = "recipe",
     name = "lamp-post",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     energy_required = 4,
     ingredients =

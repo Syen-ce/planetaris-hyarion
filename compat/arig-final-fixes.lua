@@ -19,8 +19,8 @@ if data.raw.recipe["planetaris-iron-metallic-separation"] then
   data.raw.recipe["planetaris-iron-metallic-separation"] = nil
 end
 
-data.raw.recipe["planetaris-advanced-raw-quartz"].category = "compressing"
-data.raw.recipe["planetaris-refractory-ceramics"].category = "compressing"
+data.raw.recipe["planetaris-advanced-raw-quartz"].categories = {"compressing"}
+data.raw.recipe["planetaris-refractory-ceramics"].categories = {"compressing"}
 
 data.extend({
     {
@@ -28,7 +28,7 @@ data.extend({
       name = "planetaris-iron-metallic-sifting",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-iron-sifting.png",
       icon_size = 64,
-      category = "sifting",
+      categories = {"sifting"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-b",
       energy_required = 10,
@@ -50,7 +50,7 @@ data.extend({
       name = "planetaris-copper-metallic-sifting",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-copper-sifting.png",
       icon_size = 64,
-      category = "sifting",
+      categories = {"sifting"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
       energy_required = 10,

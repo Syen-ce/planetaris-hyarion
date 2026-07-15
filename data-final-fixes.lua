@@ -1,3 +1,5 @@
+PlanetarisLib = require("PlanetarisLib")
+
 require("compat.aai-loaders")
 require("compat.arig-final-fixes")
 require("compat.arcanyx")

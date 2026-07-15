@@ -3,7 +3,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-assembling-machine-4",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       enabled = false,
       energy_required = 10,
       ingredients =
@@ -58,7 +58,7 @@ data:extend(
       {
       type = "recipe",
       name = "planetaris-big-refraction-ray-collector",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       energy_required = 4,
       enabled = false,
       surface_conditions =
@@ -82,7 +82,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polisher",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 10,
       enabled = false,
       surface_conditions =
@@ -105,7 +105,7 @@ data:extend(
     {
       type = "recipe",
       name = "hyarion-geode-mining-drill",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 10,
       enabled = false,
       surface_conditions =
@@ -130,7 +130,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-burner-drill-alternative",
       localised_name = {"", {"entity-name.burner-mining-drill"}, " (", {"space-location-name.hyarion"}, ")"},
-      category = "crafting",
+      categories = {"crafting"},
       energy_required = 5,
       enabled = false,
       auto_recycle = false,
@@ -151,7 +151,7 @@ data:extend(
       name = "planetaris-metallic-smelting",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-smelting.png",
       icon_size = 64,
-      category = "smelting",
+      categories = {"smelting"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-a",
       energy_required = 5,
@@ -161,8 +161,8 @@ data:extend(
         {type = "item", name = "planetaris-metallic-ore", amount = 5},
       },
       results = {
-          {type = "item", name = "iron-plate",                amount = 1,  probability = 0.80, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "copper-plate",              amount = 1,  probability = 0.40, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "iron-plate",                amount = 1,  independent_probability = 0.80, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-plate",              amount = 1,  independent_probability = 0.40, show_details_in_recipe_tooltip = false},
     },
       allow_productivity = false,
     },
@@ -171,7 +171,7 @@ data:extend(
       name = "planetaris-iron-metallic-separation",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-iron-sifting.png",
       icon_size = 64,
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-b",
       energy_required = 10,
@@ -193,7 +193,7 @@ data:extend(
       name = "planetaris-copper-metallic-separation",
       icon = "__planetaris-hyarion__/graphics/icons/metallic-copper-sifting.png",
       icon_size = 64,
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
       energy_required = 10,
@@ -218,7 +218,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-raw-diamond",
-      category = "polishing",
+      categories = {"polishing"},
       auto_recycle = false,
       enabled = false,
       energy_required = 2,
@@ -242,7 +242,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-polishing-compound",
       subgroup = "hyarion-basic-processes",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 10,
       auto_recycle = false,
       enabled = false,
@@ -257,7 +257,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polished-quartz",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -272,7 +272,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polished-emerald",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -287,7 +287,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polished-ruby",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -302,7 +302,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polished-sapphire",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -317,7 +317,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-polished-diamond",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -332,7 +332,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-polishing-science-pack",
-    category = "polishing",
+    categories = {"polishing"},
     enabled = false,
     surface_conditions =
     {
@@ -356,7 +356,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-advanced-raw-quartz",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
@@ -374,7 +374,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-carbon-nanotube",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "hyarion-basic-processes",
       order = "x-a",
       energy_required = 3,
@@ -396,7 +396,7 @@ data:extend(
         {icon="__planetaris-hyarion__/graphics/icons/carbon-nanotube.png", draw_background=false},
         {icon="__space-age__/graphics/icons/carbon-fiber.png", shift={12, 12}, scale=0.5},
       },
-      category = "particle-manipulation",
+      categories = {"particle-manipulation"},
       subgroup = "hyarion-advanced-processes",
       order = "e[post-refraction]-b",
       energy_required = 3,
@@ -418,7 +418,7 @@ data:extend(
         {icon="__planetaris-hyarion__/graphics/icons/fluids/polishing-compound.png", shift={12, 12}, scale=0.5},
       },
       localised_name = {"", {"item-name.rocket-fuel"}, " (", {"technology-name.planetaris-polishing"}, ")"},
-      category = "polishing",
+      categories = {"polishing"},
       subgroup = "hyarion-basic-processes",
       order = "x-a",
       energy_required = 3,
@@ -450,7 +450,7 @@ data:extend(
     },
       hide_from_player_crafting = true,
       auto_recycle = false,
-      category = "rocket-building",
+      categories = {"rocket-building"},
       ingredients =
       {
         {type = "item", name = "engine-unit", amount = 5},
@@ -517,7 +517,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-refraction-plant",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     surface_conditions =
     {
@@ -543,7 +543,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-refraction-generator",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     surface_conditions =
     {
@@ -569,7 +569,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-fiber-optics-cable",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       energy_required = 4,
       enabled = false,
       surface_conditions =
@@ -592,7 +592,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-nanoscale-lens",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 3,
       enabled = false,
       ingredients =
@@ -607,7 +607,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-ruby-laser",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       energy_required = 4,
       enabled = false,
       ingredients =
@@ -623,7 +623,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-crystalization-motor",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       energy_required = 3,
       enabled = false,
       ingredients =
@@ -640,7 +640,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-fluorite",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 10,
       auto_recycle = false,
       enabled = false,
@@ -658,7 +658,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-charged-fluorite",
       icons = {{icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=true}},
-      category = "refraction",
+      categories = {"refraction"},
       energy_required = 5,
       auto_recycle = false,
       enabled = false,
@@ -677,7 +677,7 @@ data:extend(
         {icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=false},
         {icon="__planetaris-hyarion__/graphics/icons/fluids/pure-light.png", shift={12, 12}, scale=0.5},
       },
-      category = "refraction",
+      categories = {"refraction"},
       subgroup = "hyarion-advanced-processes",
       energy_required = 2,
       auto_recycle = false,
@@ -697,7 +697,7 @@ data:extend(
       icon = "__planetaris-hyarion__/graphics/icons/fluids/pure-light.png",
       localised_name = {"fluid-name.planetaris-pure-light"},
       localised_description = {"fluid-description.planetaris-pure-light"},
-      category = "refraction",
+      categories = {"refraction"},
       subgroup = "hyarion-advanced-processes",
       energy_required = 2,
       auto_recycle = false,
@@ -715,7 +715,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-unstable-gem",
-      category = "refraction",
+      categories = {"refraction"},
       energy_required = 10,
       auto_recycle = false,
       enabled = false,
@@ -732,7 +732,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-simulating-unit",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     auto_recycle = false,
     energy_required = 15,
@@ -750,7 +750,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-refraction-science-pack",
     icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     surface_conditions =
     {
@@ -774,7 +774,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-ruby-laser-turret",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     energy_required = 20,
     ingredients =
@@ -790,7 +790,7 @@ data:extend(
       {
     type = "recipe",
     name = "planetaris-personal-ruby-laser-defense-equipment",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     energy_required = 25,
     ingredients =
@@ -809,7 +809,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-particle-manipulator",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     surface_conditions =
     {
@@ -834,7 +834,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-beryl",
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -856,7 +856,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-beryllium-plate",
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -874,7 +874,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-beryllium-nitride",
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
     energy_required = 6,
@@ -893,7 +893,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-coal-particle-manipulation",
     localised_name = {"", {"item-name.coal"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-a",
     enabled = false,
@@ -912,7 +912,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-carbon-particle-manipulation",
     localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-a-b",
     enabled = false,
@@ -931,7 +931,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-calcite-particle-manipulation",
     localised_name = {"", {"item-name.calcite"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-b",
     enabled = false,
@@ -950,7 +950,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-raw-quartz-particle-manipulation",
     localised_name = {"", {"item-name.planetaris-raw-quartz"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-b-b",
     enabled = false,
@@ -969,7 +969,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-coal-to-stone-particle-manipulation",
     localised_name = {"", {"item-name.stone"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-c",
     enabled = false,
@@ -988,7 +988,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-stone-to-coal-particle-manipulation",
     localised_name = {"", {"item-name.coal"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-c-b",
     enabled = false,
@@ -1007,7 +1007,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-sapphire-to-sulfur-particle-manipulation",
     localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-d",
     enabled = false,
@@ -1026,7 +1026,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-sulfur-to-sapphire-particle-manipulation",
     localised_name = {"", {"item-name.planetaris-raw-sapphire"}, " (", {"technology-name.planetaris-particle-manipulation"}, ")"},
-    category = "particle-manipulation",
+    categories = {"particle-manipulation"},
     subgroup = "hyarion-advanced-processes",
     order = "f[p-manipulation]-d-b",
     enabled = false,
@@ -1045,7 +1045,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-refractory-ceramics",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     auto_recycle = false,
     energy_required = 3,
@@ -1065,7 +1065,7 @@ data:extend(
     type = "recipe",
     name = "bismuth-asteroid-crushing",
     icon = "__planetaris-hyarion__/graphics/icons/bismuth-asteroid-crushing.png",
-    category = "crushing",
+    categories = {"crushing"},
     subgroup="space-crushing",
     order = "b-a-c-a",
     auto_recycle = false,
@@ -1078,7 +1078,7 @@ data:extend(
     results =
     {
       {type = "item", name = "planetaris_raw_bismuth", amount = 5},
-      {type = "item", name = "bismuth-asteroid-chunk", amount = 1, probability = 0.2}
+      {type = "item", name = "bismuth-asteroid-chunk", amount = 1, independent_probability = 0.2}
     },
     allow_productivity = true,
     allow_decomposition = false
@@ -1086,7 +1086,7 @@ data:extend(
       {
       type = "recipe",
       name = "planetaris-polished-bismuth",
-      category = "polishing",
+      categories = {"polishing"},
       energy_required = 5,
       enabled = false,
       surface_conditions =
@@ -1108,7 +1108,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-bismuth-transistor",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     enabled = false,
     surface_conditions =
     {
@@ -1132,7 +1132,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-space-manufacturer",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     surface_conditions =
     {
@@ -1159,7 +1159,7 @@ data:extend(
     localised_name = {"item-name.space-science-pack"},
     localised_description = {"item-description.space-science-pack"},
     icon = "__base__/graphics/icons/space-science-pack.png",
-    category = "space-manufacturing",
+    categories = {"space-manufacturing"},
     subgroup = "space-facilities",
     order = "a-b-a-a",
     enabled = false,
@@ -1201,7 +1201,7 @@ data:extend(
     },
     enabled = false,
     allow_productivity = true,
-    category = "space-manufacturing",
+    categories = {"space-manufacturing"},
     subgroup = "space-facilities",
     order = "a-b-a-b",
     ingredients =
@@ -1223,7 +1223,7 @@ data:extend(
       {
     type = "recipe",
     name = "planetaris-beryllium-coating",
-    category = "space-manufacturing",
+    categories = {"space-manufacturing"},
     enabled = false,
     surface_conditions =
     {
@@ -1246,7 +1246,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-zero-grav-accumulator",
-    category = "space-manufacturing",
+    categories = {"space-manufacturing"},
     enabled = false,
     surface_conditions =
     {
@@ -1270,7 +1270,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-electromagnetic-radar",
-    category = "space-manufacturing",
+    categories = {"space-manufacturing"},
     enabled = false,
     energy_required = 10,
     surface_conditions =

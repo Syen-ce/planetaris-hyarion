@@ -1,7 +1,6 @@
 require ("__base__/prototypes/entity/enemy-projectiles")
 require ("__base__/prototypes/entity/worm-animations")
 require ("__base__/prototypes/entity/pipecovers")
-require ("__base__/prototypes/entity/assemblerpipes")
 
 local sounds = require("__base__/prototypes/entity/sounds")
 local hit_effects = require ("__base__/prototypes/entity/hit-effects")
