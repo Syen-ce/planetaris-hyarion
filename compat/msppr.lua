@@ -22,7 +22,7 @@ data:extend({
         type = "recipe",
         name = "msppr-hyarion",
         subgroup = "science-pack",
-        category = "refraction",
+        categories = {"refraction"},
         surface_conditions =
         {
             {

@@ -51,7 +51,7 @@ require("PlanetarisLib")
       prerequisites = {"planet-discovery-hyarion"},
       research_trigger = {
         type = "mine-entity",
-        entity = "planetaris-quartz-ore"
+        entities = {"planetaris-quartz-ore"}
       },
       order = "e-b[hyarion]",
     },
@@ -78,7 +78,7 @@ require("PlanetarisLib")
       prerequisites = {"planetaris-quartz-furnace"},
       research_trigger = {
         type = "mine-entity",
-        entity = "planetaris-metallic-ore"
+        entities = {"planetaris-metallic-ore"}
       },
       order = "e-b[hyarion]",
     },

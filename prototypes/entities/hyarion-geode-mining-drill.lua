@@ -573,7 +573,7 @@ data:extend(
     drops_full_belt_stacks = true,
     input_fluid_box =
     {
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
       volume = 200,
       pipe_connections =

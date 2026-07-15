@@ -176,7 +176,7 @@ data:extend ({
               name = "planetaris-raw-emerald",
               amount_min = 1,
               amount_max = 1,
-              probability = 1
+              independent_probability = 1
             }
           }
         },
@@ -274,7 +274,7 @@ data:extend ({
               name = "planetaris-raw-ruby",
               amount_min = 1,
               amount_max = 1,
-              probability = 1
+              independent_probability = 1
             }
           }
         },
@@ -372,7 +372,7 @@ data:extend ({
               name = "planetaris-raw-sapphire",
               amount_min = 1,
               amount_max = 1,
-              probability = 1
+              independent_probability = 1
             }
           }
         },

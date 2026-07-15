@@ -11,7 +11,10 @@ data:extend({
     icon = "__planetaris-hyarion__/graphics/icons/refraction-ray.png",
     subgroup = "obstacles",
     factoriopedia_simulation = simulations.factoriopedia_refraction_ray,
-    damage = 120,
+    damage = {
+      amount = 120,
+      type = "impact",
+    },
     energy = "500MJ",
     time_to_damage = 10,
     effect_duration = 50,

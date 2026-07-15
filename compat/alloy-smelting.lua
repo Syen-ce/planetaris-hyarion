@@ -5,7 +5,7 @@ data.extend({
         {
         type = "recipe",
         name = "planetaris-wood-coke-sifting",
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "hyarion-basic-processes",
         order = "a-a-e",
         enabled = false,
@@ -47,7 +47,7 @@ data.extend({
         {
         type = "recipe",
         name = "planetaris-wood-coke-separation",
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "hyarion-basic-processes",
         order = "a-a-e",
         enabled = false,

@@ -32,13 +32,13 @@ end
 
 local planetaris_metallic_smelting = data.raw["recipe"]["planetaris-metallic-smelting"].results
 table.insert(planetaris_metallic_smelting,
-    {type = "item", name = "tin-plate", amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false})
+    {type = "item", name = "tin-plate", amount = 1,  independent_probability = 0.25, show_details_in_recipe_tooltip = false})
 
     data.extend({
         {
         type = "recipe",
         name = "planetaris-metallic-tin-sifting",
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "hyarion-basic-processes",
         order = "a-a-e",
         enabled = false,
@@ -64,5 +64,5 @@ table.insert(planetaris_metallic_smelting,
       )
 
 if mods["planetaris-arig"] then
-  data.raw.recipe["planetaris-metallic-tin-sifting"].category = "sifting"
+  data.raw.recipe["planetaris-metallic-tin-sifting"].categories = {"sifting"}
 end

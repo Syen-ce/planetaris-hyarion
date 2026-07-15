@@ -19,7 +19,7 @@ data.extend({
     },
       hide_from_player_crafting = true,
       auto_recycle = false,
-      category = "rocket-building",
+      categories = {"rocket-building"},
       ingredients =
       {
         {type = "item", name = "engine-unit", amount = 5},

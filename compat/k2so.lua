@@ -38,7 +38,7 @@ data.extend({
 	{
 		type = "recipe",
 		name = "kr-polishing-research-data",
-        category = "polishing",
+        categories = {"polishing"},
         surface_conditions =
         {
             {
@@ -97,7 +97,7 @@ data.extend({
     {
     type = "recipe",
     name = "kr-refraction-research-data",
-    category = "electromagnetics",
+    categories = {"electromagnetics"},
     emissions_multiplier = 5,
     surface_conditions =
     {
@@ -166,7 +166,7 @@ data.extend({
         {icon="__Krastorio2Assets__/icons/items/rare-metal-ore.png", shift={12, 12}, scale=0.5},
       },
       icon_size = 64,
-      category = "sifting",
+      categories = {"sifting"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
       energy_required = 10,
@@ -197,7 +197,7 @@ data.extend({
         {icon="__Krastorio2Assets__/icons/items/rare-metal-ore.png", shift={12, 12}, scale=0.5},
       },
       icon_size = 64,
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
       energy_required = 10,
