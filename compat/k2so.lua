@@ -4,7 +4,7 @@ require("PlanetarisLib")
 local data_util = require("__Krastorio2-spaced-out__/data-util")
 
 local function add_light(item)
-	local card = data.raw.tool[item]
+	local card = data.raw.item[item]
 	card.pictures = {
 		layers = {
 			{
@@ -70,8 +70,8 @@ data.extend({
 })
 
 --
-data_util.set_icon(data.raw.tool["planetaris-polishing-science-pack"], "__planetaris-hyarion__/graphics/compat/k2so/icons/polishing-tech-card.png")
-data.raw.tool["planetaris-polishing-science-pack"].localised_name = { "item-name.kr-polishing-tech-card" }
+data_util.set_icon(data.raw.item["planetaris-polishing-science-pack"], "__planetaris-hyarion__/graphics/compat/k2so/icons/polishing-tech-card.png")
+data.raw.item["planetaris-polishing-science-pack"].localised_name = { "item-name.kr-polishing-tech-card" }
 add_light("planetaris-polishing-science-pack")
 
 data_util.make_tech_card("planetaris-polishing-science-pack", {
@@ -130,8 +130,8 @@ data.extend({
 
 --
 
-data_util.set_icon(data.raw.tool["planetaris-refraction-science-pack"], "__planetaris-hyarion__/graphics/compat/k2so/icons/refraction-tech-card.png")
-data.raw.tool["planetaris-refraction-science-pack"].localised_name = { "item-name.kr-refraction-tech-card" }
+data_util.set_icon(data.raw.item["planetaris-refraction-science-pack"], "__planetaris-hyarion__/graphics/compat/k2so/icons/refraction-tech-card.png")
+data.raw.item["planetaris-refraction-science-pack"].localised_name = { "item-name.kr-refraction-tech-card" }
 add_light("planetaris-refraction-science-pack")
 
 data_util.make_tech_card("planetaris-refraction-science-pack", {

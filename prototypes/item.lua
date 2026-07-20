@@ -544,7 +544,7 @@ data:extend({
     drop_sound = item_sounds.sulfur_inventory_move,
   },
    {
-      type = "tool",
+      type = "item",
       name = "planetaris-polishing-science-pack",
       icon = "__planetaris-hyarion__/graphics/icons/polishing-science-pack.png",
       localised_description = {"item-description.science-pack"},
@@ -665,7 +665,7 @@ data:extend({
     drop_sound = item_sounds.wire_inventory_move,
   },
   {
-    type = "tool",
+    type = "item",
     name = "planetaris-refraction-science-pack",
     icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
     subgroup = "science-pack",

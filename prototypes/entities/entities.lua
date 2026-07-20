@@ -1055,81 +1055,89 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-output"
     },
-    vertical_animation =
+    two_direction_only = true,
+    pictures =
     {
-      animation_speed = 1,
-      layers =
+      north =
       {
+        animation =
         {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-vertical.png",
-          priority = "extra-high",
-          width = 220,
-          height = 290,
-          repeat_count = 60,
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
+          layers =
+          {
+            {
+              filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-vertical.png",
+              priority = "extra-high",
+              width = 220,
+              height = 290,
+              repeat_count = 60,
+              shift = util.by_pixel(0, -22),
+              scale = 0.6
+            },
+            {
+              filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
+              priority = "extra-high",
+              width = 220,
+              height = 290,
+              line_length = 10,
+              lines_per_file = 6,
+              frame_count = 60,
+              draw_as_glow = true,
+              blend_mode = "additive",
+              shift = util.by_pixel(0, -22),
+              scale = 0.6
+            },
+            {
+              filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
+              priority = "extra-high",
+              width = 600,
+              height = 400,
+              repeat_count = 60,
+              draw_as_shadow = true,
+              shift = util.by_pixel(0, -22),
+              scale = 0.6
+            }
+          }
         },
-        {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
-          priority = "extra-high",
-          width = 220,
-          height = 290,
-          line_length = 10,
-          lines_per_file = 6,
-          frame_count = 60,
-          draw_as_glow = true,
-          blend_mode = "additive",
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
-        },
-        {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
-          priority = "extra-high",
-          width = 600,
-          height = 400,
-          repeat_count = 60,
-          draw_as_shadow = true,
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
-        }
-      }
-    },
-    horizontal_animation =
-   {
-      animation_speed = 1,
-      layers =
+      },
+      east =
       {
+        animation =
         {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-horizontal.png",
-          priority = "extra-high",
-          width = 220,
-          height = 290,
-          repeat_count = 60,
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
-        },
-        {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
-          priority = "extra-high",
-          width = 220,
-          height = 290,
-          line_length = 10,
-          lines_per_file = 6,
-          frame_count = 60,
-          draw_as_glow = true,
-          blend_mode = "additive",
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
-        },
-        {
-          filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
-          priority = "extra-high",
-          width = 600,
-          height = 400,
-          repeat_count = 60,
-          draw_as_shadow = true,
-          shift = util.by_pixel(0, -22),
-          scale = 0.6
+          layers =
+          {
+              {
+                filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-horizontal.png",
+                priority = "extra-high",
+                width = 220,
+                height = 290,
+                repeat_count = 60,
+                shift = util.by_pixel(0, -22),
+                scale = 0.6
+              },
+              {
+                filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-emission.png",
+                priority = "extra-high",
+                width = 220,
+                height = 290,
+                line_length = 10,
+                lines_per_file = 6,
+                frame_count = 60,
+                draw_as_glow = true,
+                blend_mode = "additive",
+                shift = util.by_pixel(0, -22),
+                scale = 0.6
+              },
+              {
+                filename = "__planetaris-hyarion__/graphics/entity/refraction-generator/refraction-generator-shadow.png",
+                priority = "extra-high",
+                width = 600,
+                height = 400,
+                repeat_count = 60,
+                draw_as_shadow = true,
+                shift = util.by_pixel(0, -22),
+                scale = 0.6
+              }
+          },
         }
       }
     },

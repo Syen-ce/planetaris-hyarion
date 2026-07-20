@@ -334,6 +334,7 @@ data:extend(
     name = "planetaris-polishing-science-pack",
     categories = {"polishing"},
     enabled = false,
+    order = "h-c",
     surface_conditions =
     {
       {
@@ -752,6 +753,7 @@ data:extend(
     icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
     categories = {"electromagnetics"},
     enabled = false,
+    order = "h-d-b",
     surface_conditions =
     {
       {
