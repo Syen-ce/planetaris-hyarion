@@ -12,6 +12,31 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local wall_shift = 20
 local wall_shift_adjust = wall_shift - 7
 
+assembler_machine_4_pipe_pictures = function ()
+  local assembler4pipepictures =
+  {
+    north = util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-pipe-N",
+    {
+      priority = "extra-high",
+      scale = 0.5,
+    }),
+    east = util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-pipe-E",
+    {
+      priority = "extra-high",
+      scale = 0.5,
+    }),
+    south = util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-pipe-S",
+    {
+      priority = "extra-high",
+      scale = 0.5,
+    }),
+    west = util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-pipe-W",
+    {
+      priority = "extra-high",
+      scale = 0.5,
+    }),
+  }
+end
 
 planetaris_fiber_optics_covers_pictures = function()
   local layers =
@@ -201,7 +226,7 @@ data:extend({
   dying_explosion = "planetaris-assembling-machine-4-explosion",
   icon_draw_specification = {shift = {0, -0.3}},
   circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-  circuit_connector = circuit_connector_definitions["assembling-machine"],
+  circuit_connector = require("__base__.prototypes.entity.assembler-pictures").circuit_connector,
   alert_icon_shift = util.by_pixel(0, -12),
   resistances =
   {
@@ -214,7 +239,7 @@ data:extend({
   {
     {
       production_type = "input",
-      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler3pipepictures,
+      pipe_picture = assembler_machine_4_pipe_pictures(),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }},
@@ -222,7 +247,7 @@ data:extend({
     },
     {
       production_type = "output",
-      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler3pipepictures,
+      pipe_picture = assembler_machine_4_pipe_pictures(),
       pipe_covers = pipecoverspictures(),
       volume = 1000,
       pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }},
@@ -246,36 +271,47 @@ data:extend({
   fast_replaceable_group = "assembling-machine",
   graphics_set =
   {
-    animation_progress = 0.3,
+    animation_progress = 0.5,
     animation =
     {
       layers =
       {
+        util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-base",
         {
-          filename = "__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4.png",
           priority = "high",
-          width = 214,
-          height = 237,
-          frame_count = 32,
-          line_length = 8,
-          shift = util.by_pixel(0, -0.75),
-          scale = 0.5
-        },
+          repeat_count = 64,
+          scale = 0.5,
+        }),
+        util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-anim",
         {
-          filename = "__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-shadow.png",
           priority = "high",
-          width = 260,
-          height = 162,
-          frame_count = 32,
-          line_length = 8,
+          frame_count = 64,
+          scale = 0.5,
+        }),
+        util.sprite_load("__planetaris-hyarion__/graphics/entity/assembling-machine-4/assembling-machine-4-shadow",
+        {
+          priority = "high",
+          frame_count = 64,
+          scale = 0.5,
           draw_as_shadow = true,
-          shift = util.by_pixel(28, 4),
-          scale = 0.5
-        }
+        }),
+      }
+    },
+    working_visualisations =
+    {
+      {
+        animation = util.sprite_load("__base__/graphics/entity/assembling-machine-3/assembling-machine-3-status-light",
+        {
+          priority = "high",
+          repeat_count = 64,
+          draw_as_glow = true,
+          blend_mode = "additive",
+          scale = 0.5,
+        }),
       }
     }
   },
-  crafting_categories = {"basic-crafting", "crafting", "advanced-crafting", "crafting-with-fluid", "electronics", "electronics-with-fluid", "pressing", "metallurgy-or-assembling", "organic-or-hand-crafting", "organic-or-assembling", "electronics-or-assembling", "cryogenics-or-assembling", "crafting-with-fluid-or-metallurgy"},
+  crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"},
   crafting_speed = 1.75,
   energy_source =
   {

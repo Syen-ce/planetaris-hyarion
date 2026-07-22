@@ -11,11 +11,11 @@ if not data.raw["item-subgroup"]["science-tab-planetaris-science-pack"] then
     }
 end
 
-data.raw.tool["planetaris-polishing-science-pack"].subgroup = "science-tab-planetaris-science-pack"
-data.raw.tool["planetaris-polishing-science-pack"].order = "b[hyarion]-a"
+data.raw.item["planetaris-polishing-science-pack"].subgroup = "science-tab-planetaris-science-pack"
+data.raw.item["planetaris-polishing-science-pack"].order = "b[hyarion]-a"
 
-data.raw.tool["planetaris-refraction-science-pack"].subgroup = "science-tab-planetaris-science-pack"
-data.raw.tool["planetaris-refraction-science-pack"].order = "b[hyarion]-b"
+data.raw.item["planetaris-refraction-science-pack"].subgroup = "science-tab-planetaris-science-pack"
+data.raw.item["planetaris-refraction-science-pack"].order = "b[hyarion]-b"
 
 if mods["Krastorio2-spaced-out"] then
     if data.raw["item-group"]["science"] then
