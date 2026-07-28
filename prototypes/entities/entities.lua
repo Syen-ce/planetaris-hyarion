@@ -36,6 +36,7 @@ assembler_machine_4_pipe_pictures = function ()
       scale = 0.5,
     }),
   }
+  return assembler4pipepictures
 end
 
 planetaris_fiber_optics_covers_pictures = function()
@@ -1193,7 +1194,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.wall(),
     minable = {mining_time = 0.4, result = "planetaris-beryllium-coating"},
     fast_replaceable_group = nil,
-    max_health = 650,
+    max_health = 1200,
     heating_energy = "500kW",
     repair_speed_modifier = 3,
     corpse = "planetaris-beryllium-coating-remnants",
