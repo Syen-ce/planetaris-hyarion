@@ -660,12 +660,12 @@ data:extend(
       name = "planetaris-charged-fluorite",
       icons = {{icon="__planetaris-hyarion__/graphics/icons/charged-fluorite.png", draw_background=true}},
       categories = {"refraction"},
-      energy_required = 5,
+      energy_required = 30,
       auto_recycle = false,
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "fluid", name = "planetaris-refraction-light", amount = 360},
         {type = "item", name = "planetaris-fluorite", amount = 1},
       },
       results = {{type="item", name="planetaris-charged-fluorite", amount=1}},
@@ -680,14 +680,14 @@ data:extend(
       },
       categories = {"refraction"},
       subgroup = "hyarion-advanced-processes",
-      energy_required = 2,
+      energy_required = 30,
       auto_recycle = false,
       enabled = false,
       ingredients =
       {
         {type = "item", name = "planetaris-charged-fluorite", amount = 1},
       },
-      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 1600},
+      results = {{type="fluid", name="planetaris-pure-light", amount=720, temperature = 1600},
                  {type="item", name="planetaris-unstable-shard", amount=1}
       },
       allow_productivity = false,
@@ -705,7 +705,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "fluid", name = "planetaris-refraction-light", amount = 24},
         {type = "item", name = "planetaris-fluorite", amount = 1},
       },
       results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 1600},
