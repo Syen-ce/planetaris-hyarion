@@ -36,7 +36,7 @@ data:extend({
     order = "c[assembling-machine-4]-a",
     place_result = "planetaris-assembling-machine-4",
     stack_size = 50,
-    weight = 20*kg,
+    weight = 40*kg,
     default_import_location = "hyarion",
     },
     {

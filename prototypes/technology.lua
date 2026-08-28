@@ -554,6 +554,14 @@ end
           type = "unlock-recipe",
           recipe = "planetaris-fluorite-discharge"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-refraction-light-release"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-pure-light-release"
+        },
       },
       prerequisites = {"planetaris-crystalization-motor"},
       unit =

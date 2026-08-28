@@ -714,6 +714,44 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "planetaris-refraction-light-release",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/refraction-plant.png", draw_background=false},
+        {icon="__planetaris-hyarion__/graphics/icons/fluids/refraction-light.png", shift={12, 12}, scale=0.5},
+      },
+      categories = {"refraction"},
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 4,
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-refraction-light", amount = 12},
+      },
+      results = nil,
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-pure-light-release",
+      icons = {
+        {icon="__planetaris-hyarion__/graphics/icons/refraction-plant.png", draw_background=false},
+        {icon="__planetaris-hyarion__/graphics/icons/fluids/pure-light.png", shift={12, 12}, scale=0.5},
+      },
+      categories = {"refraction"},
+      subgroup = "hyarion-advanced-processes",
+      energy_required = 4,
+      auto_recycle = false,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-pure-light", amount = 12},
+      },
+      results = nil,
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
       name = "planetaris-unstable-gem",
       category = "refraction",
       energy_required = 10,
