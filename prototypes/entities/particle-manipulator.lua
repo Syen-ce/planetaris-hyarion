@@ -296,7 +296,7 @@ data.extend({
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
     water_reflection = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").water_reflection,
-    collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     drawing_box_vertical_extension = 0.5,
     damaged_trigger_effect = hit_effects.entity(),
