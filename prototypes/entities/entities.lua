@@ -222,7 +222,7 @@ data:extend({
   flags = {"placeable-neutral","placeable-player", "player-creation"},
   minable = {mining_time = 0.2, result = "planetaris-assembling-machine-4"},
   max_health = 400,
-  heating_energy = "500kW",
+  heating_energy = "100kW",
   corpse = "planetaris-assembling-machine-4-remnants",
   dying_explosion = "planetaris-assembling-machine-4-explosion",
   icon_draw_specification = {shift = {0, -0.3}},
@@ -1866,7 +1866,7 @@ data:extend({
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "15MJ",
+      buffer_capacity = "50MJ",
       usage_priority = "tertiary",
       input_flow_limit = "750kW",
       output_flow_limit = "750kW"

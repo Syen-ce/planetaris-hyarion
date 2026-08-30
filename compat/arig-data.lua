@@ -50,4 +50,17 @@ if data.raw["recipe"]["planetaris-hyper-splitter"] then
         }
 
   PlanetarisLib.replace_recipe_surface_condition("planetaris-hyper-splitter", "planetaris-crystalization-resistance", 100, 50)
+
+  if data.raw["item"]["planetaris-hyper-transport-belt"] then
+    data.raw["item"]["planetaris-hyper-transport-belt"].default_import_location = "hyarion"
+  end
+
+  if data.raw["item"]["planetaris-hyper-underground-belt"] then
+    data.raw["item"]["planetaris-hyper-underground-belt"].default_import_location = "hyarion"
+  end
+
+  if data.raw["item"]["planetaris-hyper-splitter"] then
+    data.raw["item"]["planetaris-hyper-splitter"].default_import_location = "hyarion"
+  end
+
 end
