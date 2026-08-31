@@ -203,7 +203,7 @@ end
       },
       order = "e-b[hyarion]",
     },
-      {
+    {
       type = "technology",
       name = "planetaris-diamond-polishing",
       icon = "__planetaris-hyarion__/graphics/technology/diamond-tech.png",
@@ -243,6 +243,37 @@ end
     },
     {
       type = "technology",
+      name = "planetaris-crystalization-motor",
+      icon = "__planetaris-hyarion__/graphics/technology/crystalization-motor.png",
+      icon_size = 256,
+      essential = false,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-crystalization-motor"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
       name = "planetaris-big-refraction-ray-collector",
       icon = "__planetaris-hyarion__/graphics/technology/big-refraction-ray-collector.png",
       icon_size = 256,
@@ -253,7 +284,7 @@ end
           recipe = "planetaris-big-refraction-ray-collector"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack"},
+      prerequisites = {"planetaris-polishing-science-pack", "planetaris-crystalization-motor"},
       unit =
       {
         count = 1000,
@@ -271,7 +302,7 @@ end
       },
       order = "e-b[hyarion]",
     },
-          {
+    {
       type = "technology",
       name = "planetaris-advanced-raw-quartz",
       icon = "__planetaris-hyarion__/graphics/technology/quartz.png",
@@ -294,7 +325,7 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
@@ -324,44 +355,14 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
         },
         time = 60
       },
       order = "e-b[hyarion]",
     },
-          {
-      type = "technology",
-      name = "planetaris-ruby-laser",
-      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser.png",
-      icon_size = 256,
-      essential = false,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-ruby-laser"
-        },
-      },
-      prerequisites = {"planetaris-polishing-science-pack"},
-      unit =
-      {
-        count = 800,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          {"planetaris-polishing-science-pack", 1},
-        },
-        time = 60
-      },
-      order = "e-b[hyarion]",
-    },
-      {
+    {
       type = "technology",
       name = "planetaris-simulating-unit",
       icon = "__planetaris-hyarion__/graphics/technology/simulating-unit.png",
@@ -384,146 +385,14 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
         },
         time = 120
       },
       order = "e-b[hyarion]",
     },
-      {
-        type = "technology",
-        name = "planetaris-automation-4",
-        icon = "__planetaris-hyarion__/graphics/technology/automation-4.png",
-        icon_size = 256,
-        localised_name = {"technology-name.planetaris-automation-4"},
-        localised_description = {"technology-description.planetaris-automation-4"},
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "planetaris-assembling-machine-4"
-          }
-        },
-        prerequisites = {"planetaris-simulating-unit","automation-3"},
-        unit =
-        {
-          count = 5000,
-          ingredients =
-          {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          {"planetaris-polishing-science-pack", 1},
-          },
-          time = 120
-        }
-    },
-      {
-      type = "technology",
-      name = "planetaris-refraction-science-pack",
-      icon = "__planetaris-hyarion__/graphics/technology/refraction-science-pack.png",
-      icon_size = 256,
-      essential = true,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-refraction-science-pack"
-        },
-      },
-      prerequisites = {"planetaris-diamond-polishing","planetaris-nanoscale-lens","planetaris-simulating-unit","planetaris-ruby-laser"},
-      unit =
-      {
-        count = 2000,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "agricultural-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
-          {"planetaris-polishing-science-pack", 1},
-        },
-        time = 60
-      },
-      order = "e-b[hyarion]",
-    },
     {
-      type = "technology",
-      name = "planetaris-ruby-laser-turret",
-      localised_name = {"entity-name.planetaris-ruby-laser-turret"},
-      localised_description = {"entity-description.planetaris-ruby-laser-turret"},
-      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser-turret.png",
-      icon_size = 256,
-      essential = false,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-ruby-laser-turret"
-        },        
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-personal-ruby-laser-defense-equipment"
-        },
-      },
-      prerequisites = {"planetaris-refraction-science-pack", "planetaris-ruby-laser"},
-      unit =
-      {
-        count = 1000,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
-        },
-        time = 30
-      },
-      order = "e-b[hyarion]",
-    },
-        {
-      type = "technology",
-      name = "planetaris-crystalization-motor",
-      icon = "__planetaris-hyarion__/graphics/technology/crystalization-motor.png",
-      icon_size = 256,
-      essential = false,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-crystalization-motor"
-        },
-      },
-      prerequisites = {"planetaris-refraction-science-pack"},
-      unit =
-      {
-        count = 500,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
-          {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
-        },
-        time = 30
-      },
-      order = "e-b[hyarion]",
-    },
-        {
       type = "technology",
       name = "planetaris-refraction-plant",
       icon = "__planetaris-hyarion__/graphics/technology/refraction-plant.png",
@@ -563,7 +432,7 @@ end
           recipe = "planetaris-pure-light-release"
         },
       },
-      prerequisites = {"planetaris-crystalization-motor"},
+      prerequisites = {"planetaris-crystalization-motor", "planetaris-big-refraction-ray-collector", "planetaris-diamond-polishing"},
       unit =
       {
         count = 1000,
@@ -574,10 +443,9 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
         },
         time = 30
       },
@@ -598,7 +466,7 @@ end
       prerequisites = {"planetaris-refraction-plant"},
       unit =
       {
-        count = 500,
+        count = 800,
         ingredients =
         {
           {"automation-science-pack", 1},
@@ -606,16 +474,15 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
         },
         time = 30
       },
       order = "e-b[hyarion]",
     },
-        {
+    {
       type = "technology",
       name = "planetaris-particle-manipulation",
       icon = "__planetaris-hyarion__/graphics/technology/particle-manipulator.png",
@@ -674,11 +541,40 @@ end
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          { "metallurgic-science-pack", 1 },
-          { "agricultural-science-pack", 1 },
-          { "electromagnetic-science-pack", 1 },
+          {"metallurgic-science-pack", 1 },
+          {"agricultural-science-pack", 1 },
+          {"electromagnetic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-ruby-laser",
+      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser.png",
+      icon_size = 256,
+      essential = false,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-ruby-laser"
+        },
+      },
+      prerequisites = {"planetaris-refraction-plant"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
         },
         time = 60
       },
@@ -704,10 +600,10 @@ end
           recipe = "planetaris-beryllium-nitride"
         },
       },
-      prerequisites = {"planetaris-refraction-science-pack","planetaris-particle-manipulation","planetaris-unstable-gems"},
+      prerequisites = {"planetaris-particle-manipulation","planetaris-unstable-gems"},
       unit =
       {
-        count = 800,
+        count = 2000,
         ingredients =
         {
           {"automation-science-pack", 1},
@@ -719,9 +615,108 @@ end
           { "agricultural-science-pack", 1 },
           { "electromagnetic-science-pack", 1 },
           {"planetaris-polishing-science-pack", 1},
-          {"planetaris-refraction-science-pack", 1},
         },
         time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+      type = "technology",
+      name = "planetaris-refraction-science-pack",
+      icon = "__planetaris-hyarion__/graphics/technology/refraction-science-pack.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-refraction-science-pack"
+        },
+      },
+      prerequisites = {"planetaris-nanoscale-lens","planetaris-simulating-unit","planetaris-ruby-laser", "planetaris-beryllium-processing"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          { "agricultural-science-pack", 1 },
+          { "electromagnetic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+        type = "technology",
+        name = "planetaris-automation-4",
+        icon = "__planetaris-hyarion__/graphics/technology/automation-4.png",
+        icon_size = 256,
+        localised_name = {"technology-name.planetaris-automation-4"},
+        localised_description = {"technology-description.planetaris-automation-4"},
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "planetaris-assembling-machine-4"
+          }
+        },
+        prerequisites = {"planetaris-simulating-unit","automation-3"},
+        unit =
+        {
+          count = 5000,
+          ingredients =
+          {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+          },
+          time = 120
+        }
+    },
+    {
+      type = "technology",
+      name = "planetaris-ruby-laser-turret",
+      localised_name = {"entity-name.planetaris-ruby-laser-turret"},
+      localised_description = {"entity-description.planetaris-ruby-laser-turret"},
+      icon = "__planetaris-hyarion__/graphics/technology/ruby-laser-turret.png",
+      icon_size = 256,
+      essential = false,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-ruby-laser-turret"
+        },        
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-personal-ruby-laser-defense-equipment"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack", "planetaris-ruby-laser"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
       },
       order = "e-b[hyarion]",
     },
@@ -749,7 +744,7 @@ end
           recipe = "planetaris-space-science-pack"
         },
       },
-      prerequisites = {"planetaris-beryllium-processing"},
+      prerequisites = {"planetaris-beryllium-processing", "planetaris-refraction-science-pack"},
       unit =
       {
         count = 3000,
@@ -911,7 +906,7 @@ end
         },
       time = 60
     },
-    max_level = 20,
+    max_level = "infinite",
     upgrade = true
   },
       {
@@ -945,7 +940,7 @@ end
         },
       time = 60
     },
-    max_level = 20,
+    max_level = "infinite",
     upgrade = true
   },
   })
