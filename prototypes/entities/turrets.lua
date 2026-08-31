@@ -89,7 +89,7 @@ data.extend({
     flags = {"placeable-player", "placeable-enemy", "player-creation"},
     minable = {mining_time = 0.5, result = "planetaris-ruby-laser-turret"},
     fast_replaceable_group = "laser-turret",
-    max_health = 1400,
+    max_health = 2000,
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-1, -1}, {1, 1}},
     drawing_box_vertical_extension = 0.3,
@@ -188,11 +188,11 @@ data.extend({
       range_mode = "center-to-bounding-box",
       source_direction_count = 64,
       source_offset = {0, -3.423489 / 4},
-      damage_modifier = 2.5,
+      damage_modifier = 4,
       ammo_category = "laser",
       ammo_type =
       {
-        energy_consumption = "1200kJ",
+        energy_consumption = "1000kJ",
         action =
         {
           type = "direct",
