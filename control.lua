@@ -7,7 +7,7 @@ local function on_built_collector(event)
 	storage.big_refraction_ray_collector[collector.unit_number] = { 
 		collector = collector, 
 		tank = nil,
-		last_energy = 0  -- Track last energy level
+		last_energy = 0 
 	}
 end
 
@@ -26,7 +26,7 @@ local function on_removed_collector(event)
 	end
 end
 
--- Check tank exists AND detect lightning strikes
+-- Check tank exists and detect lightning strikes
 script.on_nth_tick(60, function()
 	if not storage.big_refraction_ray_collector then
 		return
@@ -61,7 +61,7 @@ script.on_nth_tick(60, function()
 				end
 			end
 
-			-- Detect lightning strike by monitoring energy changes
+			-- Detect lightning strike
 			if tank and tank.valid then
 				local current_energy = collector.energy
 				local last_energy = data.last_energy or 0

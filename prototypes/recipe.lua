@@ -71,7 +71,7 @@ data:extend(
     },
       ingredients =
       {
-        {type = "item", name = "planetaris-polished-quartz", amount = 10},
+        {type = "item", name = "planetaris-crystalization-motor", amount = 1},
         {type = "item", name = "steel-plate", amount = 10},
         {type = "item", name = "electronic-circuit", amount = 5},
         {type = "item", name = "plastic-bar", amount = 2},
@@ -505,7 +505,7 @@ data:extend(
     {
       {type = "item", name = "steel-plate", amount = 800},
       {type = "item", name = "planetaris-polished-emerald", amount = 600},
-      {type = "item", name = "pipe", amount = 100},
+      {type = "item", name = "planetaris-carbon-nanotube", amount = 100},
       {type = "item", name = "electronic-circuit", amount = 200},
       {type = "item", name = "engine-unit", amount = 200}
     },
@@ -531,7 +531,7 @@ data:extend(
     {
       {type = "item", name = "planetaris-crystalization-motor", amount = 5},
       {type = "item", name = "planetaris-nanoscale-lens", amount = 20},
-      {type = "item", name = "planetaris-fiber-optics-cable", amount = 50},
+      {type = "item", name = "planetaris-carbon-nanotube", amount = 50},
       {type = "item", name = "planetaris-simulating-unit", amount = 20},
       {type = "item", name = "holmium-plate", amount = 100},
 
@@ -557,7 +557,7 @@ data:extend(
     {
       {type = "item", name = "planetaris-crystalization-motor", amount = 10},
       {type = "item", name = "planetaris-fluorite", amount = 20},
-      {type = "item", name = "planetaris-fiber-optics-cable", amount = 30},
+      {type = "item", name = "planetaris-carbon-nanotube", amount = 30},
       {type = "item", name = "planetaris-simulating-unit", amount = 20},
       {type = "item", name = "holmium-plate", amount = 50},
 
@@ -607,15 +607,15 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-ruby-laser",
-      category = "electromagnetics",
+      category = "refraction",
       energy_required = 4,
       enabled = false,
       ingredients =
       {
-        {type = "item", name = "steel-plate", amount = 5},
-        {type = "item", name = "planetaris-polished-quartz", amount = 2},
+        {type = "item", name = "planetaris-carbon-nanotube", amount = 5},
         {type = "item", name = "planetaris-polished-ruby", amount = 8},
         {type = "item", name = "tungsten-plate", amount = 2},
+        {type = "fluid",name = "planetaris-pure-light", amount=2},
       },
       results = {{type="item", name="planetaris-ruby-laser", amount=1}},
       allow_productivity = true,
@@ -789,7 +789,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-refraction-science-pack",
     icon="__planetaris-hyarion__/graphics/icons/refraction-science-pack.png",
-    category = "electromagnetics",
+    category = "refraction",
     enabled = false,
     surface_conditions =
     {
@@ -801,10 +801,11 @@ data:extend(
     },
     ingredients =
     {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid",name = "planetaris-pure-light", amount = 4},
         {type = "item", name = "planetaris-simulating-unit", amount = 3},
         {type = "item", name = "planetaris-nanoscale-lens", amount = 3},
-        {type = "item", name = "planetaris-ruby-laser", amount = 5},
+        {type = "item", name = "planetaris-beryllium-nitride", amount = 3},
+        {type = "item", name = "planetaris-ruby-laser", amount = 3},
     },
     energy_required = 10,
     results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
