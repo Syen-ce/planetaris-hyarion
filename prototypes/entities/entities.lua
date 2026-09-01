@@ -1638,7 +1638,7 @@ data:extend({
         {type = "impact",   percent = 50},
     },
     heating_energy = "500kW",
-
+    use_mirroring = true,
     collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     tile_buildability_rules =

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.19
+Date: 2026-09-01
+  Compatibility:
+    - Fixed error with wood industry
+  Bugfixes:
+    - Fixed polisher and space manufacturar not mirroring
+---------------------------------------------------------------------------------------------------
 Version: 1.3.18
 Date: 2026-08-31
   Changes:
@@ -6,7 +13,7 @@ Date: 2026-08-31
     - Changed ruby lasers recipe to use pure light and carbon nanotube
     - Changed refraction science pack recipe to use pure light and beryllium nitride
     - Changed refraction plant, refraction generator and rocket silo recipe to use carbon nanotubes
-    - Changed big ray collector recipe to use cristalization motor
+    - Changed big ray collector recipe to use cristallization motor
     - Increase damage (2.5 -> 4) and reduced energy consumption (12000kJ -> 10000kJ) of the ruby laser turret
     - Changed simulating unit and supercapacitor productivity technologies to be infinite
 ---------------------------------------------------------------------------------------------------
@@ -18,7 +25,7 @@ Date: 2026-08-31
     - Changed ruby lasers recipe to use pure light and carbon nanotube
     - Changed refraction science pack recipe to use pure light and beryllium nitride
     - Changed refraction plant, refraction generator and rocket silo recipe to use carbon nanotubes
-    - Changed big ray collector recipe to use cristalization motor
+    - Changed big ray collector recipe to use cristallization motor
     - Increase damage (2.5 -> 4) and reduced energy consumption (12000kJ -> 10000kJ) of the ruby laser turret
     - Changed simulating unit and supercapacitor productivity technologies to be infinite
 ---------------------------------------------------------------------------------------------------
