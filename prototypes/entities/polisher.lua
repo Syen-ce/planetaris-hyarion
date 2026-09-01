@@ -84,6 +84,7 @@ data.extend({
     },
     heating_energy = "500kW",
     module_slots = 4,
+    use_mirroring = true,
     icons_positioning = {
         {inventory_index = defines.inventory.crafter_modules, shift = {0, 1}}
     },
