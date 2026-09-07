@@ -943,4 +943,39 @@ end
     max_level = "infinite",
     upgrade = true
   },
+  {
+    type = "technology",
+    name = "planetaris-ray-collection-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__planetaris-hyarion__/graphics/technology/big-refraction-ray-collector.png"),
+    icon_size = 256,
+    essential = false,
+    effects =
+    {
+      {
+        type = "nothing",
+        icon = "__planetaris-hyarion__/graphics/icons/fluids/refraction-light.png",
+        icon_size = 64,
+        effect_description = {"technology-effect.planetaris-ray-collection-productivity"},
+      },
+    },
+    prerequisites = {"planetaris-refraction-science-pack"},
+    unit =
+    {
+      count_formula = "1.5^L*1000",
+      ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+      time = 60
+    },
+    max_level = 3,
+    upgrade = true
+  },
   })

@@ -26,6 +26,64 @@ local function on_removed_collector(event)
 	end
 end
 
+-- Ray collection productivity bonus
+
+local RAY_COLLECTION_TECHS = {
+	{ name = "planetaris-ray-collection-productivity", type = "infinite" },
+}
+local BASE_REFRACTION_LIGHT_AMOUNT = 8
+local REFRACTION_LIGHT_AMOUNT_PER_LEVEL = 4 -- increase per researched level
+
+local function recalculate_ray_collection_bonus(force)
+	if not (force and force.valid) then return end
+	storage.ray_collection_bonus = storage.ray_collection_bonus or {}
+
+	local amount = BASE_REFRACTION_LIGHT_AMOUNT
+	for _, entry in pairs(RAY_COLLECTION_TECHS) do
+		local tech = force.technologies[entry.name]
+		if tech then
+			if entry.type == "infinite" then
+				local researched_levels
+				if tech.researched then
+					-- maxed out
+					researched_levels = tech.level
+				else
+					-- mid-research
+					researched_levels = math.max(0, (tech.level or 1) - 1)
+				end
+				amount = amount + (researched_levels * REFRACTION_LIGHT_AMOUNT_PER_LEVEL)
+			else
+				if tech.researched then
+					amount = amount + REFRACTION_LIGHT_AMOUNT_PER_LEVEL
+				end
+			end
+		end
+	end
+	storage.ray_collection_bonus[force.index] = amount
+end
+
+local function get_ray_collection_amount(force)
+	storage.ray_collection_bonus = storage.ray_collection_bonus or {}
+	local amount = storage.ray_collection_bonus[force.index]
+	if not amount then
+		recalculate_ray_collection_bonus(force)
+		amount = storage.ray_collection_bonus[force.index]
+	end
+	return amount or BASE_REFRACTION_LIGHT_AMOUNT
+end
+
+script.on_event(defines.events.on_research_finished, function(event)
+	local tech = event.research
+	if not (tech and tech.valid) then return end
+
+	for _, entry in pairs(RAY_COLLECTION_TECHS) do
+		if tech.name == entry.name then
+			recalculate_ray_collection_bonus(tech.force)
+			break
+		end
+	end
+end)
+
 -- Check tank exists AND detect lightning strikes
 script.on_nth_tick(60, function()
 	if not storage.big_refraction_ray_collector then
@@ -71,7 +129,7 @@ script.on_nth_tick(60, function()
 				if current_energy > last_energy + energy_threshold then
 					tank.insert_fluid({
 						name = "planetaris-refraction-light",
-						amount = 8,
+						amount = get_ray_collection_amount(collector.force),
 						temperature = 0
 					})
 				end
@@ -87,11 +145,19 @@ end)
 
 local function on_init(event)
 	storage.big_refraction_ray_collector = storage.big_refraction_ray_collector or {}
+	storage.ray_collection_bonus = storage.ray_collection_bonus or {}
+	for _, force in pairs(game.forces) do
+		recalculate_ray_collection_bonus(force)
+	end
 end
 script.on_init(on_init)
 
 local function on_configuration_changed(event)
 	storage.big_refraction_ray_collector = storage.big_refraction_ray_collector or {}
+	storage.ray_collection_bonus = storage.ray_collection_bonus or {}
+	for _, force in pairs(game.forces) do
+		recalculate_ray_collection_bonus(force)
+	end
 end
 script.on_configuration_changed(on_configuration_changed)
 

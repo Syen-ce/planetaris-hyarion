@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.21
+Date: 2026-09-07
+  Features:
+    - Added Ray collection productivity technology
+  Balancing:
+    - Balanced most of recipes leading to refraction science pack
+    - Allowed productivity for pure light and unstable gems
+    - Reduced rocket fuel quantity in hyarion rocket part recipe (10 -> 5)
+  Graphics:
+    - Fixed big refraction ray collector technology icon
+---------------------------------------------------------------------------------------------------
+Version: 1.3.20
+Date: 2026-09-07
+  Features:
+    - 2.0 VERSION
+    - Added Ray collection productivity technology
+  Balancing:
+    - Balanced most of recipes leading to refraction science pack
+    - Allowed productivity for pure light and unstable gems
+    - Reduced rocket fuel quantity in hyarion rocket part recipe (10 -> 5)
+  Graphics:
+    - Fixed big refraction ray collector technology icon
+---------------------------------------------------------------------------------------------------
 Version: 1.3.19
 Date: 2026-09-01
   Compatibility:
