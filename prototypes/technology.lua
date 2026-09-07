@@ -961,7 +961,7 @@ end
     prerequisites = {"planetaris-refraction-science-pack"},
     unit =
     {
-      count_formula = "1.5^L*1000",
+      count_formula = "2^L*1000",
       ingredients =
         {
           {"automation-science-pack", 1},
