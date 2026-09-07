@@ -251,7 +251,7 @@ data:extend(
         {type = "fluid", name = "lava", amount = 50},
         {type = "item", name = "iron-ore", amount = 10},
       },
-      results = {{type="fluid", name="planetaris-polishing-compound", amount=40}},
+      results = {{type="fluid", name="planetaris-polishing-compound", amount=50}},
       allow_productivity = true,
     },
     {
@@ -263,7 +263,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-raw-quartz", amount = 5},
       },
       results = {{type="item", name="planetaris-polished-quartz", amount=1}},
@@ -278,7 +278,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-raw-emerald", amount = 5},
       },
       results = {{type="item", name="planetaris-polished-emerald", amount=1}},
@@ -293,7 +293,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-raw-ruby", amount = 5},
       },
       results = {{type="item", name="planetaris-polished-ruby", amount=1}},
@@ -308,7 +308,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-raw-sapphire", amount = 5},
       },
       results = {{type="item", name="planetaris-polished-sapphire", amount=1}},
@@ -323,7 +323,7 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-raw-diamond", amount = 2},
       },
       results = {{type="item", name="planetaris-polished-diamond", amount=1}},
@@ -455,7 +455,7 @@ data:extend(
       {
         {type = "item", name = "engine-unit", amount = 5},
         {type = "item", name = "planetaris-carbon-nanotube", amount = 5},
-        {type = "item", name = "rocket-fuel", amount = 10}
+        {type = "item", name = "rocket-fuel", amount = 5}
       },
       results = {{type="item", name="rocket-part", amount=1}},
       allow_productivity = true
@@ -593,11 +593,11 @@ data:extend(
       type = "recipe",
       name = "planetaris-nanoscale-lens",
       category = "polishing",
-      energy_required = 3,
+      energy_required = 4,
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 15},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
         {type = "item", name = "tungsten-carbide", amount = 1},
         {type = "item", name = "planetaris-polished-diamond", amount = 1},
       },
@@ -612,10 +612,10 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "item", name = "planetaris-carbon-nanotube", amount = 5},
-        {type = "item", name = "planetaris-polished-ruby", amount = 8},
+        {type = "item", name = "planetaris-carbon-nanotube", amount = 2},
+        {type = "item", name = "planetaris-polished-ruby", amount = 2},
         {type = "item", name = "tungsten-plate", amount = 2},
-        {type = "fluid",name = "planetaris-pure-light", amount=2},
+        {type = "fluid",name = "planetaris-pure-light", amount=1},
       },
       results = {{type="item", name="planetaris-ruby-laser", amount=1}},
       allow_productivity = true,
@@ -646,10 +646,10 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris-polished-diamond", amount = 1},
-        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
-        {type = "item", name = "planetaris-polished-emerald", amount = 5},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 1},
+        {type = "item", name = "planetaris-polished-emerald", amount = 1},
       },
       results = {{type="item", name="planetaris-fluorite", amount=1}},
       allow_productivity = true,
@@ -704,13 +704,13 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-refraction-light", amount = 48},
+        {type = "fluid", name = "planetaris-refraction-light", amount = 12},
         {type = "item", name = "planetaris-fluorite", amount = 1},
       },
-      results = {{type="fluid", name="planetaris-pure-light", amount=48, temperature = 1600},
-                 {type="item", name="planetaris-unstable-shard", amount=1}
+      results = {{type="fluid", name="planetaris-pure-light", amount=24, temperature = 1600},
+                 {type="item", name="planetaris-unstable-shard", amount=4, ignored_by_productivity = 1}
       },
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -755,18 +755,18 @@ data:extend(
       type = "recipe",
       name = "planetaris-unstable-gem",
       category = "refraction",
-      energy_required = 10,
+      energy_required = 8,
       auto_recycle = false,
       enabled = false,
       ingredients =
       {
-        {type = "fluid", name = "planetaris-pure-light",      amount = 20},
-        {type = "item",  name = "planetaris-polished-quartz", amount = 5 },
-        {type = "item",  name = "planetaris-unstable-shard",  amount = 5 },
-        {type = "item",  name = "planetaris-polished-ruby",   amount = 5 },
+        {type = "fluid", name = "planetaris-pure-light",      amount = 4},
+        {type = "item",  name = "planetaris-polished-quartz", amount = 2},
+        {type = "item",  name = "planetaris-unstable-shard",  amount = 2},
+        {type = "item",  name = "planetaris-polished-ruby",   amount = 1},
       },
       results = {{type="item", name="planetaris-unstable-gem", amount=1}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
   {
     type = "recipe",
@@ -801,7 +801,7 @@ data:extend(
     },
     ingredients =
     {
-        {type = "fluid",name = "planetaris-pure-light", amount = 4},
+        {type = "fluid",name = "planetaris-pure-light", amount = 2},
         {type = "item", name = "planetaris-simulating-unit", amount = 3},
         {type = "item", name = "planetaris-nanoscale-lens", amount = 3},
         {type = "item", name = "planetaris-beryllium-nitride", amount = 3},
@@ -880,8 +880,8 @@ data:extend(
     energy_required = 3,
     ingredients =
     {
-      {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
-      {type = "item", name = "planetaris-polished-emerald", amount = 3},
+      {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
+      {type = "item", name = "planetaris-polished-emerald", amount = 1},
       {type = "item", name = "planetaris-unstable-gem", amount = 1},
     },
     results = {
@@ -902,7 +902,7 @@ data:extend(
     energy_required = 3,
     ingredients =
     {
-      {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+      {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
       {type = "item", name = "planetaris-beryl", amount = 3},
       {type = "item", name = "copper-ore", amount = 5},
     },
@@ -1139,7 +1139,7 @@ data:extend(
     },
       ingredients =
       {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
         {type = "item", name = "planetaris_raw_bismuth", amount = 5},
       },
       results = {{type="item", name="planetaris-polished-bismuth", amount=1}},
