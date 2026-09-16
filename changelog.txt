@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.23
+Date: 2026-09-16
+  Features:
+    - Added setting to disable assembling machine 4
+  Compatibility:
+    - K2SO, added wood recibe through chemistry/sifting using carbon
+---------------------------------------------------------------------------------------------------
+Version: 1.3.22
+Date: 2026-09-16
+  Features:
+    - 2.0 VERSION
+    - Added setting to disable assembling machine 4
+  Compatibility:
+    - K2SO, added wood recibe thorugh chemistry/sifting using carbon
+---------------------------------------------------------------------------------------------------
 Version: 1.3.21
 Date: 2026-09-07
   Features:

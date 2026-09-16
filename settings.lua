@@ -68,3 +68,13 @@ data:extend({
 	}
 })
 end
+
+data:extend({
+	{
+		type = "bool-setting",
+		name = "disable-assembling-machine-4",
+		setting_type = "startup",
+		default_value = false,
+		order = "d-a",
+	}
+})
