@@ -4,8 +4,10 @@ require("PlanetarisLib")
 
 -- Set the next_upgrade property to point to assembling-machine-4
 
-local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
-assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
+if settings.startup["disable-assembling-machine-4"].value == false then
+  local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
+  assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
+end
 
 -- Set the next_upgrade property to point to assembling-machine-4
 

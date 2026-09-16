@@ -183,11 +183,29 @@ data.extend({
       allow_productivity = true,
       crafting_machine_tint = {primary = {0.57, 0.55, 0.969, 1}, secondary = {0.57, 0.55, 0.969, 1}},
     },
+    {
+        type = "recipe",
+        name = "planetaris-lig-carbon-wood-chemistry",
+        category = "sifting",
+        enabled = false,
+        auto_recycle = false,
+        energy_required = 1,
+        icon = "__base__/graphics/icons/wood.png",
+        localised_name = {"", {"item-name.wood"}, " (", {"space-location-name.hyarion"}, ")"},
+        ingredients =
+        {
+        {type = "item", name = "carbon", amount = 2},
+        },
+        results = {{type="item", name="wood", amount=5}},
+        allow_productivity = false
+        },
 })
 
-data_util.add_recipe_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-sifting")
+PlanetarisLib.add_tech_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-separation")
+PlanetarisLib.add_tech_unlock("planetaris-metallic-ore-processing", "planetaris-lig-carbon-wood-chemistry")
 
 else
+
 data.extend({
     {
       type = "recipe",
@@ -213,9 +231,27 @@ data.extend({
 
       allow_productivity = true,
       crafting_machine_tint = {primary = {0.57, 0.55, 0.969, 1}, secondary = {0.57, 0.55, 0.969, 1}},
-    }
+    },
+
+    {
+        type = "recipe",
+        name = "planetaris-lig-carbon-wood-chemistry",
+        category = "chemistry",
+        enabled = false,
+        auto_recycle = false,
+        energy_required = 1,
+        icon = "__base__/graphics/icons/wood.png",
+        localised_name = {"", {"item-name.wood"}, " (", {"space-location-name.hyarion"}, ")"},
+        ingredients =
+        {
+        {type = "item", name = "carbon", amount = 2},
+        },
+        results = {{type="item", name="wood", amount=5}},
+        allow_productivity = false
+        },
 })
 
-data_util.add_recipe_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-separation")
+PlanetarisLib.add_tech_unlock("planetaris-metallic-ore-processing", "planetaris-rare-ore-metallic-separation")
+PlanetarisLib.add_tech_unlock("planetaris-metallic-ore-processing", "planetaris-lig-carbon-wood-chemistry")
 
 end
