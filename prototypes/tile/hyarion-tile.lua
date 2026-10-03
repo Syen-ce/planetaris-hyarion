@@ -7,7 +7,8 @@ local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 local tile_trigger_effects = require("__base__/prototypes/tile/tile-trigger-effects")
-local tile_pollution = require("__base__/prototypes/tile/tile-pollution-values")
+-- the lava values live in the Space Age table, which also includes the base ones
+local tile_pollution = require("__space-age__/prototypes/tile/tile-pollution-values")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 
 local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
