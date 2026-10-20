@@ -5,8 +5,11 @@ Date: 2026-10-20
     - Rebalanced refraction science recipe to be a 30% cheaper and 60% faster
     - Rebalanced advanced and normal carbon nanotube recipes to be cheaper
     - Made Untable gems, beryl, simulating units and ruby lasers recipes faster
+  Compatibility:
+    - Added support for Celestial Weathers 2.1 forks by GreenTech-Solutions
   Bugfixes:
     - Fixed minimum_temperature and maximum_temperature being removed from fluid boxes.
+    - Fixed hyper belt tech prerequisites to include silica processing by wanda-phi
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2026-09-16
