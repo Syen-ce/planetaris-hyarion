@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.24
+Date: 2026-10-20
+  Balancing:
+    - Rebalanced refraction science recipe to be a 30% cheaper and 60% faster
+    - Rebalanced advanced and normal carbon nanotube recipes to be cheaper
+    - Made Untable gems, beryl, simulating units and ruby lasers recipes faster
+  Bugfixes:
+    - Fixed minimum_temperature and maximum_temperature being removed from fluid boxes.
+---------------------------------------------------------------------------------------------------
 Version: 1.3.23
 Date: 2026-09-16
   Features:

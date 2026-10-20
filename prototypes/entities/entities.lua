@@ -1055,6 +1055,7 @@ data:extend({
     effectivity = 1,
     fluid_usage_per_tick = 0.033,
     maximum_temperature = 100,
+    minimum_input_temperature = 100.0,
     max_power_output = "15MW",
     burns_fluid = false,
     resistances =
@@ -1084,7 +1085,6 @@ data:extend({
         { flow_direction = "input-output", direction = defines.direction.west,  position = {-1.5, -1.5}, connection_category = "light" }
       },
       filter = "planetaris-pure-light",
-      minimum_temperature = 100.0,
       max_pipeline_extent = 1000,
     },
     energy_source =
