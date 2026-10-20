@@ -2,6 +2,7 @@
 Version: 1.3.25
 Date: 2026-10-20
   Balancing:
+    - 2.0 VERSION
     - Rebalanced refraction science recipe to be a 30% cheaper and 60% faster
     - Rebalanced advanced and normal carbon nanotube recipes to be cheaper
     - Made Untable gems, beryl, simulating units and ruby lasers recipes faster
