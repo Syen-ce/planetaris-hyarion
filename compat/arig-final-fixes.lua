@@ -101,7 +101,7 @@ PlanetarisLib.add_tech_effect("planetaris-metallic-ore-processing", {type = "unl
 
 PlanetarisLib.remove_tech_effect("planetaris-diamond-polishing", "unlock-recipe", "planetaris-raw-diamond")
 
-data.raw["technology"]["planetaris-hyper-transport-belt"].prerequisites = {"planetaris-polishing-science-pack", "turbo-transport-belt"}
+data.raw["technology"]["planetaris-hyper-transport-belt"].prerequisites = {"planetaris-polishing-science-pack", "turbo-transport-belt", "planetaris-silica-processing"}
 data.raw["technology"]["planetaris-hyper-transport-belt"].unit.ingredients =
         {
           {"automation-science-pack", 1},
