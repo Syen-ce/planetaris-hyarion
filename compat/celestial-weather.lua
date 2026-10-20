@@ -1,5 +1,10 @@
 -- Code from the celestial wheather mod
 
+-- Celestial Weather, or one of its Factorio 2.1 continuations: they keep its graphics under the same paths
+local celestial_weather = (mods["celestial-weather"] and "celestial-weather")
+  or (mods["celestial-weather-additions-updated"] and "celestial-weather-additions-updated")
+  or (mods["celestial-weather-updated"] and "celestial-weather-updated")
+
 local cluster_particles = {
   type = "cluster",
   distance = 8,
@@ -59,17 +64,17 @@ local fog = {
 -------------------------- Hyarion
 
 
-if mods["celestial-weather"] and settings.startup["enable-hyarion-weather"].value then
+if celestial_weather and settings.startup["enable-hyarion-weather"].value then
 
 hyarion_effects = {}
 
-if mods["celestial-weather"] and settings.startup["enable-hyarion-dust"].value then
+if celestial_weather and settings.startup["enable-hyarion-dust"].value then
 
 ----- Dust
   local hyarion_dust_particle = table.deepcopy(data.raw["trivial-smoke"]["aquilo-snow-smoke"])
   hyarion_dust_particle.name = "hyarion_dust_particle"
   hyarion_dust_particle.color = {0.961, 0.902, 0.914}
-  hyarion_dust_particle.animation.filename = "__celestial-weather__/graphics/entity/sand-particles.png",
+  hyarion_dust_particle.animation.filename = "__" .. celestial_weather .. "__/graphics/entity/sand-particles.png",
   data:extend({hyarion_dust_particle})
 
   local hyarion_weather_d = table.deepcopy(cluster_particles)
@@ -82,13 +87,13 @@ if mods["celestial-weather"] and settings.startup["enable-hyarion-dust"].value t
 
 end
 
-if mods["celestial-weather"] and settings.startup["enable-hyarion-lights"].value then
+if celestial_weather and settings.startup["enable-hyarion-lights"].value then
 
 -- Light particles
   local hyarion_lights = table.deepcopy(data.raw["trivial-smoke"]["aquilo-snow-smoke"])
   hyarion_lights.name = "hyarion-lights"
   hyarion_lights.color = {1, 1, 1, 1}
-  hyarion_lights.animation.filename = "__celestial-weather__/graphics/entity/fire-particles.png"
+  hyarion_lights.animation.filename = "__" .. celestial_weather .. "__/graphics/entity/fire-particles.png"
   data:extend({hyarion_lights})
 
   local hyarion_weather_l = table.deepcopy(cluster_particles)
@@ -101,14 +106,14 @@ if mods["celestial-weather"] and settings.startup["enable-hyarion-lights"].value
 
 end
 
-if mods["celestial-weather"] and settings.startup["enable-hyarion-lights"].value then
+if celestial_weather and settings.startup["enable-hyarion-lights"].value then
 
 ----- Fog
   local hyarion_fog = table.deepcopy(fog)
   hyarion_fog.color1 = {1, 1, 1, 1}
   hyarion_fog.color2 = {1, 1, 1, 1}
   hyarion_fog.tick_factor = 0.0002
-  hyarion_fog.detail_noise_texture.filename = "__celestial-weather__/graphics/entity/dense-clouds.png"
+  hyarion_fog.detail_noise_texture.filename = "__" .. celestial_weather .. "__/graphics/entity/dense-clouds.png"
 
   data.raw["planet"]["hyarion"].surface_render_parameters = data.raw["planet"]["hyarion"]["surface_render_parameters"] or {}
   data.raw["planet"]["hyarion"].surface_render_parameters["fog"] = hyarion_fog
