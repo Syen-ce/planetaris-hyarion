@@ -260,11 +260,37 @@ data:extend({
   close_sound = sounds.machine_close,
   impact_category = "metal",
   working_sound =
-  {
-    sound = {filename = "__base__/sound/assembling-machine-t3-1.ogg", volume = 0.45, audible_distance_modifier = 0.5},
-    fade_in_ticks = 4,
-    fade_out_ticks = 20
-  },
+    {
+      sound =
+      {
+        filename = "__base__/sound/assembling-machine-t3-1.ogg", volume = 0.45,
+        advanced_volume_control = assembling_machine_advanced_volume_control()
+      },
+      max_sounds_per_prototype = 7,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20,
+      sound_accents =
+      {
+        {
+          sound =
+          {
+            variations = sound_variations("__base__/sound/entity/assembling-machine/assembling-machine-mech-impact", 7, 0.15),
+            audible_distance_modifier = 0.5,
+            advanced_volume_control = assembling_machine_advanced_volume_control()
+          },
+            frame = 15,
+        },
+        {
+          sound =
+          {
+            variations = sound_variations("__base__/sound/entity/assembling-machine/assembling-machine-mech-impact", 7, 0.15),
+            audible_distance_modifier = 0.5,
+            advanced_volume_control = assembling_machine_advanced_volume_control()
+          },
+            frame = 47,
+        },
+      },
+    },
   collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
   selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
   damaged_trigger_effect = hit_effects.entity(),
