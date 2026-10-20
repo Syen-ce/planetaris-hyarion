@@ -384,8 +384,8 @@ data:extend(
       ingredients =
       {
         {type = "fluid", name = "lava", amount = 30},
-        {type = "item", name = "carbon", amount = 20},
-        {type = "item", name = "planetaris-polished-quartz", amount = 10},
+        {type = "item", name = "carbon", amount = 10},
+        {type = "item", name = "planetaris-polished-quartz", amount = 5},
       },
       results = {{type="item", name="planetaris-carbon-nanotube", amount=1}},
       allow_productivity = false,
@@ -400,15 +400,15 @@ data:extend(
       categories = {"particle-manipulation"},
       subgroup = "hyarion-advanced-processes",
       order = "e[post-refraction]-b",
-      energy_required = 3,
+      energy_required = 1,
       enabled = false,
       auto_recycle = false,
       ingredients =
       {
-        {type = "fluid", name = "molten-copper", amount = 50},
-        {type = "item", name = "carbon-fiber", amount = 5},
+        {type = "fluid", name = "molten-copper", amount = 25},
+        {type = "item", name = "carbon-fiber", amount = 2},
       },
-      results = {{type="item", name="planetaris-carbon-nanotube", amount=2}},
+      results = {{type="item", name="planetaris-carbon-nanotube", amount=3}},
       allow_productivity = true,
     },
     {
@@ -571,7 +571,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-fiber-optics-cable",
       categories = {"electromagnetics"},
-      energy_required = 4,
+      energy_required = 2,
       enabled = false,
       surface_conditions =
     {
@@ -594,7 +594,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-nanoscale-lens",
       categories = {"polishing"},
-      energy_required = 4,
+      energy_required = 2,
       enabled = false,
       ingredients =
       {
@@ -609,7 +609,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-ruby-laser",
       categories = {"refraction"},
-      energy_required = 4,
+      energy_required = 2,
       enabled = false,
       ingredients =
       {
@@ -755,7 +755,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-unstable-gem",
       categories = {"refraction"},
-      energy_required = 10,
+      energy_required = 3,
       auto_recycle = false,
       enabled = false,
       ingredients =
@@ -774,7 +774,7 @@ data:extend(
     categories = {"electromagnetics"},
     enabled = false,
     auto_recycle = false,
-    energy_required = 15,
+    energy_required = 12,
     ingredients =
     {
       {type = "item", name = "processing-unit", amount = 1},
@@ -803,12 +803,12 @@ data:extend(
     ingredients =
     {
         {type = "fluid",name = "planetaris-pure-light", amount = 2},
-        {type = "item", name = "planetaris-simulating-unit", amount = 3},
-        {type = "item", name = "planetaris-nanoscale-lens", amount = 3},
-        {type = "item", name = "planetaris-beryllium-nitride", amount = 3},
-        {type = "item", name = "planetaris-ruby-laser", amount = 3},
+        {type = "item", name = "planetaris-simulating-unit", amount = 2},
+        {type = "item", name = "planetaris-nanoscale-lens", amount = 2},
+        {type = "item", name = "planetaris-beryllium-nitride", amount = 2},
+        {type = "item", name = "planetaris-ruby-laser", amount = 2},
     },
-    energy_required = 10,
+    energy_required = 4,
     results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
     allow_productivity = true,
   },
@@ -878,7 +878,7 @@ data:extend(
     categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
-    energy_required = 3,
+    energy_required = 2,
     ingredients =
     {
       {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
@@ -900,7 +900,7 @@ data:extend(
     categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
-    energy_required = 3,
+    energy_required = 2,
     ingredients =
     {
       {type = "fluid", name = "planetaris-polishing-compound", amount = 5},
@@ -918,7 +918,7 @@ data:extend(
     categories = {"particle-manipulation"},
     enabled = false,
     auto_recycle = false,
-    energy_required = 6,
+    energy_required = 3,
     ingredients =
     {
       {type = "fluid", name = "lava", amount = 30},
